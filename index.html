@@ -286,7 +286,7 @@
         #concept::before {
             content: ''; position: absolute; top: 0; left: 0;
             width: 100%; height: 100%;
-            background-image: url('images/logo-pattern.png');
+            background-image: url('images/ra-pattern.png');
             background-size: 180px; background-position: center;
             opacity: 0.04; z-index: 0; pointer-events: none;
         }
@@ -672,7 +672,7 @@
                         <dt>席数</dt><dd>カウンター8席</dd>
                         <dt>アクセス</dt><dd>名古屋市営地下鉄桜通線<br>鶴里駅 徒歩1分</dd>
                         <dt>お支払い</dt><dd>現金 / 各種キャッシュレス対応</dd>
-                        <dt>お問い合わせ</dt><dd>お問い合わせ・取材のご依頼は<br><a href="/cdn-cgi/l/email-protection#3e575058517e4c5f584b104c4a5f10505f5951475f" class="shop-tel-link"><span class="__cf_email__" data-cfemail="30595e565f70425156451e4244511e5e51575f4951">[email&#160;protected]</span></a></dd>
+                        <dt>お問い合わせ</dt><dd>お問い合わせ・取材のご依頼は<br><a href="mailto:info@rafu.rta.nagoya" class="shop-tel-link">info@rafu.rta.nagoya</a></dd>
                     </dl>
                 </div>
             </div>
@@ -682,7 +682,7 @@
     <footer class="footer">
         <div class="container">
             <a href="#" class="footer-logo">焼きそばスタンド らふ</a>
-            <div class="footer-address">〒457-0004 愛知県名古屋市南区中江1-6-15<br>地下鉄桜通線 鶴里駅 徒歩1分<br>TEL: 052-746-6386<br><span style="font-size:0.8rem; opacity:0.7;">お問い合わせ・取材: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="85ecebe3eac5f7e4e3f0abf7f1e4abebe4e2eafce4">[email&#160;protected]</a></span></div>
+            <div class="footer-address">〒457-0004 愛知県名古屋市南区中江1-6-15<br>地下鉄桜通線 鶴里駅 徒歩1分<br>TEL: 052-746-6386<br><span style="font-size:0.8rem; opacity:0.7;">お問い合わせ・取材: <a href="mailto:info@rafu.rta.nagoya">info@rafu.rta.nagoya</a></span></div>
             <div class="sns-links">
                 <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
                 <a href="#" aria-label="LINE"><i class="fa-brands fa-line"></i></a>
@@ -698,7 +698,7 @@
         <img src="" alt="拡大画像" class="lightbox-img" id="lightboxImg">
     </div>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script>
         // Mobile Menu
@@ -771,4 +771,10 @@
 
         // SNS
         gsap.to(".js-insta-intro", { opacity: 1, y: 0, duration: 0.8, scrollTrigger: { trigger: ".sns-section", start: "top 78%" } });
-        gsap.to(".js-insta-item", { opacity: 1, scale: 1, duration: 0.6, stagger: 0.08, ease: "back.out(1.3)", scrollTrigger: { trigger: ".insta-grid", start: "top 82%" } }
+        gsap.to(".js-insta-item", { opacity: 1, scale: 1, duration: 0.6, stagger: 0.08, ease: "back.out(1.3)", scrollTrigger: { trigger: ".insta-grid", start: "top 82%" } });
+
+        // Access
+        gsap.to(".js-access-item", { opacity: 1, x: 0, duration: 1, stagger: 0.2, ease: "power2.out", scrollTrigger: { trigger: ".access-wrapper", start: "top 75%" } });
+    </script>
+</body>
+</html>

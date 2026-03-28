@@ -163,7 +163,7 @@
             color: var(--c-primary); font-weight: bold;
             display: flex; align-items: center; gap: 10px;
         }
-        .logo svg { color: var(--c-accent); width: 1.3em; height: 1.3em; transform: rotate(-10deg); }
+        .logo-icon { width: 1.8em; height: 1.8em; object-fit: contain; filter: sepia(1) saturate(2) brightness(0.55) hue-rotate(-10deg); }
 
         .nav-pc { display: none; }
         @media (min-width: 768px) {
@@ -516,11 +516,7 @@
 
     <header class="header">
         <a href="/" class="logo">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="currentColor" aria-hidden="true">
-                <path d="M8 12 H56 L50 44 H14 Z" />
-                <rect x="28" y="42" width="8" height="18" rx="2" />
-                <path d="M18 20 H46" stroke="rgba(255,255,255,0.3)" stroke-width="2" stroke-linecap="round" />
-            </svg>
+            <img src="images/ra-pattern.png" alt="らふロゴ" class="logo-icon">
             焼きそばスタンド らふ
         </a>
         <nav class="nav-pc">

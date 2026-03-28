@@ -235,12 +235,25 @@
            ========================================= */
         .hero {
             height: 100vh; min-height: 600px;
-            background-image: url('images/hero-bg.jpg');
-            background-size: cover; background-position: 70% center;
             position: relative; display: flex; align-items: center;
             justify-content: center; text-align: center;
             color: var(--c-white); padding: 0 20px;
             overflow: hidden; z-index: 1;
+        }
+        .hero-bg {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            background-image: url('images/hero-bg.jpg');
+            background-size: cover; background-position: 70% center;
+            animation: heroPan 25s ease-in-out infinite alternate;
+            z-index: -2;
+        }
+        @keyframes heroPan {
+            0% { background-position: 30% center; }
+            100% { background-position: 70% center; }
+        }
+        @keyframes heroKenBurns {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.15); }
         }
         .hero::before {
             content: ''; position: absolute; top: 0; left: 0;
@@ -249,7 +262,7 @@
             z-index: -1;
         }
         @media (min-width: 768px) {
-            .hero { background-position: center center; }
+            .hero-bg { background-position: center center; animation-name: heroKenBurns; animation-duration: 20s; }
         }
         .hero-content h1 {
             font-size: 2.5rem; margin-bottom: 24px; line-height: 1.5;
@@ -542,6 +555,7 @@
     </header>
 
     <section class="hero">
+        <div class="hero-bg"></div>
         <div class="hero-content">
             <h1 class="hero-title">
                 <span class="line-break">ソースの香りと、</span>
@@ -747,7 +761,7 @@
           .to(".btn-hero", { opacity: 1, duration: 0.8 }, "-=0.7");
 
         // Parallax
-        gsap.to(".hero", {
+        gsap.to(".hero-bg", {
             backgroundPosition: "50% 80%", ease: "none",
             scrollTrigger: { trigger: ".hero", start: "top top", end: "bottom top", scrub: true }
         });

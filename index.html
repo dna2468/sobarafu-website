@@ -266,7 +266,7 @@
         }
         .hero-content h1 {
             font-size: 2.5rem; margin-bottom: 24px; line-height: 1.5;
-            text-shadow: 2px 2px 12px rgba(0,0,0,0.4); overflow: hidden;
+            text-shadow: 2px 2px 12px rgba(0,0,0,0.4); overflow: hidden; visibility: hidden;
         }
         .hero-char { display: inline-block; opacity: 0; transform: translateY(20px); }
         .hero-text {
@@ -752,6 +752,7 @@
             });
             line.appendChild(document.createElement('br'));
         });
+        document.querySelector('.hero-title').style.visibility = 'visible';
 
         // Opening
         const tl = gsap.timeline({ defaults: { ease: "power3.out" } });

@@ -160,10 +160,11 @@
         }
         .logo {
             font-family: var(--f-head); font-size: 1.3rem;
-            color: var(--c-primary); font-weight: bold;
+            color: #42210B; font-weight: bold;
             display: flex; align-items: center; gap: 10px;
         }
         .logo-icon { width: 1.8em; height: 1.8em; object-fit: contain; filter: sepia(1) saturate(2) brightness(0.55) hue-rotate(-10deg); }
+        .logo-red { color: #C1272D; }
 
         .nav-pc { display: none; }
         @media (min-width: 768px) {
@@ -517,7 +518,7 @@
     <header class="header">
         <a href="/" class="logo">
             <img src="images/ra-pattern.png" alt="らふロゴ" class="logo-icon">
-            焼きそばスタンド らふ
+            <span><span class="logo-red">焼きそば</span>スタンド <span class="logo-red">らふ</span></span>
         </a>
         <nav class="nav-pc">
             <a href="#concept">こだわり</a>

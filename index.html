@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>焼きそばスタンド らふ | こだわりの特製麺</title>
+    <meta name="description" content="ソースの香りと、ぬくもりを。特製麺と秘伝ソースで味わう、大人のための焼きそば専門店「焼きそばスタンド らふ」。女性お一人様でも入りやすい和モダンな空間です。">
+    
+    <!-- OGP -->
+    <meta property="og:title" content="焼きそばスタンド らふ | こだわりの特製麺">
+    <meta property="og:description" content="ソースの香りと、ぬくもりを。特製麺と秘伝ソースで味わう焼きそば専門店。名古屋市南区・鶴里駅徒歩1分。">
+    <meta property="og:type" content="restaurant">
+    <meta property="og:image" content="https://sobarafu.rta.nagoya/images/hero-bg.jpg">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:url" content="https://sobarafu.rta.nagoya/">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/logo-pattern.png" type="image/png">
+
+    <!-- 構造化データ (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Restaurant",
+        "name": "焼きそばスタンド らふ",
+        "description": "特製麺と秘伝ソースで味わう、こだわりの焼きそば専門店。女性お一人様でも入りやすい和モダンな空間です。",
+        "image": "https://sobarafu.rta.nagoya/images/hero-bg.jpg",
+        "telephone": "+81-52-746-6386",
+        "email": "info@rafu.rta.nagoya",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "中江1-6-15 パックス鶴里1階",
+            "addressLocality": "名古屋市南区",
+            "addressRegion": "愛知県",
+            "postalCode": "457-0004",
+            "addressCountry": "JP"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 35.12423,
+            "longitude": 136.93883
+        },
+        "url": "https://sobarafu.rta.nagoya/",
+        "servesCuisine": "焼きそば",
+        "priceRange": "¥850〜¥1,200",
+        "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+            "opens": "11:00",
+            "closes": "17:00"
+        },
+        "paymentAccepted": "Cash, Credit Card, Electronic Money, QR Code Payment",
+        "currenciesAccepted": "JPY",
+        "hasMenu": "https://sobarafu.rta.nagoya/menu.html",
+        "publicAccess": true,
+        "smokingAllowed": false
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Zen+Maru+Gothic:wght@400;500;700&family=Yomogi&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+
+    <style>
+        :root {
+            --c-bg: #FAF8F3;
+            --c-bg-warm: #F5F0E8;
+            --c-text: #4A4540;
+            --c-text-light: #8A8580;
+            --c-primary: #5D4037;
+            --c-primary-light: #8D6E63;
+            --c-accent: #E8764B;
+            --c-accent-hover: #D4633A;
+            --c-accent-light: #FFF3EE;
+            --c-cream: #FFF8F0;
+            --c-white: #FFFFFF;
+            --c-badge: #D44B3F;
+
+            --f-body: 'Noto Sans JP', sans-serif;
+            --f-head: 'Zen Maru Gothic', sans-serif;
+            --f-accent: 'Yomogi', cursive;
+
+            --header-height: 70px;
+            --radius: 16px;
+            --radius-sm: 10px;
+        }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; scroll-padding-top: var(--header-height); }
+
+        body {
+            font-family: var(--f-body);
+            color: var(--c-text);
+            background-color: var(--c-bg);
+            line-height: 1.9;
+            letter-spacing: 0.05em;
+            overflow-x: hidden;
+        }
+
+        /* Subtle noise texture overlay */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0.022;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+        }
+
+        img { max-width: 100%; height: auto; display: block; }
+        a { text-decoration: none; color: inherit; transition: all 0.3s; }
+        h1, h2, h3 { font-family: var(--f-head); font-weight: 700; }
+
+        .container { width: 90%; max-width: 1040px; margin: 0 auto; padding: 0 16px; }
+
+        /* Section Titles */
+        .section-title-area { text-align: center; margin-bottom: 56px; }
+        .section-title {
+            font-size: 2rem;
+            color: var(--c-primary);
+            display: inline-block;
+            position: relative;
+        }
+        .section-title-en {
+            display: block;
+            font-family: var(--f-accent);
+            font-size: 0.9rem;
+            color: var(--c-accent);
+            margin-top: 6px;
+            letter-spacing: 0.15em;
+        }
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 32px; height: 3px;
+            background: var(--c-accent);
+            margin: 14px auto 0;
+            border-radius: 2px;
+        }
+
+        /* =========================================
+           Header
+           ========================================= */
+        .header {
+            position: fixed; top: 0; left: 0;
+            width: 100%; height: var(--header-height);
+            background: rgba(250, 248, 243, 0.92);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 0 5%;
+            z-index: 1000;
+            box-shadow: 0 1px 20px rgba(0,0,0,0.04);
+            opacity: 0; transform: translateY(-20px);
+        }
+        .logo {
+            font-family: var(--f-head); font-size: 1.3rem;
+            color: var(--c-primary); font-weight: bold;
+            display: flex; align-items: center; gap: 10px;
+        }
+        .logo svg { color: var(--c-accent); width: 1.3em; height: 1.3em; transform: rotate(-10deg); }
+
+        .nav-pc { display: none; }
+        @media (min-width: 768px) {
+            .nav-pc { display: flex; gap: 28px; align-items: center; }
+            .nav-pc a {
+                color: var(--c-primary); font-weight: 500; font-size: 0.95rem;
+                position: relative; font-family: var(--f-head);
+            }
+            .nav-pc a::after {
+                content: ''; position: absolute; bottom: -5px; left: 0;
+                width: 0; height: 2px; background: var(--c-accent); transition: width 0.3s;
+            }
+            .nav-pc a:hover::after { width: 100%; }
+            .nav-pc a:hover { opacity: 1; }
+            .nav-tel-btn {
+                background: var(--c-accent); color: white !important;
+                padding: 8px 18px; border-radius: 50px; font-size: 0.9rem;
+                display: flex; align-items: center; gap: 6px;
+                transition: background 0.3s, transform 0.3s;
+            }
+            .nav-tel-btn:hover { background: var(--c-accent-hover); opacity: 1 !important; transform: translateY(-1px); }
+            .nav-tel-btn::after { display: none; }
+        }
+
+        .mobile-actions { display: flex; align-items: center; gap: 15px; }
+        .mobile-tel {
+            display: flex; justify-content: center; align-items: center;
+            width: 40px; height: 40px; background: var(--c-accent);
+            color: white; border-radius: 50%; font-size: 1.1rem;
+            box-shadow: 0 3px 10px rgba(232,118,75,0.3);
+        }
+        .menu-btn {
+            display: block; background: none; border: none; cursor: pointer;
+            z-index: 1001; width: 40px; height: 40px; position: relative;
+        }
+        .menu-btn span {
+            position: absolute; left: 5px; display: block;
+            width: 30px; height: 2px; background: var(--c-primary);
+            transition: 0.3s; border-radius: 2px;
+        }
+        .menu-btn span:nth-child(1) { top: 10px; }
+        .menu-btn span:nth-child(2) { top: 19px; }
+        .menu-btn span:nth-child(3) { top: 28px; }
+        .menu-btn.active span:nth-child(1) { transform: translateY(9px) rotate(45deg); }
+        .menu-btn.active span:nth-child(2) { opacity: 0; }
+        .menu-btn.active span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
+        @media (min-width: 768px) { .mobile-actions, .menu-btn { display: none; } }
+
+        .nav-mobile {
+            position: fixed; top: 0; right: -100%;
+            width: 80%; max-width: 400px; height: 100vh;
+            background: var(--c-bg); padding-top: 90px;
+            transition: 0.4s cubic-bezier(0.16,1,0.3,1);
+            z-index: 999; box-shadow: -5px 0 20px rgba(0,0,0,0.08);
+        }
+        .nav-mobile.active { right: 0; }
+        .nav-mobile ul { list-style: none; padding: 0 20px; }
+        .nav-mobile li { border-bottom: 1px solid rgba(0,0,0,0.04); }
+        .nav-mobile a {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 20px 10px; color: var(--c-primary);
+            font-size: 1.1rem; font-family: var(--f-head);
+        }
+        .nav-mobile a i { font-size: 0.9em; color: #ccc; }
+
+        /* =========================================
+           Hero
+           ========================================= */
+        .hero {
+            height: 100vh; min-height: 600px;
+            background-image: url('images/hero-bg.jpg');
+            background-size: cover; background-position: 70% center;
+            position: relative; display: flex; align-items: center;
+            justify-content: center; text-align: center;
+            color: var(--c-white); padding: 0 20px;
+            overflow: hidden; z-index: 1;
+        }
+        .hero::before {
+            content: ''; position: absolute; top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: linear-gradient(180deg, rgba(40,25,15,0.22) 0%, rgba(40,25,15,0.55) 100%);
+            z-index: -1;
+        }
+        @media (min-width: 768px) {
+            .hero { background-position: center center; }
+        }
+        .hero-content h1 {
+            font-size: 2.5rem; margin-bottom: 24px; line-height: 1.5;
+            text-shadow: 2px 2px 12px rgba(0,0,0,0.4); overflow: hidden;
+        }
+        .hero-char { display: inline-block; opacity: 0; transform: translateY(20px); }
+        .hero-text {
+            font-size: 1.05rem; font-weight: 500; margin-bottom: 40px;
+            text-shadow: 1px 1px 6px rgba(0,0,0,0.4); opacity: 0;
+            font-family: var(--f-head); letter-spacing: 0.1em;
+        }
+        .btn-hero {
+            display: inline-block; background: var(--c-accent);
+            color: var(--c-white); padding: 16px 48px;
+            border-radius: 50px; font-weight: bold; font-family: var(--f-head);
+            box-shadow: 0 6px 24px rgba(232,118,75,0.35);
+            transition: all 0.3s; opacity: 0; position: relative; overflow: hidden;
+        }
+        .btn-hero:hover {
+            background: var(--c-accent-hover); transform: translateY(-3px);
+            box-shadow: 0 8px 28px rgba(232,118,75,0.5); opacity: 1;
+        }
+        .btn-hero::after {
+            content: ''; position: absolute; top: -50%; left: -50%;
+            width: 200%; height: 200%;
+            background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.25) 50%, rgba(255,255,255,0) 100%);
+            transform: rotate(45deg) translate(-100%,-100%); transition: transform 0.6s;
+        }
+        .btn-hero:hover::after { transform: rotate(45deg) translate(100%,100%); }
+        @media (min-width: 768px) { .hero-content h1 { font-size: 3.8rem; } }
+
+        /* =========================================
+           Concept
+           ========================================= */
+        .section { padding: 100px 0; position: relative; }
+        #concept { background: var(--c-bg-warm); }
+        #concept::before {
+            content: ''; position: absolute; top: 0; left: 0;
+            width: 100%; height: 100%;
+            background-image: url('images/logo-pattern.png');
+            background-size: 180px; background-position: center;
+            opacity: 0.04; z-index: 0; pointer-events: none;
+        }
+        .concept-wrapper {
+            display: flex; flex-direction: column; gap: 40px;
+            align-items: center; position: relative; z-index: 1;
+        }
+        .img-container {
+            width: 100%; overflow: hidden;
+            border-radius: var(--radius);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+        }
+        .concept-img {
+            width: 100%; height: 300px; object-fit: cover;
+            opacity: 0; transform: scale(1.15); transform-origin: center;
+        }
+        .concept-text { width: 100%; opacity: 0; transform: translateY(30px); }
+        .concept-text h3 {
+            font-size: 1.45rem; color: var(--c-primary);
+            margin-bottom: 24px; line-height: 1.7;
+        }
+        .concept-text p { margin-bottom: 20px; color: var(--c-text); text-align: justify; }
+        @media (min-width: 768px) {
+            .concept-wrapper { flex-direction: row; gap: 72px; }
+            .img-container { width: 48%; height: 440px; }
+            .concept-img { height: 100%; }
+            .concept-text { width: 52%; }
+        }
+
+        /* =========================================
+           Menu
+           ========================================= */
+        .menu-section { background: var(--c-white); }
+        .menu-grid { display: grid; grid-template-columns: 1fr; gap: 28px; }
+        @media (min-width: 600px) { .menu-grid { grid-template-columns: repeat(2, 1fr); } }
+
+        .menu-item {
+            background: var(--c-bg); border-radius: var(--radius);
+            overflow: hidden;
+            transition: all 0.45s cubic-bezier(0.165,0.84,0.44,1);
+            border: 1px solid rgba(0,0,0,0.03);
+            opacity: 0; transform: translateY(40px);
+            cursor: pointer; position: relative;
+        }
+        .menu-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+        }
+        .badge-popular {
+            position: absolute; top: 12px; left: 12px;
+            background: var(--c-badge); color: white;
+            padding: 6px 14px; font-size: 0.8rem;
+            font-weight: bold; font-family: var(--f-head);
+            border-radius: 50px; z-index: 10;
+            box-shadow: 0 3px 10px rgba(212,75,63,0.3);
+        }
+        .menu-img-wrapper { overflow: hidden; width: 100%; height: 240px; }
+        .menu-img {
+            width: 100%; height: 100%; object-fit: cover;
+            transition: transform 0.7s cubic-bezier(0.33,0,0.2,1);
+            cursor: zoom-in;
+        }
+        .menu-item:hover .menu-img { transform: scale(1.08); }
+        .menu-info { padding: 24px; }
+        .menu-header {
+            display: flex; justify-content: space-between; align-items: center;
+            margin-bottom: 10px; font-family: var(--f-head);
+            font-weight: bold; font-size: 1.2rem; color: var(--c-primary);
+        }
+        .menu-price { color: var(--c-accent); font-weight: bold; font-size: 1.15rem; }
+        .menu-desc { font-size: 0.92rem; color: var(--c-text-light); line-height: 1.7; }
+        .menu-more-btn-wrapper { text-align: center; margin-top: 56px; }
+        .btn-more {
+            display: inline-block; background: var(--c-accent);
+            color: var(--c-white); padding: 16px 40px;
+            border-radius: 50px; font-weight: bold; font-family: var(--f-head);
+            box-shadow: 0 6px 24px rgba(232,118,75,0.3);
+            transition: all 0.3s; position: relative; overflow: hidden;
+        }
+        .btn-more:hover {
+            background: var(--c-accent-hover); transform: translateY(-3px);
+            box-shadow: 0 8px 28px rgba(232,118,75,0.5); opacity: 1;
+        }
+
+        /* =========================================
+           SNS
+           ========================================= */
+        .sns-section { background: var(--c-bg); text-align: center; }
+        .insta-intro {
+            margin-bottom: 40px; font-size: 1rem;
+            color: var(--c-text-light); opacity: 0; transform: translateY(10px);
+        }
+        .insta-grid {
+            display: grid; grid-template-columns: repeat(2, 1fr);
+            gap: 12px; margin-bottom: 40px;
+        }
+        @media (min-width: 768px) { .insta-grid { grid-template-columns: repeat(4, 1fr); gap: 16px; } }
+        .insta-item {
+            position: relative; overflow: hidden;
+            border-radius: var(--radius-sm); aspect-ratio: 1/1;
+            opacity: 0; transform: scale(0.9);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06); display: block;
+        }
+        .insta-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s; }
+        .insta-item:hover img { transform: scale(1.1); }
+        .insta-overlay {
+            position: absolute; top: 0; left: 0;
+            width: 100%; height: 100%; background: rgba(0,0,0,0.35);
+            display: flex; align-items: center; justify-content: center;
+            opacity: 0; transition: opacity 0.3s;
+        }
+        .insta-item:hover .insta-overlay { opacity: 1; }
+        .insta-overlay i { color: #fff; font-size: 2rem; }
+
+        .sns-buttons-wrapper {
+            display: flex; flex-wrap: wrap; justify-content: center;
+            gap: 16px; margin-top: 30px;
+        }
+        .btn-sns {
+            display: inline-flex; align-items: center; justify-content: center;
+            gap: 10px; width: 260px; padding: 14px 20px;
+            border-radius: 50px; font-weight: bold; font-family: var(--f-head);
+            color: #fff; transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+            opacity: 0; transform: translateY(20px);
+        }
+        .btn-sns:hover { transform: translateY(-3px); opacity: 1; }
+        .btn-sns.insta {
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+            box-shadow: 0 4px 15px rgba(220,39,67,0.25);
+        }
+        .btn-sns.insta:hover { box-shadow: 0 6px 20px rgba(220,39,67,0.45); }
+        .btn-sns.line { background: #06C755; box-shadow: 0 4px 15px rgba(6,199,85,0.25); }
+        .btn-sns.line:hover { box-shadow: 0 6px 20px rgba(6,199,85,0.45); }
+        .btn-sns.tabelog { background: #fa9926; box-shadow: 0 4px 15px rgba(250,153,38,0.25); }
+        .btn-sns.tabelog:hover { box-shadow: 0 6px 20px rgba(250,153,38,0.45); }
+
+        /* =========================================
+           Access
+           ========================================= */
+        .access-wrapper { display: flex; flex-direction: column; gap: 40px; }
+        .map-container {
+            width: 100%; height: 300px; border-radius: var(--radius);
+            overflow: hidden; opacity: 0; transform: translateX(-30px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+        }
+        .map-container iframe { width: 100%; height: 100%; border: 0; }
+        .shop-info { opacity: 0; transform: translateX(30px); }
+        .shop-info h3 { margin-bottom: 20px; font-size: 1.3rem; }
+        .shop-info dl { display: flex; flex-wrap: wrap; border-top: 1px solid #e8e4de; }
+        .shop-info dt {
+            width: 30%; padding: 16px 0; font-weight: bold;
+            color: var(--c-primary); border-bottom: 1px solid #e8e4de; font-size: 0.95rem;
+        }
+        .shop-info dd { width: 70%; padding: 16px 0; border-bottom: 1px solid #e8e4de; line-height: 1.7; }
+        .shop-tel-link {
+            color: var(--c-text); text-decoration: underline;
+            text-decoration-color: var(--c-accent); text-underline-offset: 3px;
+        }
+        @media (min-width: 768px) {
+            .access-wrapper { flex-direction: row-reverse; align-items: start; }
+            .map-container, .shop-info { width: 50%; }
+            .map-container { height: 440px; }
+        }
+
+        /* =========================================
+           Footer
+           ========================================= */
+        .footer {
+            background: var(--c-primary); color: var(--c-white);
+            padding: 60px 0 30px; text-align: center;
+        }
+        .footer-logo { font-family: var(--f-head); font-size: 1.8rem; margin-bottom: 24px; display: inline-block; font-weight: bold; }
+        .footer-address { margin-bottom: 28px; font-size: 0.9rem; opacity: 0.85; line-height: 1.9; }
+        .sns-links { margin-bottom: 28px; }
+        .sns-links a {
+            font-size: 1.4rem; margin: 0 14px; color: var(--c-white);
+            display: inline-block; transition: transform 0.3s, color 0.3s;
+        }
+        .sns-links a:hover { transform: translateY(-4px); color: var(--c-accent); opacity: 1; }
+        .copyright {
+            font-size: 0.75rem; opacity: 0.5;
+            border-top: 1px solid rgba(255,255,255,0.08);
+            padding-top: 20px; width: 90%; margin: 0 auto;
+        }
+
+        /* Back to top */
+        .back-to-top {
+            position: fixed; bottom: 28px; right: 28px;
+            width: 48px; height: 48px; background: var(--c-primary);
+            color: #fff; border-radius: 50%;
+            display: flex; justify-content: center; align-items: center;
+            z-index: 990; box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+            transition: all 0.3s; opacity: 0; visibility: hidden; cursor: pointer;
+        }
+        .back-to-top.active { opacity: 1; visibility: visible; }
+        .back-to-top:hover { background: var(--c-accent); transform: translateY(-4px); opacity: 1; }
+
+        /* Lightbox */
+        .lightbox {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.92); z-index: 2000;
+            display: flex; justify-content: center; align-items: center;
+            opacity: 0; visibility: hidden; transition: all 0.3s;
+            cursor: zoom-out; padding: 20px;
+        }
+        .lightbox.active { opacity: 1; visibility: visible; }
+        .lightbox-img {
+            max-width: 100%; max-height: 90vh; object-fit: contain;
+            transform: scale(0.95); transition: transform 0.3s;
+            border-radius: 4px; box-shadow: 0 10px 50px rgba(0,0,0,0.5);
+        }
+        .lightbox.active .lightbox-img { transform: scale(1); }
+        .lightbox-close {
+            position: absolute; top: 20px; right: 20px;
+            color: #fff; font-size: 2.5rem; background: none; border: none;
+            cursor: pointer; width: 50px; height: 50px;
+            display: flex; align-items: center; justify-content: center;
+            opacity: 0.8; transition: opacity 0.3s;
+        }
+        .lightbox-close:hover { opacity: 1; }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <a href="#" class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="currentColor" aria-hidden="true">
+                <path d="M8 12 H56 L50 44 H14 Z" />
+                <rect x="28" y="42" width="8" height="18" rx="2" />
+                <path d="M18 20 H46" stroke="rgba(255,255,255,0.3)" stroke-width="2" stroke-linecap="round" />
+            </svg>
+            焼きそばスタンド らふ
+        </a>
+        <nav class="nav-pc">
+            <a href="#concept">こだわり</a>
+            <a href="#menu">メニュー</a>
+            <a href="#access">アクセス</a>
+            <a href="#sns"><i class="fa-solid fa-share-nodes"></i> SNS</a>
+            <a href="tel:0527466386" class="nav-tel-btn"><i class="fa-solid fa-phone"></i> お問い合わせ</a>
+        </nav>
+        <div class="mobile-actions">
+            <a href="tel:0527466386" class="mobile-tel" aria-label="電話をかける"><i class="fa-solid fa-phone"></i></a>
+            <button class="menu-btn" id="menuBtn" aria-label="メニューを開く"><span></span><span></span><span></span></button>
+        </div>
+        <nav class="nav-mobile" id="navMobile">
+            <ul>
+                <li><a href="#concept" class="nav-link">こだわり <i class="fa-solid fa-chevron-right"></i></a></li>
+                <li><a href="#menu" class="nav-link">メニュー <i class="fa-solid fa-chevron-right"></i></a></li>
+                <li><a href="#access" class="nav-link">アクセス <i class="fa-solid fa-chevron-right"></i></a></li>
+                <li><a href="#sns" class="nav-link"><i class="fa-solid fa-share-nodes"></i> SNS <i class="fa-solid fa-chevron-right"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="line-break">ソースの香りと、</span>
+                <span class="line-break">ぬくもりを。</span>
+            </h1>
+            <p class="hero-text">特製麺と鉄板がつむぐ、<br>至福のひととき。</p>
+            <a href="menu.html" class="btn-hero">すべてのメニューを見る</a>
+        </div>
+    </section>
+
+    <section id="concept" class="section">
+        <div class="container">
+            <div class="section-title-area">
+                <h2 class="section-title">こだわり<span class="section-title-en">our story</span></h2>
+            </div>
+            <div class="concept-wrapper">
+                <div class="img-container">
+                    <img src="images/concept.jpg" alt="店内の落ち着いた雰囲気" class="concept-img js-concept-left">
+                </div>
+                <div class="concept-text js-concept-right">
+                    <h3>「ただいま」と言いたくなる、<br>あなたのサードプレイスへ。</h3>
+                    <p>「焼きそばスタンド らふ」へようこそ。<br>当店は、いわゆる「屋台の焼きそば」とは少し違います。</p>
+                    <p>もちもちとした麺の食感と、<br>じっくり時間を重ねて深みを増したソース。<br>熱々の鉄板が奏でる音と、焦がれるような香ばしさ。<br>それらすべてが重なり合い、心まで満たす一皿になりました。</p>
+                    <p>「午後からも、もうひと頑張り」<br>そんなランチタイムに、お一人でも、同僚の方とでも。<br>木の温もりを感じる店内で、香ばしいソースの香りに包まれながら、<br>心もお腹も満たされる至福の時間をお過ごしください。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="menu" class="section menu-section">
+        <div class="container">
+            <div class="section-title-area">
+                <h2 class="section-title">メニュー<span class="section-title-en">menu</span></h2>
+            </div>
+            <div class="menu-grid">
+                <div class="menu-item js-menu-item">
+                    <div class="menu-img-wrapper">
+                        <img src="images/ソース焼きそば.jpg" alt="ソース焼きそば" class="menu-img">
+                    </div>
+                    <div class="menu-info">
+                        <div class="menu-header"><span>ソース焼きそば</span><span class="menu-price">¥850</span></div>
+                        <p class="menu-desc">特製生麺の小麦の香りを最大限に引き出す、王道のソース焼きそば。当店の原点の一皿です。</p>
+                    </div>
+                </div>
+                <div class="menu-item js-menu-item">
+                    <span class="badge-popular">人気No.1</span>
+                    <div class="menu-img-wrapper">
+                        <img src="images/すじこん焼きそば.jpg" alt="すじコン焼きそば" class="menu-img">
+                    </div>
+                    <div class="menu-info">
+                        <div class="menu-header"><span>すじコン焼きそば</span><span class="menu-price">¥1,200</span></div>
+                        <p class="menu-desc">甘辛く煮込んだ牛すじとこんにゃくの旨味が麺に絡む、当店自慢の一品。ビールとの相性も抜群です。</p>
+                    </div>
+                </div>
+                <div class="menu-item js-menu-item">
+                    <div class="menu-img-wrapper">
+                        <img src="images/旨辛ホルモン焼きそば.jpg" alt="激辛ホルモン焼きそば" class="menu-img">
+                    </div>
+                    <div class="menu-info">
+                        <div class="menu-header"><span>激辛ホルモン焼きそば</span><span class="menu-price">¥1,100</span></div>
+                        <p class="menu-desc">プリプリのホルモンとピリ辛味噌ダレが食欲をそそる、スタミナ満点の一皿。辛いもの好きにはたまりません。</p>
+                    </div>
+                </div>
+                <div class="menu-item js-menu-item">
+                    <div class="menu-img-wrapper">
+                        <img src="images/名古屋風あんかけ焼きそば.jpg" alt="あんかけスパ風焼きそば" class="menu-img">
+                    </div>
+                    <div class="menu-info">
+                        <div class="menu-header"><span>あんかけスパ風焼きそば</span><span class="menu-price">¥1,100</span></div>
+                        <p class="menu-desc">名古屋名物あんかけスパと焼きそばの夢のコラボ。ピリ辛のとろみ餡が麺に絡む、ご当地メニューです。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-more-btn-wrapper">
+                <a href="menu.html" class="btn-more js-btn-more">トッピング・ドリンクを含む全メニューを見る</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="sns" class="section sns-section">
+        <div class="container">
+            <div class="section-title-area">
+                <h2 class="section-title">SNS<span class="section-title-en">follow us</span></h2>
+            </div>
+            <p class="insta-intro js-insta-intro">最新メニューや季節のお知らせはSNSで配信中。<br>公式LINEでは来店ポイントカードのサービスもあります。</p>
+            <div class="insta-grid">
+                <a href="https://instagram.com" target="_blank" class="insta-item js-insta-item">
+                    <img src="images/sns-01.jpg" alt="料理写真1"><div class="insta-overlay"><i class="fa-brands fa-instagram"></i></div>
+                </a>
+                <a href="https://instagram.com" target="_blank" class="insta-item js-insta-item">
+                    <img src="images/sns-02.jpg" alt="料理写真2"><div class="insta-overlay"><i class="fa-brands fa-instagram"></i></div>
+                </a>
+                <a href="https://instagram.com" target="_blank" class="insta-item js-insta-item">
+                    <img src="images/sns-03.jpg" alt="料理写真3"><div class="insta-overlay"><i class="fa-brands fa-instagram"></i></div>
+                </a>
+                <a href="https://instagram.com" target="_blank" class="insta-item js-insta-item">
+                    <img src="images/sns-04.jpg" alt="店内写真"><div class="insta-overlay"><i class="fa-brands fa-instagram"></i></div>
+                </a>
+            </div>
+            <div class="sns-buttons-wrapper">
+                <a href="https://instagram.com" target="_blank" class="btn-sns insta js-btn-sns"><i class="fa-brands fa-instagram"></i> 公式Instagram</a>
+                <a href="https://line.me" target="_blank" class="btn-sns line js-btn-sns"><i class="fa-brands fa-line"></i> 公式LINE</a>
+                <a href="https://tabelog.com" target="_blank" class="btn-sns tabelog js-btn-sns"><i class="fa-solid fa-utensils"></i> 食べログで見る</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="access" class="section">
+        <div class="container">
+            <div class="section-title-area">
+                <h2 class="section-title">アクセス<span class="section-title-en">access</span></h2>
+            </div>
+            <div class="access-wrapper">
+                <div class="map-container js-access-item">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3263.2981912803876!2d136.93883397621437!3d35.12423377277258!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60037a5b3a37885b%3A0x62919d36e8900445!2z44CSNDU3LTAwMDYg5oSb55-l55yM5ZCN5Y-k5bGL5biC5Y2X5Yy65Lit5rGf77yR5LiB55uu77yW4oiS77yR77yV!5e0!3m2!1sja!2sjp!4v1700000000000!5m2!1sja!2sjp" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="店舗地図"></iframe>
+                </div>
+                <div class="shop-info js-access-item">
+                    <h3>店舗情報</h3>
+                    <dl>
+                        <dt>店名</dt><dd>焼きそばスタンド らふ</dd>
+                        <dt>住所</dt>
+                        <dd>〒457-0004<br>愛知県名古屋市南区中江1-6-15<br>パックス鶴里1階</dd>
+                        <dt>電話番号</dt><dd><a href="tel:0527466386" class="shop-tel-link">052-746-6386</a></dd>
+                        <dt>営業時間</dt>
+                        <dd>11:00 - 17:00 (L.O. 16:30)<br><span style="font-size:0.85rem; color:#999;">※ディナー営業は準備中です</span></dd>
+                        <dt>定休日</dt><dd>日曜日・月曜日</dd>
+                        <dt>席数</dt><dd>カウンター8席</dd>
+                        <dt>アクセス</dt><dd>名古屋市営地下鉄桜通線<br>鶴里駅 徒歩1分</dd>
+                        <dt>お支払い</dt><dd>現金 / 各種キャッシュレス対応</dd>
+                        <dt>お問い合わせ</dt><dd>お問い合わせ・取材のご依頼は<br><a href="/cdn-cgi/l/email-protection#3e575058517e4c5f584b104c4a5f10505f5951475f" class="shop-tel-link"><span class="__cf_email__" data-cfemail="30595e565f70425156451e4244511e5e51575f4951">[email&#160;protected]</span></a></dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <a href="#" class="footer-logo">焼きそばスタンド らふ</a>
+            <div class="footer-address">〒457-0004 愛知県名古屋市南区中江1-6-15<br>地下鉄桜通線 鶴里駅 徒歩1分<br>TEL: 052-746-6386<br><span style="font-size:0.8rem; opacity:0.7;">お問い合わせ・取材: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="85ecebe3eac5f7e4e3f0abf7f1e4abebe4e2eafce4">[email&#160;protected]</a></span></div>
+            <div class="sns-links">
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="LINE"><i class="fa-brands fa-line"></i></a>
+            </div>
+            <p class="copyright">&copy; 2026 Yakisoba Stand Rafu. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top" id="backToTop" aria-label="ページトップへ戻る"><i class="fa-solid fa-chevron-up"></i></a>
+
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" aria-label="閉じる">&times;</button>
+        <img src="" alt="拡大画像" class="lightbox-img" id="lightboxImg">
+    </div>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script>
+        // Mobile Menu
+        const menuBtn = document.getElementById('menuBtn');
+        const navMobile = document.getElementById('navMobile');
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => { menuBtn.classList.remove('active'); navMobile.classList.remove('active'); });
+        });
+        menuBtn.addEventListener('click', () => { menuBtn.classList.toggle('active'); navMobile.classList.toggle('active'); });
+
+        // Lightbox
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightboxImg');
+        document.querySelectorAll('.menu-img').forEach(img => {
+            img.addEventListener('click', e => {
+                e.stopPropagation();
+                lightboxImg.src = img.src; lightboxImg.alt = img.alt;
+                lightbox.classList.add('active'); document.body.style.overflow = 'hidden';
+            });
+        });
+        lightbox.addEventListener('click', () => { lightbox.classList.remove('active'); document.body.style.overflow = ''; });
+
+        // Back to Top
+        const backToTopBtn = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => { backToTopBtn.classList.toggle('active', window.scrollY > 300); });
+        backToTopBtn.addEventListener('click', e => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); });
+
+        // GSAP
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Hero text split
+        document.querySelectorAll('.hero-title .line-break').forEach(line => {
+            const text = line.textContent; line.innerHTML = '';
+            text.split('').forEach(char => {
+                const span = document.createElement('span');
+                span.classList.add('hero-char'); span.textContent = char;
+                line.appendChild(span);
+            });
+            line.appendChild(document.createElement('br'));
+        });
+
+        // Opening
+        const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
+        tl.to(".header", { opacity: 1, y: 0, duration: 1 })
+          .to(".hero-char", { opacity: 1, y: 0, duration: 0.7, stagger: 0.04, ease: "back.out(1.5)" }, "-=0.5")
+          .to(".hero-text", { y: 0, opacity: 1, duration: 1 }, "-=0.4")
+          .to(".btn-hero", { opacity: 1, duration: 0.8 }, "-=0.7");
+
+        // Parallax
+        gsap.to(".hero", {
+            backgroundPosition: "50% 80%", ease: "none",
+            scrollTrigger: { trigger: ".hero", start: "top top", end: "bottom top", scrub: true }
+        });
+
+        // Section titles
+        gsap.utils.toArray(".section-title-area").forEach(area => {
+            gsap.fromTo(area, { opacity: 0, y: 24 }, {
+                opacity: 1, y: 0, duration: 1,
+                scrollTrigger: { trigger: area, start: "top 82%", toggleActions: "play none none reverse" }
+            });
+        });
+
+        // Concept
+        gsap.to(".js-concept-left", { opacity: 1, scale: 1, duration: 1.5, ease: "power2.out", scrollTrigger: { trigger: "#concept", start: "top 70%" } });
+        gsap.to(".js-concept-right", { opacity: 1, y: 0, duration: 1.2, delay: 0.3, ease: "power2.out", scrollTrigger: { trigger: "#concept", start: "top 70%" } });
+
+        // Menu
+        gsap.to(".js-menu-item", { opacity: 1, y: 0, duration: 0.8, stagger: 0.12, ease: "power3.out", scrollTrigger: { trigger: ".menu-grid", start: "top 78%" } });
+        gsap.fromTo(".js-btn-more", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.8, scrollTrigger: { trigger: ".menu-more-btn-wrapper", start: "top 88%" } });
+
+        // SNS
+        gsap.to(".js-insta-intro", { opacity: 1, y: 0, duration: 0.8, scrollTrigger: { trigger: ".sns-section", start: "top 78%" } });
+        gsap.to(".js-insta-item", { opacity: 1, scale: 1, duration: 0.6, stagger: 0.08, ease: "back.out(1.3)", scrollTrigger: { trigger: ".insta-grid", start: "top 82%" } }

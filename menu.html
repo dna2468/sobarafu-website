@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お品書き | 焼きそばスタンド らふ</title>
+    <meta name="description" content="焼きそばスタンド らふの全メニュー一覧です。こだわりの焼きそば、トッピング、単品・セット、ドリンクをご用意しております。">
+    
+    <link rel="icon" href="images/logo-pattern.png" type="image/png">
+
+    <!-- OGP -->
+    <meta property="og:title" content="お品書き | 焼きそばスタンド らふ">
+    <meta property="og:description" content="焼きそばスタンド らふの全メニュー一覧。特製焼きそば、トッピング、ドリンクをご用意しております。">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://sobarafu.rta.nagoya/images/hero-bg.jpg">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:url" content="https://sobarafu.rta.nagoya/menu.html">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Zen+Maru+Gothic:wght@400;500;700&family=Yomogi&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+
+    <style>
+        :root {
+            --c-bg: #FAF8F3;
+            --c-bg-warm: #F5F0E8;
+            --c-text: #4A4540;
+            --c-text-light: #8A8580;
+            --c-primary: #5D4037;
+            --c-accent: #E8764B;
+            --c-accent-hover: #D4633A;
+            --c-white: #FFFFFF;
+            --c-badge: #D44B3F;
+            --c-green: #7BA05B;
+            --f-body: 'Noto Sans JP', sans-serif;
+            --f-head: 'Zen Maru Gothic', sans-serif;
+            --f-accent: 'Yomogi', cursive;
+            --header-height: 70px;
+            --radius: 16px;
+            --radius-sm: 10px;
+        }
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: var(--f-body); color: var(--c-text);
+            background: var(--c-bg); line-height: 1.9;
+            letter-spacing: 0.05em; padding-top: var(--header-height);
+            overflow-x: hidden;
+        }
+        body::before {
+            content: ''; position: fixed; top: 0; left: 0;
+            width: 100%; height: 100%; pointer-events: none;
+            z-index: 9999; opacity: 0.022;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+        }
+        img { max-width: 100%; height: auto; display: block; }
+        a { text-decoration: none; color: inherit; transition: all 0.3s; }
+        h1,h2,h3,h4 { font-family: var(--f-head); font-weight: 700; }
+        .container { width: 90%; max-width: 1040px; margin: 0 auto; padding: 0 16px; }
+
+        /* Header */
+        .header {
+            position: fixed; top: 0; left: 0; width: 100%; height: var(--header-height);
+            background: rgba(250,248,243,0.92); backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 0 5%; z-index: 1000; box-shadow: 0 1px 20px rgba(0,0,0,0.04);
+        }
+        .logo {
+            font-family: var(--f-head); font-size: 1.3rem;
+            color: var(--c-primary); font-weight: bold;
+            display: flex; align-items: center; gap: 10px;
+        }
+        .logo svg { color: var(--c-accent); width: 1.3em; height: 1.3em; transform: rotate(-10deg); }
+        .nav-pc { display: none; }
+        @media (min-width: 768px) {
+            .nav-pc { display: flex; gap: 28px; align-items: center; }
+            .nav-pc a {
+                color: var(--c-primary); font-weight: 500; font-size: 0.95rem;
+                position: relative; font-family: var(--f-head);
+            }
+            .nav-pc a::after {
+                content: ''; position: absolute; bottom: -5px; left: 0;
+                width: 0; height: 2px; background: var(--c-accent); transition: width 0.3s;
+            }
+            .nav-pc a:hover::after { width: 100%; }
+            .nav-pc a:hover { opacity: 1; }
+            .btn-home {
+                border: 1.5px solid var(--c-primary); padding: 7px 18px;
+                border-radius: 50px; font-size: 0.9rem; transition: all 0.3s;
+            }
+            .btn-home:hover { background: var(--c-primary); color: #fff; opacity: 1; }
+            .btn-home::after { display: none; }
+        }
+        .mobile-actions { display: flex; gap: 15px; align-items: center; }
+        .mobile-home { font-size: 1.4rem; color: var(--c-primary); }
+        @media (min-width: 768px) { .mobile-actions { display: none; } }
+
+        /* Page Header */
+        .page-header {
+            background: var(--c-primary); color: var(--c-white);
+            text-align: center; padding: 64px 0 44px; margin-bottom: 72px;
+            position: relative; z-index: 1; overflow: hidden;
+        }
+        .page-header::before {
+            content: ''; position: absolute; top: 0; left: 0;
+            width: 100%; height: 100%;
+            background-image: url('images/logo-pattern.png');
+            background-size: 180px; background-position: center;
+            opacity: 0.06; z-index: -1;
+        }
+        .page-title { font-size: 2.5rem; margin-bottom: 8px; letter-spacing: 0.1em; }
+        .page-subtitle {
+            font-family: var(--f-accent); font-size: 1rem;
+            opacity: 0.7; letter-spacing: 0.2em;
+        }
+
+        /* Category Titles */
+        .category-title-area { text-align: center; margin-bottom: 44px; }
+        .category-title {
+            font-size: 1.7rem; color: var(--c-primary);
+            display: inline-block; position: relative;
+        }
+        .category-title-en {
+            display: block; font-family: var(--f-accent);
+            font-size: 0.85rem; color: var(--c-accent);
+            margin-top: 4px; letter-spacing: 0.15em;
+        }
+        .category-title::after {
+            content: ''; display: block; width: 28px; height: 3px;
+            background: var(--c-accent); margin: 12px auto 0; border-radius: 2px;
+        }
+
+        .menu-section { margin-bottom: 88px; }
+
+        /* Menu Grid */
+        .main-menu-grid { display: grid; grid-template-columns: 1fr; gap: 28px; }
+        @media (min-width: 600px) { .main-menu-grid { grid-template-columns: repeat(2, 1fr); } }
+        .menu-card {
+            background: var(--c-white); border-radius: var(--radius);
+            overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            transition: all 0.45s cubic-bezier(0.165,0.84,0.44,1);
+            border: 1px solid rgba(0,0,0,0.03);
+        }
+        .menu-card:hover { transform: translateY(-8px); box-shadow: 0 16px 44px rgba(0,0,0,0.1); }
+        .menu-img-area { height: 220px; overflow: hidden; position: relative; }
+        .menu-img-area img {
+            width: 100%; height: 100%; object-fit: cover;
+            transition: transform 0.7s cubic-bezier(0.33,0,0.2,1);
+        }
+        .menu-card:hover img { transform: scale(1.08); }
+        .menu-badge {
+            position: absolute; top: 10px; left: 10px;
+            background: var(--c-badge); color: #fff;
+            padding: 5px 14px; font-size: 0.8rem; font-weight: bold;
+            font-family: var(--f-head); border-radius: 50px;
+            box-shadow: 0 3px 10px rgba(212,75,63,0.25);
+        }
+        .menu-details { padding: 22px; }
+        .menu-name-price {
+            display: flex; justify-content: space-between; align-items: baseline;
+            margin-bottom: 10px; border-bottom: 1px dotted #ddd; padding-bottom: 10px;
+        }
+        .menu-name { font-size: 1.1rem; font-weight: bold; color: var(--c-primary); }
+        .menu-price {
+            font-size: 1.1rem; color: var(--c-accent); font-weight: bold;
+            font-family: var(--f-body); white-space: nowrap;
+        }
+        .menu-desc { font-size: 0.9rem; color: var(--c-text-light); line-height: 1.7; }
+
+        /* Topping Tags */
+        .topping-tags {
+            display: flex; flex-wrap: wrap; gap: 10px;
+            justify-content: center; max-width: 800px; margin: 0 auto;
+        }
+        .topping-tag {
+            background: var(--c-white); border: 1.5px solid var(--c-accent);
+            color: var(--c-accent); padding: 8px 18px; border-radius: 50px;
+            font-weight: bold; font-family: var(--f-head);
+            display: flex; align-items: center; gap: 8px; font-size: 0.95rem;
+            transition: all 0.3s;
+        }
+        .topping-tag:hover { background: var(--c-accent); color: var(--c-white); }
+        .topping-tag:hover span { color: var(--c-white); }
+        .topping-tag span { color: var(--c-text-light); font-weight: normal; font-size: 0.85rem; transition: color 0.3s; }
+
+        /* Text Menu */
+        .text-menu-list {
+            display: grid; grid-template-columns: 1fr; gap: 20px;
+            background: var(--c-white); padding: 36px; border-radius: var(--radius);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+            max-width: 800px; margin: 0 auto;
+        }
+        @media (min-width: 768px) { .text-menu-list { grid-template-columns: 1fr 1fr; gap: 20px 56px; } }
+        .text-item {
+            display: flex; justify-content: space-between; align-items: baseline;
+            border-bottom: 1px dotted #ddd; padding-bottom: 10px;
+        }
+        .text-name { font-weight: 500; color: var(--c-primary); font-size: 0.95rem; }
+        .text-desc { display: block; font-size: 0.8rem; color: var(--c-text-light); margin-top: 4px; font-weight: normal; }
+        .text-price { font-weight: bold; color: var(--c-text); white-space: nowrap; }
+
+        /* Drink */
+        .drink-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 28px; max-width: 900px; margin: 0 auto;
+        }
+        .drink-category {
+            background: var(--c-white); border-radius: var(--radius);
+            padding: 28px; box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+        }
+        .drink-category h4 {
+            color: var(--c-accent); border-left: 4px solid var(--c-accent);
+            padding-left: 12px; margin-bottom: 20px; font-size: 1.15rem;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--c-primary); color: var(--c-white);
+            padding: 48px 0 24px; text-align: center; margin-top: 20px;
+        }
+        .footer-name { font-family: var(--f-head); font-size: 1.2rem; font-weight: bold; margin-bottom: 8px; }
+        .footer-address { font-size: 0.85rem; opacity: 0.8; line-height: 1.8; margin-bottom: 20px; }
+        .sns-links { margin-bottom: 20px; }
+        .sns-links a {
+            font-size: 1.4rem; margin: 0 14px; color: #fff;
+            display: inline-block; transition: transform 0.3s, color 0.3s;
+        }
+        .sns-links a:hover { transform: translateY(-4px); color: var(--c-accent); opacity: 1; }
+        .copyright {
+            font-size: 0.75rem; opacity: 0.5;
+            border-top: 1px solid rgba(255,255,255,0.08); padding-top: 20px;
+        }
+
+        /* Back to Top */
+        .back-to-top {
+            position: fixed; bottom: 28px; right: 28px;
+            width: 48px; height: 48px; background: var(--c-primary);
+            color: #fff; border-radius: 50%;
+            display: flex; justify-content: center; align-items: center;
+            z-index: 990; box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+            transition: all 0.3s; opacity: 0; visibility: hidden; cursor: pointer;
+        }
+        .back-to-top.active { opacity: 1; visibility: visible; }
+        .back-to-top:hover { background: var(--c-accent); transform: translateY(-4px); opacity: 1; }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <a href="index.html" class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="currentColor" aria-hidden="true">
+                <path d="M8 12 H56 L50 44 H14 Z" />
+                <rect x="28" y="42" width="8" height="18" rx="2" />
+                <path d="M18 20 H46" stroke="rgba(255,255,255,0.3)" stroke-width="2" stroke-linecap="round" />
+            </svg>
+            焼きそばスタンド らふ
+        </a>
+        <nav class="nav-pc">
+            <a href="index.html#concept">こだわり</a>
+            <a href="index.html#access">アクセス</a>
+            <a href="index.html" class="btn-home"><i class="fa-solid fa-house"></i> トップへ戻る</a>
+        </nav>
+        <div class="mobile-actions">
+            <a href="index.html" class="mobile-home" aria-label="トップへ戻る"><i class="fa-solid fa-house"></i></a>
+        </div>
+    </header>
+
+    <header class="page-header">
+        <div class="container">
+            <h1 class="page-title">お品書き</h1>
+            <p class="page-subtitle">menu</p>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <section class="menu-section">
+            <div class="category-title-area">
+                <h2 class="category-title">特製焼きそば<span class="category-title-en">yakisoba</span></h2>
+            </div>
+            <div class="main-menu-grid">
+                <div class="menu-card js-fade">
+                    <div class="menu-img-area">
+                        <span class="menu-badge">人気No.1</span>
+                        <img src="images/すじこん焼きそば.jpg" alt="すじコン焼きそば">
+                    </div>
+                    <div class="menu-details">
+                        <div class="menu-name-price"><h3 class="menu-name">すじコン焼きそば</h3><span class="menu-price">¥1,200</span></div>
+                        <p class="menu-desc">甘辛く煮込んだ牛すじとこんにゃくの旨味が麺に絡む、当店自慢の一品。ビールとの相性も抜群です。</p>
+                    </div>
+                </div>
+                <div class="menu-card js-fade">
+                    <div class="menu-img-area"><img src="images/ソース焼きそば.jpg" alt="ソース焼きそば"></div>
+                    <div class="menu-details">
+                        <div class="menu-name-price"><h3 class="menu-name">ソース焼きそば</h3><span class="menu-price">¥850</span></div>
+                        <p class="menu-desc">特製生麺の小麦の香りを最大限に引き出す、王道のソース焼きそば。当店の原点の一皿です。</p>
+                    </div>
+                </div>
+                <div class="menu-card js-fade">
+                    <div class="menu-img-area"><img src="images/旨辛ホルモン焼きそば.jpg" alt="激辛ホルモン焼きそば"></div>
+                    <div class="menu-details">
+                        <div class="menu-name-price"><h3 class="menu-name">激辛ホルモン焼きそば</h3><span class="menu-price">¥1,100</span></div>
+                        <p class="menu-desc">プリプリのホルモンとピリ辛味噌ダレが食欲をそそる、スタミナ満点の一皿。辛いもの好きにはたまりません。</p>
+                    </div>
+                </div>
+                <div class="menu-card js-fade">
+                    <div class="menu-img-area"><img src="images/名古屋風あんかけ焼きそば.jpg" alt="あんかけスパ風焼きそば"></div>
+                    <div class="menu-details">
+                        <div class="menu-name-price"><h3 class="menu-name">あんかけスパ風焼きそば</h3><span class="menu-price">¥1,100</span></div>
+                        <p class="menu-desc">名古屋名物あんかけスパと焼きそばの夢のコラボ。ピリ辛のとろみ餡が麺に絡む、ご当地メニューです。</p>
+                    </div>
+                </div>
+                <div class="menu-card js-fade">
+                    <div class="menu-img-area"><img src="images/ソース焼きそば_目玉焼きトッピング_.jpg" alt="目玉焼きのせソース焼きそば"></div>
+                    <div class="menu-details">
+                        <div class="menu-name-price"><h3 class="menu-name">目玉焼きのせソース焼きそば</h3><span class="menu-price">¥950</span></div>
+                        <p class="menu-desc">王道ソース焼きそばに半熟の目玉焼きをトッピング。とろ〜り黄身を絡めてお召し上がりください。</p>
+                    </div>
+                </div>
+                <div class="menu-card js-fade">
+                    <div class="menu-img-area">
+                        <span class="menu-badge" style="background:var(--c-green);">テイクアウト専用</span>
+                        <img src="images/焼きそばパン_2個セット_.jpg" alt="焼きそばパン（2個セット）">
+                    </div>
+                    <div class="menu-details">
+                        <div class="menu-name-price"><h3 class="menu-name">特製焼きそばパン</h3><span class="menu-price">¥580</span></div>
+                        <p class="menu-desc">「らふ」のロゴ焼き印入り。特製ソース焼きそばをふわふわの食パンにたっぷりサンドした、テイクアウト専用メニューです。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="menu-section">
+            <div class="category-title-area">
+                <h2 class="category-title">トッピング<span class="category-title-en">topping</span></h2>
+            </div>
+            <div class="topping-tags js-fade">
+                <div class="topping-tag">目玉焼き <span>+¥100</span></div>
+                <div class="topping-tag">温玉 <span>+¥150</span></div>
+                <div class="topping-tag">チーズ <span>+¥100</span></div>
+                <div class="topping-tag">タコさんウインナー2本 <span>+¥100</span></div>
+                <div class="topping-tag">すじコン <span>+¥350</span></div>
+            </div>
+        </section>
+
+        <section class="menu-section">
+            <div class="category-title-area">
+                <h2 class="category-title">単品・お昼のセット<span class="category-title-en">set menu</span></h2>
+            </div>
+            <div class="text-menu-list js-fade">
+                <div>
+                    <div class="text-item"><span class="text-name">ライス</span><span class="text-price">¥220</span></div>
+                </div>
+                <div>
+                    <div class="text-item">
+                        <span class="text-name">お昼のセット<span class="text-desc">ライス＋小皿一品</span></span>
+                        <span class="text-price">+¥200</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="menu-section">
+            <div class="category-title-area">
+                <h2 class="category-title">お飲み物<span class="category-title-en">drink</span></h2>
+            </div>
+            <div class="drink-grid js-fade">
+                <div class="drink-category">
+                    <h4>アルコール</h4>
+                    <div class="text-item"><span class="text-name">瓶ビール</span><span class="text-price">¥500</span></div>
+                </div>
+                <div class="drink-category">
+                    <h4>ソフトドリンク</h4>
+                    <div class="text-item"><span class="text-name">オレンジジュース</span><span class="text-price">¥250</span></div>
+                    <div class="text-item"><span class="text-name">カルピス</span><span class="text-price">¥250</span></div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-name">焼きそばスタンド らふ</p>
+            <div class="footer-address">〒457-0004 愛知県名古屋市南区中江1-6-15<br>地下鉄桜通線 鶴里駅 徒歩1分<br>TEL: 052-746-6386<br><span style="font-size:0.8rem; opacity:0.7;">お問い合わせ・取材: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="7d14131b123d0f1c1b08530f091c53131c1a12041c">[email&#160;protected]</a></span></div>
+            <div class="sns-links">
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="LINE"><i class="fa-brands fa-line"></i></a>
+            </div>
+            <p class="copyright">&copy; 2026 Yakisoba Stand Rafu. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top" id="backToTop" aria-label="ページトップへ戻る"><i class="fa-solid fa-chevron-up"></i></a>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Page header entrance
+        gsap.fromTo(".page-header", { opacity: 0 }, { opacity: 1, duration: 1, ease: "power2.out" });
+
+        // Category titles
+        gsap.utils.toArray('.category-title-area').forEach(area => {
+            gsap.fromTo(area, { opacity: 0, y: 24 },
+                { opacity: 1, y: 0, duration: 0.9, ease: "power3.out",
+                  scrollTrigger: { trigger: area, start: "top 85%" } });
+        });
+
+        // Menu cards stagger
+        gsap.utils.toArray('.main-menu-grid').forEach(grid => {
+            gsap.fromTo(grid.querySelectorAll('.menu-card'),
+                { opacity: 0, y: 40 },
+                { opacity: 1, y: 0, duration: 0.7, stagger: 0.1, ease: "power3.out",
+                  scrollTrigger: { trigger: grid, start: "top 80%" } });
+        });
+
+        // Fade-in sections
+        gsap.utils.toArray('.js-fade').forEach(el => {
+            gsap.fromTo(el, { opacity: 0, y: 30 },
+                { opacity: 1, y: 0, duration: 0.8, ease: "power2.out",
+                  scrollTrigger: { trigger: el, start: "top 85%" } });
+        });
+
+        // Topping tags pop
+        gsap.utils.toArray('.topping-tags').forEach(w => {
+            gsap.fromTo(w.querySelectorAll('.topping-tag'),
+                { opacity: 0, scale: 0.85 },
+                { opacity: 1, scale: 1, duration: 0.5, stagger: 0.06, ease: "back.out(1.4)",
+                  scrollTrigger: { trigger: w, start: "top 85%" } });
+        });
+
+        // Drink categories
+        gsap.utils.toArray('.drink-grid').forEach(grid => {
+            gsap.fromTo(grid.querySelectorAll('.drink-category'),
+                { opacity: 0, y: 24 },
+                { opacity: 1, y: 0, duration: 0.7, stagger: 0.15, ease: "power3.out",
+                  scrollTrigger: { trigger: grid, start: "top 85%" } });
+        });
+
+        // Back to top
+        const b = document.getElementById('backToTop');
+  

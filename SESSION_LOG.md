@@ -35,13 +35,14 @@
 - **こだわり見出しサイズ調整**: iPhone 15幅に対応
 
 ## 技術メモ
-- デプロイ: GitHub（main） → Netlify 自動デプロイ
+- デプロイ: GitHub（main） → Cloudflare Pages 自動デプロイ
 - 公開URL: https://sobarafu.rta.nagoya/
 - フレームワーク: 静的HTML（ビルド不要）
 - アニメーション: GSAP + ScrollTrigger（CDN）
 - 看板の赤色: #C1272D / こげ茶: #42210B
 
 ## 残りの課題
-- SNSリンクがプレースホルダー（`https://instagram.com` 等）のまま → 実際のアカウントURLに差し替え必要
-- フッターのInstagram/LINEリンクが `href="#"` のまま
+- ~~SNSリンクがプレースホルダーのまま~~ → 済（Instagram投稿リンク・埋め込みに対応）
+- ~~フッターのInstagram/LINEリンクが `href="#"` のまま~~ → 済（Instagram設定済、LINE削除）
 - `robots.txt` / `sitemap.xml` 未作成
+- 公式LINEアカウント作成後にリンク設定が必要

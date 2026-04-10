@@ -27,5 +27,5 @@ https://sobarafu.rta.nagoya/
 
 ## デプロイ
 
-Netlify + GitHub連携による自動デプロイ。  
+Cloudflare Pages + GitHub連携による自動デプロイ。  
 mainブランチへのpushで自動的に公開されます。

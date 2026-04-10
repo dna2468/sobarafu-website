@@ -269,6 +269,13 @@
             text-shadow: 2px 2px 12px rgba(0,0,0,0.4); overflow: hidden; visibility: hidden;
         }
         .hero-char { display: inline-block; opacity: 0; transform: translateY(20px); }
+        .hero-opening {
+            display: inline-block; font-family: var(--f-head); font-size: 1.1rem; font-weight: 700;
+            letter-spacing: 0.15em; color: #fff; background: var(--c-primary);
+            padding: 8px 28px; border-radius: 50px; margin-bottom: 24px;
+            border: 2px solid rgba(255,255,255,0.5);
+            opacity: 0; transform: translateY(10px);
+        }
         .hero-text {
             font-size: 1.05rem; font-weight: 500; margin-bottom: 40px;
             text-shadow: 1px 1px 6px rgba(0,0,0,0.4); opacity: 0;
@@ -544,6 +551,7 @@
     <section class="hero">
         <div class="hero-bg"></div>
         <div class="hero-content">
+            <p class="hero-opening">５月上旬オープン予定</p>
             <h1 class="hero-title">
                 <span class="line-break">ソースの香りと、</span>
                 <span class="line-break">ぬくもりを。</span>
@@ -735,7 +743,8 @@
         // Opening
         const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
         tl.to(".header", { opacity: 1, y: 0, duration: 1 })
-          .to(".hero-char", { opacity: 1, y: 0, duration: 0.7, stagger: 0.04, ease: "back.out(1.5)" }, "-=0.5")
+          .to(".hero-opening", { opacity: 1, y: 0, duration: 0.8 }, "-=0.5")
+          .to(".hero-char", { opacity: 1, y: 0, duration: 0.7, stagger: 0.04, ease: "back.out(1.5)" }, "-=0.4")
           .to(".hero-text", { y: 0, opacity: 1, duration: 1 }, "-=0.4")
           .to(".btn-hero", { opacity: 1, duration: 0.8 }, "-=0.7");
 

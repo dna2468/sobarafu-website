@@ -317,7 +317,110 @@
             transform: rotate(45deg) translate(-100%,-100%); transition: transform 0.6s;
         }
         .btn-hero:hover::after { transform: rotate(45deg) translate(100%,100%); }
-        @media (min-width: 768px) { .hero-content h1 { font-size: 3.8rem; } }
+        .hero-cta-group { display: flex; flex-direction: column; align-items: center; gap: 16px; }
+        .btn-hero-sub {
+            display: inline-flex; align-items: center; gap: 8px;
+            color: #fff; font-family: var(--f-head); font-weight: 500; font-size: 0.95rem;
+            border: 2px solid rgba(255,255,255,0.6); padding: 12px 32px;
+            border-radius: 50px; transition: all 0.3s; opacity: 0;
+        }
+        .btn-hero-sub:hover { background: rgba(255,255,255,0.15); border-color: #fff; opacity: 1; }
+        @media (min-width: 768px) {
+            .hero-content h1 { font-size: 3.8rem; }
+            .hero-cta-group { flex-direction: row; gap: 20px; }
+        }
+
+        /* =========================================
+           Features Banner
+           ========================================= */
+        .features-section { padding: 60px 0; background: var(--c-white); }
+        .features-grid {
+            display: grid; grid-template-columns: 1fr; gap: 24px;
+        }
+        @media (min-width: 768px) { .features-grid { grid-template-columns: repeat(3, 1fr); } }
+        .feature-card {
+            text-align: center; padding: 36px 24px;
+            background: var(--c-bg); border-radius: var(--radius);
+            opacity: 0; transform: translateY(20px);
+        }
+        .feature-icon {
+            width: 64px; height: 64px; margin: 0 auto 16px;
+            background: var(--c-primary); color: #fff;
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            font-size: 1.6rem;
+        }
+        .feature-card h3 {
+            font-size: 1.15rem; margin-bottom: 10px; color: var(--c-text);
+        }
+        .feature-card p {
+            font-size: 0.9rem; color: var(--c-text-light); line-height: 1.7;
+        }
+
+        /* =========================================
+           Menu Tel CTA
+           ========================================= */
+        .menu-tel-cta {
+            text-align: center; margin-top: 48px; padding: 32px;
+            background: var(--c-bg); border-radius: var(--radius);
+            border: 2px dashed var(--c-accent);
+        }
+        .menu-tel-cta p {
+            font-family: var(--f-head); font-weight: 700; font-size: 1rem;
+            color: var(--c-text); margin-bottom: 12px;
+        }
+        .menu-tel-cta .tel-link {
+            display: inline-block; font-family: var(--f-head); font-size: 1.8rem;
+            font-weight: 700; color: var(--c-primary); letter-spacing: 0.05em;
+        }
+        .menu-tel-cta .tel-note {
+            display: block; font-size: 0.8rem; color: var(--c-text-light); margin-top: 8px;
+        }
+
+        /* =========================================
+           FAQ
+           ========================================= */
+        .faq-list { max-width: 800px; margin: 0 auto; }
+        .faq-item {
+            background: var(--c-white); border-radius: var(--radius-sm);
+            margin-bottom: 12px; overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
+        .faq-question {
+            width: 100%; display: flex; justify-content: space-between; align-items: center;
+            padding: 20px 24px; border: none; background: none; cursor: pointer;
+            font-family: var(--f-head); font-size: 1rem; font-weight: 700;
+            color: var(--c-text); text-align: left;
+        }
+        .faq-question i {
+            color: var(--c-primary); transition: transform 0.3s; flex-shrink: 0; margin-left: 16px;
+        }
+        .faq-question[aria-expanded="true"] i { transform: rotate(180deg); }
+        .faq-answer {
+            max-height: 0; overflow: hidden; transition: max-height 0.3s ease;
+        }
+        .faq-answer p {
+            padding: 0 24px 20px; font-size: 0.92rem; color: var(--c-text-light); line-height: 1.8;
+        }
+
+        /* =========================================
+           Footer Enhancements
+           ========================================= */
+        .footer-info-bar {
+            display: flex; flex-wrap: wrap; justify-content: center; gap: 24px;
+            margin-bottom: 24px;
+        }
+        .footer-info-item {
+            font-size: 0.95rem; opacity: 0.9;
+            display: flex; align-items: center; gap: 8px;
+        }
+        .footer-tel { margin-bottom: 24px; }
+        .footer-tel p { font-size: 0.85rem; opacity: 0.7; margin-bottom: 6px; }
+        .footer-tel a {
+            font-family: var(--f-head); font-size: 1.5rem; font-weight: 700;
+            color: #fff; display: inline-flex; align-items: center; gap: 10px;
+            transition: opacity 0.3s;
+        }
+        .footer-tel a:hover { opacity: 0.8; }
 
         /* =========================================
            Concept
@@ -587,10 +690,10 @@
             <span><span class="logo-red">焼きそば</span>スタンド <span class="logo-red">らふ</span></span>
         </a>
         <nav class="nav-pc">
-            <a href="#concept">こだわり</a>
             <a href="#menu">メニュー</a>
+            <a href="#concept">こだわり</a>
             <a href="#access">アクセス</a>
-            <a href="#sns"><i class="fa-solid fa-share-nodes"></i> SNS</a>
+            <a href="#faq">FAQ</a>
             <a href="tel:0527466386" class="nav-tel-btn"><i class="fa-solid fa-phone"></i> お問い合わせ</a>
         </nav>
         <div class="mobile-actions">
@@ -599,10 +702,10 @@
         </div>
         <nav class="nav-mobile" id="navMobile">
             <ul>
-                <li><a href="#concept" class="nav-link">こだわり <i class="fa-solid fa-chevron-right"></i></a></li>
                 <li><a href="#menu" class="nav-link">メニュー <i class="fa-solid fa-chevron-right"></i></a></li>
+                <li><a href="#concept" class="nav-link">こだわり <i class="fa-solid fa-chevron-right"></i></a></li>
                 <li><a href="#access" class="nav-link">アクセス <i class="fa-solid fa-chevron-right"></i></a></li>
-                <li><a href="#sns" class="nav-link">SNS <i class="fa-solid fa-chevron-right"></i></a></li>
+                <li><a href="#faq" class="nav-link">FAQ <i class="fa-solid fa-chevron-right"></i></a></li>
             </ul>
         </nav>
     </header>
@@ -615,34 +718,39 @@
                 <span class="line-break">ソースの香りと、</span>
                 <span class="line-break">ぬくもりを。</span>
             </h1>
-            <p class="hero-text">蒸し麺じゃない。茹で麺だから、この食感。<br>鶴里駅すぐの焼きそば専門店。</p>
-            <a href="menu.html" class="btn-hero">すべてのメニューを見る <i class="fa-solid fa-arrow-right"></i></a>
+            <p class="hero-text">蒸し麺じゃない。茹で麺だから、この食感。<br>カウンター8席の小さな焼きそば専門店。</p>
+            <div class="hero-cta-group">
+                <a href="#menu" class="btn-hero">メニューを見る <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="#access" class="btn-hero-sub"><i class="fa-solid fa-map-location-dot"></i> アクセス・営業情報</a>
+            </div>
         </div>
         <div class="scroll-indicator js-scroll-indicator"><span>scroll</span><i class="fa-solid fa-chevron-down"></i></div>
     </section>
 
-    <section id="concept" class="section">
+    <!-- 特徴バナー -->
+    <section class="features-section">
         <div class="container">
-            <div class="section-title-area">
-                <h2 class="section-title">こだわり<span class="section-title-en">our story</span></h2>
-            </div>
-            <div class="concept-wrapper">
-                <div class="img-container">
-                    <img src="images/concept.jpg" alt="焼きそばスタンド らふ 店舗看板" class="concept-img js-concept-left">
+            <div class="features-grid">
+                <div class="feature-card js-feature">
+                    <div class="feature-icon"><i class="fa-solid fa-bowl-food"></i></div>
+                    <h3>こだわりの茹で麺</h3>
+                    <p>蒸し麺とは違う、もちもち食感。<br>特製生麺で作る本格焼きそば。</p>
                 </div>
-                <div class="concept-text js-concept-right">
-                    <h3>「ただいま」と言いたくなる、<br>あなたのサードプレイスへ。</h3>
-                    <p>「焼きそばスタンド らふ」へようこそ。<br>当店は、いわゆる「屋台の焼きそば」とは少し違います。</p>
-                    <div class="concept-callout">
-                        主役は、一般的な蒸し麺ではなく「茹で麺」。<br>もちもちとした弾力と、つるんとしたのど越し。<br>ソース・すじコン・旨辛ホルモン・あんかけ――<br>どの味にもこの麺だからこそ出せる食感があります。
-                    </div>
-                    <p>「午後からも、もうひと頑張り」<br>そんなランチタイムに、お一人でも、同僚の方とでも。<br>カウンター8席の小さなお店ですが、<br>だからこそ一皿一皿、丁寧にお作りします。</p>
-                    <p>鶴里駅から徒歩1分。<br>ふらっと立ち寄れる、あなたの「いつもの場所」になれたら嬉しいです。</p>
+                <div class="feature-card js-feature">
+                    <div class="feature-icon"><i class="fa-solid fa-chair"></i></div>
+                    <h3>カウンター8席</h3>
+                    <p>一皿一皿、目の前で丁寧に。<br>お一人様でも気軽にどうぞ。</p>
+                </div>
+                <div class="feature-card js-feature">
+                    <div class="feature-icon"><i class="fa-solid fa-train-subway"></i></div>
+                    <h3>鶴里駅 徒歩1分</h3>
+                    <p>桜通線鶴里駅すぐ。<br>ランチにふらっと立ち寄れます。</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- メニュー -->
     <section id="menu" class="section menu-section">
         <div class="container">
             <div class="section-title-area">
@@ -669,6 +777,7 @@
                     </div>
                 </div>
                 <div class="menu-item js-menu-item">
+                    <span class="badge-popular" style="background:var(--c-accent);color:var(--c-text);">辛い</span>
                     <div class="menu-img-wrapper">
                         <img src="images/旨辛ホルモン焼きそば.jpg" alt="旨辛ホルモン焼きそば" class="menu-img" loading="lazy">
                     </div>
@@ -678,6 +787,7 @@
                     </div>
                 </div>
                 <div class="menu-item js-menu-item">
+                    <span class="badge-popular" style="background:var(--c-accent);color:var(--c-text);">名古屋名物</span>
                     <div class="menu-img-wrapper">
                         <img src="images/名古屋風あんかけ焼きそば.jpg" alt="あんかけスパ風焼きそば" class="menu-img" loading="lazy">
                     </div>
@@ -690,28 +800,38 @@
             <div class="menu-more-btn-wrapper">
                 <a href="menu.html" class="btn-more js-btn-more">トッピング・ドリンクを含む全メニューを見る</a>
             </div>
+            <div class="menu-tel-cta">
+                <p><i class="fa-solid fa-phone"></i> お問い合わせはお気軽に</p>
+                <a href="tel:0527466386" class="tel-link">052-746-6386</a>
+                <span class="tel-note">※予約不可・先着順でのご案内です</span>
+            </div>
         </div>
     </section>
 
-    <section id="sns" class="section sns-section">
+    <!-- こだわり -->
+    <section id="concept" class="section">
         <div class="container">
             <div class="section-title-area">
-                <h2 class="section-title">SNS<span class="section-title-en">follow us</span></h2>
+                <h2 class="section-title">こだわり<span class="section-title-en">our story</span></h2>
             </div>
-            <p class="insta-intro js-insta-intro">最新メニューや季節のお知らせはSNSで配信中。<br>公式LINEでは来店ポイントカードのサービスも予定しています。</p>
-            <div class="insta-embed-grid">
-                <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DW5FcaKgUSy/" data-instgrm-version="14"></blockquote>
-                <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DW3bVAyATZn/" data-instgrm-version="14"></blockquote>
-                <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DW3QdgngUko/" data-instgrm-version="14"></blockquote>
-            </div>
-            <div class="sns-buttons-wrapper">
-                <a href="https://www.instagram.com/yakisoba.stand.rafu/" target="_blank" class="btn-sns insta js-btn-sns"><i class="fa-brands fa-instagram"></i> 公式Instagram</a>
-                <span class="btn-sns line js-btn-sns" style="opacity:0.5; cursor:default;"><i class="fa-brands fa-line"></i> 公式LINE（準備中）</span>
-                <a href="https://tabelog.com" target="_blank" class="btn-sns tabelog js-btn-sns"><i class="fa-solid fa-utensils"></i> 食べログで見る</a>
+            <div class="concept-wrapper">
+                <div class="img-container">
+                    <img src="images/concept.jpg" alt="焼きそばスタンド らふ 店舗看板" class="concept-img js-concept-left">
+                </div>
+                <div class="concept-text js-concept-right">
+                    <h3>「ただいま」と言いたくなる、<br>あなたのサードプレイスへ。</h3>
+                    <p>「焼きそばスタンド らふ」へようこそ。<br>当店は、いわゆる「屋台の焼きそば」とは少し違います。</p>
+                    <div class="concept-callout">
+                        主役は、一般的な蒸し麺ではなく「茹で麺」。<br>もちもちとした弾力と、つるんとしたのど越し。<br>ソース・すじコン・旨辛ホルモン・あんかけ――<br>どの味にもこの麺だからこそ出せる食感があります。
+                    </div>
+                    <p>「午後からも、もうひと頑張り」<br>そんなランチタイムに、お一人でも、同僚の方とでも。<br>カウンター8席の小さなお店ですが、<br>だからこそ一皿一皿、丁寧にお作りします。</p>
+                    <p>鶴里駅から徒歩1分。<br>ふらっと立ち寄れる、あなたの「いつもの場所」になれたら嬉しいです。</p>
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- アクセス -->
     <section id="access" class="section">
         <div class="container">
             <div class="section-title-area">
@@ -743,11 +863,74 @@
         </div>
     </section>
 
+    <!-- FAQ -->
+    <section id="faq" class="section" style="background:var(--c-bg-warm);">
+        <div class="container">
+            <div class="section-title-area">
+                <h2 class="section-title">よくある質問<span class="section-title-en">FAQ</span></h2>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item js-faq">
+                    <button class="faq-question" aria-expanded="false"><span>予約はできますか？</span><i class="fa-solid fa-chevron-down"></i></button>
+                    <div class="faq-answer"><p>申し訳ございませんが、ご予約は承っておりません。先着順でのご案内となります。カウンター8席の小さなお店ですので、お時間に余裕を持ってお越しください。</p></div>
+                </div>
+                <div class="faq-item js-faq">
+                    <button class="faq-question" aria-expanded="false"><span>支払い方法は？</span><i class="fa-solid fa-chevron-down"></i></button>
+                    <div class="faq-answer"><p>現金のほか、各種クレジットカード・電子マネー・QRコード決済に対応しております。</p></div>
+                </div>
+                <div class="faq-item js-faq">
+                    <button class="faq-question" aria-expanded="false"><span>テイクアウトはできますか？</span><i class="fa-solid fa-chevron-down"></i></button>
+                    <div class="faq-answer"><p>はい、一部メニューのテイクアウトに対応しております。お気軽にスタッフまでお申し付けください。</p></div>
+                </div>
+                <div class="faq-item js-faq">
+                    <button class="faq-question" aria-expanded="false"><span>駐車場はありますか？</span><i class="fa-solid fa-chevron-down"></i></button>
+                    <div class="faq-answer"><p>専用駐車場はございません。公共交通機関（地下鉄桜通線 鶴里駅 徒歩1分）または近隣のコインパーキングをご利用ください。</p></div>
+                </div>
+                <div class="faq-item js-faq">
+                    <button class="faq-question" aria-expanded="false"><span>一人でも入りやすいですか？</span><i class="fa-solid fa-chevron-down"></i></button>
+                    <div class="faq-answer"><p>もちろんです！カウンター8席のお店ですので、お一人様のお客様も多くいらっしゃいます。お気軽にお越しください。</p></div>
+                </div>
+                <div class="faq-item js-faq">
+                    <button class="faq-question" aria-expanded="false"><span>アレルギー対応はしていますか？</span><i class="fa-solid fa-chevron-down"></i></button>
+                    <div class="faq-answer"><p>メニューによって使用食材が異なります。アレルギーをお持ちの方は、ご来店時にスタッフまでお気軽にご相談ください。</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SNS -->
+    <section id="sns" class="section sns-section">
+        <div class="container">
+            <div class="section-title-area">
+                <h2 class="section-title">SNS<span class="section-title-en">follow us</span></h2>
+            </div>
+            <p class="insta-intro js-insta-intro">最新メニューや季節のお知らせはSNSで配信中。<br>公式LINEでは来店ポイントカードのサービスも予定しています。</p>
+            <div class="insta-embed-grid">
+                <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DW5FcaKgUSy/" data-instgrm-version="14"></blockquote>
+                <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DW3bVAyATZn/" data-instgrm-version="14"></blockquote>
+                <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DW3QdgngUko/" data-instgrm-version="14"></blockquote>
+            </div>
+            <div class="sns-buttons-wrapper">
+                <a href="https://www.instagram.com/yakisoba.stand.rafu/" target="_blank" class="btn-sns insta js-btn-sns"><i class="fa-brands fa-instagram"></i> 公式Instagram</a>
+                <span class="btn-sns line js-btn-sns" style="opacity:0.5; cursor:default;"><i class="fa-brands fa-line"></i> 公式LINE（準備中）</span>
+                <a href="https://tabelog.com" target="_blank" class="btn-sns tabelog js-btn-sns"><i class="fa-solid fa-utensils"></i> 食べログで見る</a>
+            </div>
+        </div>
+    </section>
+
     <footer class="footer">
         <div class="container">
             <a href="/" class="footer-logo">焼きそばスタンド らふ</a>
             <p class="footer-tagline">ソースの香りと、ぬくもりを。</p>
-            <div class="footer-address">〒457-0004 愛知県名古屋市南区中江1-6-15<br>地下鉄桜通線 鶴里駅 徒歩1分<br>TEL: 052-746-6386<br><span style="font-size:0.8rem; opacity:0.7;">お問い合わせ・取材: <a href="mailto:info@rafu.rta.nagoya">info@rafu.rta.nagoya</a></span></div>
+            <div class="footer-info-bar">
+                <div class="footer-info-item"><i class="fa-regular fa-clock"></i> 11:00 - 17:00（L.O. 16:30）</div>
+                <div class="footer-info-item"><i class="fa-regular fa-calendar-xmark"></i> 定休日：日曜・月曜</div>
+            </div>
+            <div class="footer-tel">
+                <p>お気軽にお電話ください</p>
+                <a href="tel:0527466386"><i class="fa-solid fa-phone"></i> 052-746-6386</a>
+            </div>
+            <div class="footer-address">〒457-0004 愛知県名古屋市南区中江1-6-15<br>地下鉄桜通線 鶴里駅 徒歩1分<br><span style="font-size:0.8rem; opacity:0.7;">お問い合わせ・取材: <a href="mailto:info@rafu.rta.nagoya">info@rafu.rta.nagoya</a></span></div>
             <div class="sns-links">
                 <a href="https://www.instagram.com/yakisoba.stand.rafu/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
             </div>
@@ -812,6 +995,7 @@
           .to(".hero-char", { opacity: 1, y: 0, duration: 0.7, stagger: 0.04, ease: "back.out(1.5)" }, "-=0.4")
           .to(".hero-text", { y: 0, opacity: 1, duration: 1 }, "-=0.4")
           .to(".btn-hero", { opacity: 1, duration: 0.8 }, "-=0.7")
+          .to(".btn-hero-sub", { opacity: 1, duration: 0.6 }, "-=0.5")
           .to(".js-scroll-indicator", { opacity: 1, duration: 0.6 }, "-=0.3");
 
         // Opening badge pulse
@@ -833,6 +1017,9 @@
             });
         });
 
+        // Features
+        gsap.to(".js-feature", { opacity: 1, y: 0, duration: 0.7, stagger: 0.15, ease: "back.out(1.5)", scrollTrigger: { trigger: ".features-grid", start: "top 82%" } });
+
         // Concept
         gsap.to(".js-concept-left", { opacity: 1, scale: 1, duration: 1.5, ease: "power2.out", scrollTrigger: { trigger: "#concept", start: "top 70%" } });
         gsap.to(".js-concept-right", { opacity: 1, y: 0, duration: 1.2, delay: 0.3, ease: "power2.out", scrollTrigger: { trigger: "#concept", start: "top 70%" } });
@@ -847,6 +1034,28 @@
 
         // Access
         gsap.to(".js-access-item", { opacity: 1, x: 0, duration: 1, stagger: 0.2, ease: "power2.out", scrollTrigger: { trigger: ".access-wrapper", start: "top 75%" } });
+
+        // FAQ accordion
+        document.querySelectorAll('.faq-question').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const item = btn.parentElement;
+                const answer = item.querySelector('.faq-answer');
+                const isOpen = btn.getAttribute('aria-expanded') === 'true';
+                document.querySelectorAll('.faq-question[aria-expanded="true"]').forEach(other => {
+                    if (other !== btn) {
+                        other.setAttribute('aria-expanded', 'false');
+                        other.parentElement.querySelector('.faq-answer').style.maxHeight = '0';
+                    }
+                });
+                btn.setAttribute('aria-expanded', !isOpen);
+                answer.style.maxHeight = isOpen ? '0' : answer.scrollHeight + 'px';
+            });
+        });
+
+        // FAQ fade in
+        gsap.utils.toArray('.js-faq').forEach((item, i) => {
+            gsap.fromTo(item, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.5, delay: i * 0.08, scrollTrigger: { trigger: '.faq-list', start: 'top 82%' } });
+        });
     </script>
     <script async src="//www.instagram.com/embed.js"></script>
 </body>

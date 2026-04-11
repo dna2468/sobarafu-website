@@ -61,31 +61,34 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Zen+Maru+Gothic:wght@400;500;700&family=Yomogi&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Zen+Maru+Gothic:wght@400;500;700&family=Yomogi&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
 
     <style>
         :root {
-            --c-bg: #FAF8F3;
-            --c-bg-warm: #F5F0E8;
-            --c-text: #4A4540;
-            --c-text-light: #8A8580;
-            --c-primary: #5D4037;
-            --c-primary-light: #8D6E63;
-            --c-accent: #E8764B;
-            --c-accent-hover: #D4633A;
-            --c-accent-light: #FFF3EE;
+            --c-bg: #FFFDF5;
+            --c-bg-warm: #FFF8E7;
+            --c-text: #2D2D2D;
+            --c-text-light: #777777;
+            --c-primary: #C1272D;
+            --c-primary-light: #E85D5D;
+            --c-accent: #FFB800;
+            --c-accent-hover: #E5A500;
+            --c-accent-light: #FFF8E7;
             --c-cream: #FFF8F0;
             --c-white: #FFFFFF;
-            --c-badge: #D44B3F;
+            --c-badge: #FF4D6D;
+            --c-cta: #FF6B35;
+            --c-cta-hover: #E55A2B;
+            --c-footer: #1A1A2E;
 
             --f-body: 'Noto Sans JP', sans-serif;
             --f-head: 'Zen Maru Gothic', sans-serif;
             --f-accent: 'Yomogi', cursive;
 
             --header-height: 70px;
-            --radius: 16px;
-            --radius-sm: 10px;
+            --radius: 20px;
+            --radius-sm: 12px;
         }
 
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -149,21 +152,21 @@
         .header {
             position: fixed; top: 0; left: 0;
             width: 100%; height: var(--header-height);
-            background: rgba(250, 248, 243, 0.92);
+            background: rgba(255, 253, 245, 0.95);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
             display: flex; justify-content: space-between; align-items: center;
             padding: 0 5%;
             z-index: 1000;
-            box-shadow: 0 1px 20px rgba(0,0,0,0.04);
+            border-bottom: 3px solid var(--c-accent);
             opacity: 0; transform: translateY(-20px);
         }
         .logo {
             font-family: var(--f-head); font-size: 1.1rem;
-            color: #42210B; font-weight: bold;
+            color: var(--c-text); font-weight: bold;
             display: flex; align-items: center; gap: 8px; white-space: nowrap;
         }
-        .logo-icon { width: 1.8em; height: 1.8em; object-fit: contain; filter: sepia(1) saturate(2) brightness(0.55) hue-rotate(-10deg); }
+        .logo-icon { width: 1.8em; height: 1.8em; object-fit: contain; }
         .logo-red { color: #C1272D; }
 
         .nav-pc { display: none; }
@@ -180,21 +183,21 @@
             .nav-pc a:hover::after { width: 100%; }
             .nav-pc a:hover { opacity: 1; }
             .nav-tel-btn {
-                background: var(--c-accent); color: white !important;
+                background: var(--c-primary); color: white !important;
                 padding: 8px 18px; border-radius: 50px; font-size: 0.9rem;
                 display: flex; align-items: center; gap: 6px;
                 transition: background 0.3s, transform 0.3s;
             }
-            .nav-tel-btn:hover { background: var(--c-accent-hover); opacity: 1 !important; transform: translateY(-1px); }
+            .nav-tel-btn:hover { background: var(--c-primary-light); opacity: 1 !important; transform: translateY(-1px); }
             .nav-tel-btn::after { display: none; }
         }
 
         .mobile-actions { display: flex; align-items: center; gap: 15px; }
         .mobile-tel {
             display: flex; justify-content: center; align-items: center;
-            width: 40px; height: 40px; background: var(--c-accent);
+            width: 40px; height: 40px; background: var(--c-primary);
             color: white; border-radius: 50%; font-size: 1.1rem;
-            box-shadow: 0 3px 10px rgba(232,118,75,0.3);
+            box-shadow: 0 3px 10px rgba(193,39,45,0.3);
         }
         .menu-btn {
             display: block; background: none; border: none; cursor: pointer;
@@ -258,8 +261,14 @@
         .hero::before {
             content: ''; position: absolute; top: 0; left: 0;
             width: 100%; height: 100%;
-            background: linear-gradient(180deg, rgba(40,25,15,0.22) 0%, rgba(40,25,15,0.55) 100%);
+            background: linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.45) 100%);
             z-index: -1;
+        }
+        .hero::after {
+            content: ''; position: absolute; bottom: 20px; right: 30px;
+            width: 180px; height: 180px;
+            background: url('images/ra-pattern.png') no-repeat center/contain;
+            opacity: 0.06; z-index: 0; pointer-events: none;
         }
         @media (min-width: 768px) {
             .hero-bg { background-position: center center; animation-name: heroKenBurns; animation-duration: 20s; }
@@ -272,26 +281,35 @@
         .hero-opening {
             display: inline-block; font-family: var(--f-head); font-size: 1.1rem; font-weight: 700;
             letter-spacing: 0.15em; color: #fff; background: var(--c-primary);
-            padding: 8px 28px; border-radius: 50px; margin-bottom: 24px;
+            padding: 10px 32px; border-radius: 50px; margin-bottom: 24px;
             border: 2px solid rgba(255,255,255,0.5);
             opacity: 0; transform: translateY(10px);
         }
         .hero-text {
-            font-size: 1.05rem; font-weight: 500; margin-bottom: 40px;
+            font-size: 1.15rem; font-weight: 500; margin-bottom: 40px;
             text-shadow: 1px 1px 6px rgba(0,0,0,0.4); opacity: 0;
-            font-family: var(--f-head); letter-spacing: 0.1em;
+            font-family: var(--f-accent); letter-spacing: 0.1em;
         }
         .btn-hero {
-            display: inline-block; background: var(--c-accent);
-            color: var(--c-white); padding: 16px 48px;
+            display: inline-block; background: var(--c-cta);
+            color: var(--c-white); padding: 18px 52px;
             border-radius: 50px; font-weight: bold; font-family: var(--f-head);
-            box-shadow: 0 6px 24px rgba(232,118,75,0.35);
+            font-size: 1.05rem;
+            box-shadow: 0 6px 24px rgba(255,107,53,0.35);
             transition: all 0.3s; opacity: 0; position: relative; overflow: hidden;
         }
         .btn-hero:hover {
-            background: var(--c-accent-hover); transform: translateY(-3px);
-            box-shadow: 0 8px 28px rgba(232,118,75,0.5); opacity: 1;
+            background: var(--c-cta-hover); transform: translateY(-3px) scale(1.03);
+            box-shadow: 0 8px 28px rgba(255,107,53,0.5); opacity: 1;
         }
+        .scroll-indicator {
+            position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%);
+            display: flex; flex-direction: column; align-items: center; gap: 6px;
+            color: rgba(255,255,255,0.7); font-size: 0.75rem; font-family: var(--f-head);
+            opacity: 0; z-index: 2;
+        }
+        .scroll-indicator i { animation: scrollBounce 1.5s ease-in-out infinite; }
+        @keyframes scrollBounce { 0%,100% { transform: translateY(0); } 50% { transform: translateY(8px); } }
         .btn-hero::after {
             content: ''; position: absolute; top: -50%; left: -50%;
             width: 200%; height: 200%;
@@ -311,7 +329,7 @@
             width: 100%; height: 100%;
             background-image: url('images/ra-pattern.png');
             background-size: 180px; background-position: center;
-            opacity: 0.04; z-index: 0; pointer-events: none;
+            opacity: 0.06; z-index: 0; pointer-events: none;
         }
         .concept-wrapper {
             display: flex; flex-direction: column; gap: 40px;
@@ -320,18 +338,29 @@
         .img-container {
             width: 100%; overflow: hidden;
             border-radius: var(--radius);
+            border: 4px solid var(--c-accent);
             box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+            transform: rotate(-1deg);
+            transition: transform 0.4s;
         }
+        @media (hover: hover) { .img-container:hover { transform: rotate(0deg); } }
         .concept-img {
             width: 100%; height: 300px; object-fit: cover;
             opacity: 0; transform: scale(1.15); transform-origin: center;
         }
         .concept-text { width: 100%; opacity: 0; transform: translateY(30px); }
         .concept-text h3 {
-            font-size: 1.25rem; color: var(--c-primary);
+            font-size: 1.4rem; color: var(--c-primary);
             margin-bottom: 24px; line-height: 1.7;
+            font-family: var(--f-accent);
         }
-        .concept-text p { margin-bottom: 20px; color: var(--c-text); text-align: justify; }
+        .concept-text p { margin-bottom: 20px; color: var(--c-text); text-align: justify; font-weight: 300; }
+        .concept-callout {
+            background: var(--c-white); border-left: 4px solid var(--c-accent);
+            padding: 20px 24px; border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+            margin: 24px 0; font-family: var(--f-head); font-weight: 500;
+            color: var(--c-text); line-height: 1.8;
+        }
         @media (min-width: 768px) {
             .concept-wrapper { flex-direction: row; gap: 72px; }
             .img-container { width: 48%; height: 440px; }
@@ -347,51 +376,57 @@
         @media (min-width: 600px) { .menu-grid { grid-template-columns: repeat(2, 1fr); } }
 
         .menu-item {
-            background: var(--c-bg); border-radius: var(--radius);
+            background: var(--c-white); border-radius: var(--radius);
             overflow: hidden;
             transition: all 0.45s cubic-bezier(0.165,0.84,0.44,1);
-            border: 1px solid rgba(0,0,0,0.03);
-            opacity: 0; transform: translateY(40px);
+            border-top: 4px solid var(--c-primary);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+            opacity: 0; transform: translateY(40px) scale(0.95) rotate(-1deg);
             cursor: pointer; position: relative;
         }
-        .menu-item:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+        .menu-item:nth-child(even) { border-top-color: var(--c-accent); }
+        @media (hover: hover) {
+            .menu-item:hover {
+                transform: translateY(-8px) rotate(0deg);
+                box-shadow: 0 20px 50px rgba(255,184,0,0.15);
+            }
         }
         .badge-popular {
             position: absolute; top: 12px; left: 12px;
             background: var(--c-badge); color: white;
-            padding: 6px 14px; font-size: 0.8rem;
+            padding: 6px 16px; font-size: 0.8rem;
             font-weight: bold; font-family: var(--f-head);
             border-radius: 50px; z-index: 10;
-            box-shadow: 0 3px 10px rgba(212,75,63,0.3);
+            box-shadow: 0 3px 10px rgba(255,77,109,0.3);
+            transform: rotate(-3deg);
         }
-        .menu-img-wrapper { overflow: hidden; width: 100%; height: 240px; }
+        .menu-img-wrapper { overflow: hidden; width: 100%; height: 280px; position: relative; }
         .menu-img {
             width: 100%; height: 100%; object-fit: cover;
             transition: transform 0.7s cubic-bezier(0.33,0,0.2,1);
             cursor: zoom-in;
         }
-        .menu-item:hover .menu-img { transform: scale(1.08); }
+        @media (hover: hover) { .menu-item:hover .menu-img { transform: scale(1.08); } }
         .menu-info { padding: 24px; }
         .menu-header {
             display: flex; justify-content: space-between; align-items: center;
             margin-bottom: 10px; font-family: var(--f-head);
-            font-weight: bold; font-size: 1.2rem; color: var(--c-primary);
+            font-weight: bold; font-size: 1.2rem; color: var(--c-text);
         }
-        .menu-price { color: var(--c-accent); font-weight: bold; font-size: 1.15rem; }
-        .menu-desc { font-size: 0.92rem; color: var(--c-text-light); line-height: 1.7; }
+        .menu-price { color: var(--c-primary); font-weight: bold; font-size: 1.2rem; font-family: var(--f-head); }
+        .menu-desc { font-size: 0.92rem; color: var(--c-text-light); line-height: 1.7; font-weight: 300; }
         .menu-more-btn-wrapper { text-align: center; margin-top: 56px; }
         .btn-more {
-            display: inline-block; background: var(--c-accent);
-            color: var(--c-white); padding: 16px 40px;
+            display: inline-block; background: var(--c-primary);
+            color: var(--c-white); padding: 18px 44px;
             border-radius: 50px; font-weight: bold; font-family: var(--f-head);
-            box-shadow: 0 6px 24px rgba(232,118,75,0.3);
+            font-size: 1.05rem;
+            box-shadow: 0 6px 24px rgba(193,39,45,0.3);
             transition: all 0.3s; position: relative; overflow: hidden;
         }
         .btn-more:hover {
-            background: var(--c-accent-hover); transform: translateY(-3px);
-            box-shadow: 0 8px 28px rgba(232,118,75,0.5); opacity: 1;
+            background: var(--c-primary-light); transform: translateY(-3px);
+            box-shadow: 0 8px 28px rgba(193,39,45,0.4); opacity: 1;
         }
 
         /* =========================================
@@ -438,20 +473,33 @@
            Access
            ========================================= */
         .access-wrapper { display: flex; flex-direction: column; gap: 40px; }
+        .access-station-badge {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: var(--c-accent); color: var(--c-text);
+            padding: 10px 24px; border-radius: 50px;
+            font-family: var(--f-head); font-weight: 700; font-size: 1.1rem;
+            margin-bottom: 28px;
+        }
+        .access-station-badge i { font-size: 1.2rem; }
         .map-container {
             width: 100%; height: 300px; border-radius: var(--radius);
             overflow: hidden; opacity: 0; transform: translateX(-30px);
-            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+            border: 4px solid var(--c-primary);
         }
         .map-container iframe { width: 100%; height: 100%; border: 0; }
         .shop-info { opacity: 0; transform: translateX(30px); }
         .shop-info h3 { margin-bottom: 20px; font-size: 1.3rem; }
-        .shop-info dl { display: flex; flex-wrap: wrap; border-top: 1px solid #e8e4de; }
+        .shop-info dl { display: flex; flex-wrap: wrap; border-top: 1px solid #eee; }
         .shop-info dt {
-            width: 30%; padding: 16px 0; font-weight: bold;
-            color: var(--c-primary); border-bottom: 1px solid #e8e4de; font-size: 0.95rem;
+            width: 30%; padding: 14px 0; font-weight: bold; font-size: 0.85rem;
+            color: var(--c-white); border-bottom: 1px solid #eee;
+            display: flex; align-items: center;
         }
-        .shop-info dd { width: 70%; padding: 16px 0; border-bottom: 1px solid #e8e4de; line-height: 1.7; }
+        .shop-info dt span {
+            background: var(--c-primary); color: white;
+            padding: 3px 12px; border-radius: 50px; font-size: 0.8rem;
+        }
+        .shop-info dd { width: 70%; padding: 14px 0; border-bottom: 1px solid #eee; line-height: 1.7; }
         .shop-tel-link {
             color: var(--c-text); text-decoration: underline;
             text-decoration-color: var(--c-accent); text-underline-offset: 3px;
@@ -466,17 +514,28 @@
            Footer
            ========================================= */
         .footer {
-            background: var(--c-primary); color: var(--c-white);
+            background: var(--c-footer); color: var(--c-white);
             padding: 60px 0 30px; text-align: center;
+            position: relative; overflow: hidden;
         }
-        .footer-logo { font-family: var(--f-head); font-size: 1.8rem; margin-bottom: 24px; display: inline-block; font-weight: bold; }
+        .footer::before {
+            content: ''; position: absolute; top: 50%; right: -40px;
+            width: 200px; height: 200px; transform: translateY(-50%);
+            background: url('images/ra-pattern.png') no-repeat center/contain;
+            opacity: 0.05; pointer-events: none;
+        }
+        .footer-logo { font-family: var(--f-head); font-size: 1.8rem; margin-bottom: 12px; display: inline-block; font-weight: bold; }
+        .footer-tagline { font-family: var(--f-accent); font-size: 1rem; opacity: 0.7; margin-bottom: 24px; }
         .footer-address { margin-bottom: 28px; font-size: 0.9rem; opacity: 0.85; line-height: 1.9; }
         .sns-links { margin-bottom: 28px; }
         .sns-links a {
-            font-size: 1.4rem; margin: 0 14px; color: var(--c-white);
-            display: inline-block; transition: transform 0.3s, color 0.3s;
+            font-size: 1.4rem; margin: 0 10px; color: var(--c-white);
+            display: inline-flex; align-items: center; justify-content: center;
+            width: 44px; height: 44px; border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+            transition: transform 0.3s, background 0.3s;
         }
-        .sns-links a:hover { transform: translateY(-4px); color: var(--c-accent); opacity: 1; }
+        .sns-links a:hover { transform: translateY(-4px); background: var(--c-primary); opacity: 1; }
         .copyright {
             font-size: 0.75rem; opacity: 0.5;
             border-top: 1px solid rgba(255,255,255,0.08);
@@ -557,8 +616,9 @@
                 <span class="line-break">ぬくもりを。</span>
             </h1>
             <p class="hero-text">蒸し麺じゃない。茹で麺だから、この食感。<br>鶴里駅すぐの焼きそば専門店。</p>
-            <a href="menu.html" class="btn-hero">すべてのメニューを見る</a>
+            <a href="menu.html" class="btn-hero">すべてのメニューを見る <i class="fa-solid fa-arrow-right"></i></a>
         </div>
+        <div class="scroll-indicator js-scroll-indicator"><span>scroll</span><i class="fa-solid fa-chevron-down"></i></div>
     </section>
 
     <section id="concept" class="section">
@@ -573,7 +633,9 @@
                 <div class="concept-text js-concept-right">
                     <h3>「ただいま」と言いたくなる、<br>あなたのサードプレイスへ。</h3>
                     <p>「焼きそばスタンド らふ」へようこそ。<br>当店は、いわゆる「屋台の焼きそば」とは少し違います。</p>
-                    <p>主役は、一般的な蒸し麺ではなく「茹で麺」。<br>もちもちとした弾力と、つるんとしたのど越し。<br>ソース・すじコン・旨辛ホルモン・あんかけ――<br>どの味にもこの麺だからこそ出せる食感があります。</p>
+                    <div class="concept-callout">
+                        主役は、一般的な蒸し麺ではなく「茹で麺」。<br>もちもちとした弾力と、つるんとしたのど越し。<br>ソース・すじコン・旨辛ホルモン・あんかけ――<br>どの味にもこの麺だからこそ出せる食感があります。
+                    </div>
                     <p>「午後からも、もうひと頑張り」<br>そんなランチタイムに、お一人でも、同僚の方とでも。<br>カウンター8席の小さなお店ですが、<br>だからこそ一皿一皿、丁寧にお作りします。</p>
                     <p>鶴里駅から徒歩1分。<br>ふらっと立ち寄れる、あなたの「いつもの場所」になれたら嬉しいです。</p>
                 </div>
@@ -660,20 +722,21 @@
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3263.2981912803876!2d136.93883397621437!3d35.12423377277258!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60037a5b3a37885b%3A0x62919d36e8900445!2z44CSNDU3LTAwMDYg5oSb55-l55yM5ZCN5Y-k5bGL5biC5Y2X5Yy65Lit5rGf77yR5LiB55uu77yW4oiS77yR77yV!5e0!3m2!1sja!2sjp!4v1700000000000!5m2!1sja!2sjp" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="店舗地図"></iframe>
                 </div>
                 <div class="shop-info js-access-item">
+                    <div class="access-station-badge"><i class="fa-solid fa-person-walking"></i> 鶴里駅 徒歩1分</div>
                     <h3>店舗情報</h3>
                     <dl>
-                        <dt>店名</dt><dd>焼きそばスタンド らふ</dd>
-                        <dt>住所</dt>
+                        <dt><span>店名</span></dt><dd>焼きそばスタンド らふ</dd>
+                        <dt><span>住所</span></dt>
                         <dd>〒457-0004<br>愛知県名古屋市南区中江1-6-15<br>パックス鶴里1階</dd>
-                        <dt>電話番号</dt><dd><a href="tel:0527466386" class="shop-tel-link">052-746-6386</a></dd>
-                        <dt>営業時間</dt>
+                        <dt><span>電話番号</span></dt><dd><a href="tel:0527466386" class="shop-tel-link">052-746-6386</a></dd>
+                        <dt><span>営業時間</span></dt>
                         <dd>11:00 - 17:00 (L.O. 16:30)<br><span style="font-size:0.85rem; color:#999;">※ディナー営業は準備中です</span></dd>
-                        <dt>定休日</dt><dd>日曜日・月曜日</dd>
-                        <dt>席数</dt><dd>カウンター8席</dd>
-                        <dt>アクセス</dt><dd>名古屋市営地下鉄桜通線<br>鶴里駅 徒歩1分</dd>
-                        <dt>駐車場</dt><dd>専用駐車場はございません。<br>公共交通機関または近隣のコインパーキングをご利用ください。</dd>
-                        <dt>お支払い</dt><dd>現金 / 各種キャッシュレス対応</dd>
-                        <dt>お問い合わせ</dt><dd>お問い合わせ・取材のご依頼は<br><a href="mailto:info@rafu.rta.nagoya" class="shop-tel-link">info@rafu.rta.nagoya</a></dd>
+                        <dt><span>定休日</span></dt><dd>日曜日・月曜日</dd>
+                        <dt><span>席数</span></dt><dd>カウンター8席</dd>
+                        <dt><span>アクセス</span></dt><dd>名古屋市営地下鉄桜通線<br>鶴里駅 徒歩1分</dd>
+                        <dt><span>駐車場</span></dt><dd>専用駐車場はございません。<br>公共交通機関または近隣のコインパーキングをご利用ください。</dd>
+                        <dt><span>お支払い</span></dt><dd>現金 / 各種キャッシュレス対応</dd>
+                        <dt><span>お問い合わせ</span></dt><dd>お問い合わせ・取材のご依頼は<br><a href="mailto:info@rafu.rta.nagoya" class="shop-tel-link">info@rafu.rta.nagoya</a></dd>
                     </dl>
                 </div>
             </div>
@@ -683,6 +746,7 @@
     <footer class="footer">
         <div class="container">
             <a href="/" class="footer-logo">焼きそばスタンド らふ</a>
+            <p class="footer-tagline">ソースの香りと、ぬくもりを。</p>
             <div class="footer-address">〒457-0004 愛知県名古屋市南区中江1-6-15<br>地下鉄桜通線 鶴里駅 徒歩1分<br>TEL: 052-746-6386<br><span style="font-size:0.8rem; opacity:0.7;">お問い合わせ・取材: <a href="mailto:info@rafu.rta.nagoya">info@rafu.rta.nagoya</a></span></div>
             <div class="sns-links">
                 <a href="https://www.instagram.com/yakisoba.stand.rafu/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
@@ -747,7 +811,13 @@
           .to(".hero-opening", { opacity: 1, y: 0, duration: 0.8 }, "-=0.5")
           .to(".hero-char", { opacity: 1, y: 0, duration: 0.7, stagger: 0.04, ease: "back.out(1.5)" }, "-=0.4")
           .to(".hero-text", { y: 0, opacity: 1, duration: 1 }, "-=0.4")
-          .to(".btn-hero", { opacity: 1, duration: 0.8 }, "-=0.7");
+          .to(".btn-hero", { opacity: 1, duration: 0.8 }, "-=0.7")
+          .to(".js-scroll-indicator", { opacity: 1, duration: 0.6 }, "-=0.3");
+
+        // Opening badge pulse
+        tl.eventCallback("onComplete", () => {
+            gsap.to(".hero-opening", { scale: 1.05, repeat: -1, yoyo: true, duration: 1.5, ease: "power1.inOut" });
+        });
 
         // Parallax
         gsap.to(".hero-bg", {
@@ -768,7 +838,7 @@
         gsap.to(".js-concept-right", { opacity: 1, y: 0, duration: 1.2, delay: 0.3, ease: "power2.out", scrollTrigger: { trigger: "#concept", start: "top 70%" } });
 
         // Menu
-        gsap.to(".js-menu-item", { opacity: 1, y: 0, duration: 0.8, stagger: 0.12, ease: "power3.out", scrollTrigger: { trigger: ".menu-grid", start: "top 78%" } });
+        gsap.to(".js-menu-item", { opacity: 1, y: 0, scale: 1, rotation: 0, duration: 0.8, stagger: 0.12, ease: "back.out(1.7)", scrollTrigger: { trigger: ".menu-grid", start: "top 78%" } });
         gsap.fromTo(".js-btn-more", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.8, scrollTrigger: { trigger: ".menu-more-btn-wrapper", start: "top 88%" } });
 
         // SNS

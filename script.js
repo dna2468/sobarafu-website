@@ -1,5 +1,7 @@
 (() => {
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const isDesktop = () => window.innerWidth >= 960;
+  const enableParallax = () => !prefersReducedMotion && isDesktop();
   const useGSAP = !!(window.gsap && window.ScrollTrigger) && !prefersReducedMotion;
 
   const header = document.getElementById('siteHeader');
@@ -23,8 +25,8 @@
     if (floatDisc) floatDisc.classList.toggle('is-visible', y > 400);
     if (backToTop) backToTop.classList.toggle('is-visible', y > 600);
 
-    /* parallax hero photos (fallback when GSAP is absent) */
-    if (!useGSAP) {
+    /* parallax hero photos (fallback when GSAP is absent) — desktop only */
+    if (!useGSAP && enableParallax()) {
       parallaxEls.forEach((el) => {
         const speed = parseFloat(el.dataset.parallax) || 0;
         el.style.setProperty('--py', (y * speed).toFixed(2) + 'px');
@@ -33,6 +35,17 @@
       });
     }
   };
+
+  /* Reset parallax transforms when switching to mobile */
+  const resetParallaxOnResize = () => {
+    if (!enableParallax()) {
+      parallaxEls.forEach((el) => {
+        el.style.transform = '';
+        el.style.removeProperty('--py');
+      });
+    }
+  };
+  window.addEventListener('resize', resetParallaxOnResize);
 
   let rafId = null;
   const requestScrollUpdate = () => {
@@ -195,7 +208,7 @@
     const subPhoto = document.querySelector('.hero-photo-sub');
     const heroBgText = document.querySelector('.hero-bg-text');
 
-    if (heroSection) {
+    if (heroSection && enableParallax()) {
       gsap.set(mainPhoto, { rotate: -3, transformOrigin: '50% 50%' });
       gsap.set(subPhoto, { rotate: 4, transformOrigin: '50% 50%' });
 
@@ -226,6 +239,7 @@
   const thumbs = document.querySelectorAll('.spotlight-thumbs .thumb');
   if (spotlight && thumbs.length) {
     const featureImg = spotlight.querySelector('.feature-img');
+    const featureSource = spotlight.querySelector('.feature-source');
     const featureName = spotlight.querySelector('.feature-name');
     const featureDesc = spotlight.querySelector('.feature-desc');
     const featurePriceMain = spotlight.querySelector('.feature-price-main');
@@ -234,6 +248,7 @@
     const priceTax = spotlight.querySelector('.feature-price small');
 
     const applyFeature = (d) => {
+      if (featureSource && d.imgWebp) featureSource.srcset = d.imgWebp;
       featureImg.src = d.img;
       featureImg.alt = d.name;
       featureName.textContent = d.name;

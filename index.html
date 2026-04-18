@@ -8,11 +8,19 @@
 
 <meta property="og:title" content="焼きそばスタンド らふ｜鶴里駅徒歩1分・茹で麺の焼きそば専門店">
 <meta property="og:description" content="2026年5月7日(木)オープン。蒸し麺ではなく、茹で麺で。もちもち、つるん。カウンター8席の小さな専門店。">
-<meta property="og:image" content="https://sobarafu.rta.nagoya/images/%E5%BA%97%E8%88%97%E5%A4%96%E8%A6%B3.jpg">
+<meta property="og:image" content="https://sobarafu.rta.nagoya/images/shop-exterior.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="904">
+<meta property="og:image:alt" content="焼きそばスタンド らふ 店舗外観">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://sobarafu.rta.nagoya/">
 <meta property="og:site_name" content="焼きそばスタンド らふ">
+<meta property="og:locale" content="ja_JP">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="焼きそばスタンド らふ｜鶴里駅徒歩1分・茹で麺の焼きそば専門店">
+<meta name="twitter:description" content="2026年5月7日(木)オープン。蒸し麺ではなく、茹で麺で。もちもち、つるん。カウンター8席の小さな専門店。">
+<meta name="twitter:image" content="https://sobarafu.rta.nagoya/images/shop-exterior.jpg">
+<meta name="twitter:image:alt" content="焼きそばスタンド らふ 店舗外観">
 
 <link rel="canonical" href="https://sobarafu.rta.nagoya/">
 <link rel="icon" type="image/png" href="logo-brand/ra-pattern.png">
@@ -33,7 +41,7 @@
   "name": "焼きそばスタンド らふ",
   "alternateName": "Yakisoba Stand Rafu",
   "description": "名古屋・鶴里駅徒歩1分、蒸し麺ではなく茹で麺の焼きそば専門店。カウンター8席の小さなお店。2026年5月7日(木)オープン。",
-  "image": "https://sobarafu.rta.nagoya/images/%E5%BA%97%E8%88%97%E5%A4%96%E8%A6%B3.jpg",
+  "image": "https://sobarafu.rta.nagoya/images/shop-exterior.jpg",
   "url": "https://sobarafu.rta.nagoya/",
   "telephone": "+81-52-746-6386",
   "email": "info@rafu.rta.nagoya",
@@ -53,28 +61,59 @@
     "latitude": 35.105756,
     "longitude": 136.9443319
   },
-  "openingHoursSpecification": [{
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-    "opens": "11:00",
-    "closes": "17:00"
-  }],
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      "opens": "11:00",
+      "closes": "17:00"
+    }
+  ],
+  "specialOpeningHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "description": "定休日：日曜日・月曜日・祝日",
+      "dayOfWeek": ["Sunday", "Monday", "PublicHolidays"]
+    }
+  ],
   "sameAs": ["https://www.instagram.com/yakisoba.stand.rafu/"],
   "hasMenu": {
     "@type": "Menu",
-    "name": "特製焼きそばメニュー",
-    "hasMenuSection": [{
-      "@type": "MenuSection",
-      "name": "特製焼きそば",
-      "hasMenuItem": [
-        {"@type": "MenuItem", "name": "ソース焼きそば", "offers": {"@type": "Offer", "price": "850", "priceCurrency": "JPY"}},
-        {"@type": "MenuItem", "name": "すじコン焼きそば", "offers": {"@type": "Offer", "price": "1200", "priceCurrency": "JPY"}},
-        {"@type": "MenuItem", "name": "旨辛ホルモン焼きそば", "offers": {"@type": "Offer", "price": "1100", "priceCurrency": "JPY"}},
-        {"@type": "MenuItem", "name": "あんかけスパ風焼きそば", "offers": {"@type": "Offer", "price": "1100", "priceCurrency": "JPY"}},
-        {"@type": "MenuItem", "name": "ソース焼きそば 目玉焼きトッピング", "offers": {"@type": "Offer", "price": "950", "priceCurrency": "JPY"}},
-        {"@type": "MenuItem", "name": "焼きそばパン（2個セット）", "offers": {"@type": "Offer", "price": "600", "priceCurrency": "JPY"}}
-      ]
-    }]
+    "name": "焼きそばスタンド らふ メニュー",
+    "hasMenuSection": [
+      {
+        "@type": "MenuSection",
+        "name": "特製焼きそば",
+        "hasMenuItem": [
+          {"@type": "MenuItem", "name": "ソース焼きそば", "description": "こだわりの茹で麺の食感を最大限に引き出す、王道のソース焼きそば。", "offers": {"@type": "Offer", "price": "850", "priceCurrency": "JPY"}},
+          {"@type": "MenuItem", "name": "すじコン焼きそば", "description": "甘辛く煮込んだ牛すじとこんにゃくの旨味が麺に絡む、当店自慢の一品。", "offers": {"@type": "Offer", "price": "1200", "priceCurrency": "JPY"}},
+          {"@type": "MenuItem", "name": "旨辛ホルモン焼きそば", "description": "プリプリのホルモンとピリ辛味噌ダレが食欲をそそる一皿。", "offers": {"@type": "Offer", "price": "1100", "priceCurrency": "JPY"}},
+          {"@type": "MenuItem", "name": "あんかけスパ風焼きそば", "description": "名古屋名物あんかけスパと焼きそばの夢のコラボ。", "offers": {"@type": "Offer", "price": "1100", "priceCurrency": "JPY"}},
+          {"@type": "MenuItem", "name": "ソース焼きそば 目玉焼きトッピング", "offers": {"@type": "Offer", "price": "950", "priceCurrency": "JPY"}},
+          {"@type": "MenuItem", "name": "焼きそばパン（2個セット）", "description": "テイクアウト専用メニュー。", "offers": {"@type": "Offer", "price": "600", "priceCurrency": "JPY"}}
+        ]
+      },
+      {
+        "@type": "MenuSection",
+        "name": "トッピング",
+        "hasMenuItem": [
+          {"@type": "MenuItem", "name": "目玉焼き"},
+          {"@type": "MenuItem", "name": "温泉卵"},
+          {"@type": "MenuItem", "name": "チーズ"},
+          {"@type": "MenuItem", "name": "ホットドッグ"},
+          {"@type": "MenuItem", "name": "すじコン"}
+        ]
+      },
+      {
+        "@type": "MenuSection",
+        "name": "ドリンク",
+        "hasMenuItem": [
+          {"@type": "MenuItem", "name": "ビール"},
+          {"@type": "MenuItem", "name": "オレンジジュース"},
+          {"@type": "MenuItem", "name": "カルピス"}
+        ]
+      }
+    ]
   }
 }
 </script>
@@ -266,11 +305,17 @@
 
       <div class="hero-visual">
         <div class="hero-photo hero-photo-main" data-parallax="0.14">
-          <img src="menu-photos/すじこん焼きそば.jpg" alt="すじコン焼きそば（人気No.1）" width="800" height="602" fetchpriority="high" decoding="async">
+          <picture>
+            <source type="image/webp" srcset="menu-photos/すじこん焼きそば.webp">
+            <img src="menu-photos/すじこん焼きそば.jpg" alt="すじコン焼きそば（人気No.1）" width="800" height="602" fetchpriority="high" decoding="async">
+          </picture>
           <span class="menu-badge badge-hot hero-photo-badge">人気No.1</span>
         </div>
         <div class="hero-photo hero-photo-sub" data-parallax="-0.08">
-          <img src="images/店舗外観.jpg" alt="焼きそばスタンドらふ 店舗外観" width="1200" height="904" decoding="async">
+          <picture>
+            <source type="image/webp" srcset="images/shop-exterior.webp">
+            <img src="images/shop-exterior.jpg" alt="焼きそばスタンドらふ 店舗外観" width="1200" height="904" decoding="async">
+          </picture>
         </div>
         <div class="hero-sticker" aria-hidden="true">
           <span>鶴里駅<br>徒歩1分</span>
@@ -423,10 +468,16 @@
 
       <div class="story-visual">
         <div class="story-photo story-photo-a">
-          <img src="images/店舗外観.jpg" alt="店舗外観" width="1200" height="904" loading="lazy" decoding="async">
+          <picture>
+            <source type="image/webp" srcset="images/shop-exterior.webp">
+            <img src="images/shop-exterior.jpg" alt="店舗外観" width="1200" height="904" loading="lazy" decoding="async">
+          </picture>
         </div>
         <div class="story-photo story-photo-b">
-          <img src="menu-photos/ソース焼きそば_目玉焼きトッピング_.jpg" alt="ソース焼きそば 目玉焼きトッピング" width="800" height="602" loading="lazy" decoding="async">
+          <picture>
+            <source type="image/webp" srcset="menu-photos/ソース焼きそば_目玉焼きトッピング_.webp">
+            <img src="menu-photos/ソース焼きそば_目玉焼きトッピング_.jpg" alt="ソース焼きそば 目玉焼きトッピング" width="800" height="602" loading="lazy" decoding="async">
+          </picture>
         </div>
         <div class="story-tag" aria-hidden="true">茹で麺、はじめました。</div>
       </div>
@@ -448,7 +499,10 @@
       <div class="menu-spotlight">
         <article class="spotlight-feature" aria-live="polite">
           <div class="spotlight-photo">
-            <img class="feature-img" src="menu-photos/すじこん焼きそば.jpg" alt="すじコン焼きそば" width="800" height="602" loading="lazy" decoding="async">
+            <picture class="feature-picture">
+              <source class="feature-source" type="image/webp" srcset="menu-photos/すじこん焼きそば.webp">
+              <img class="feature-img" src="menu-photos/すじこん焼きそば.jpg" alt="すじコン焼きそば" width="800" height="602" loading="lazy" decoding="async">
+            </picture>
             <span class="menu-badge feature-badge badge-hot">人気No.1</span>
           </div>
           <div class="spotlight-body">
@@ -462,13 +516,17 @@
           <li>
             <button class="thumb is-active" type="button" role="tab" aria-selected="true"
               data-img="menu-photos/すじこん焼きそば.jpg"
+              data-img-webp="menu-photos/すじこん焼きそば.webp"
               data-name="すじコン焼きそば"
               data-desc="甘辛く煮込んだ牛すじとこんにゃくの旨味が、もちもちの茹で麺にしっかり絡む、当店自慢の一品。ビールとの相性も抜群です。"
               data-price="¥1,200"
               data-badge="人気No.1"
               data-badge-class="badge-hot">
               <span class="thumb-photo">
-                <img src="menu-photos/すじこん焼きそば.jpg" alt="" width="400" height="300" loading="lazy" decoding="async">
+                <picture>
+                  <source type="image/webp" srcset="menu-photos/すじこん焼きそば.webp">
+                  <img src="menu-photos/すじこん焼きそば.jpg" alt="" width="400" height="300" loading="lazy" decoding="async">
+                </picture>
                 <span class="thumb-badge badge-hot">人気No.1</span>
               </span>
               <span class="thumb-label"><span>すじコン焼きそば</span><small>¥1,200</small></span>
@@ -477,37 +535,53 @@
           <li>
             <button class="thumb" type="button" role="tab" aria-selected="false"
               data-img="menu-photos/ソース焼きそば.jpg"
+              data-img-webp="menu-photos/ソース焼きそば.webp"
               data-name="ソース焼きそば"
               data-desc="こだわりの茹で麺の食感を最大限に引き出す、王道のソース焼きそば。当店の原点の一皿。"
               data-price="¥850"
               data-badge=""
               data-badge-class="">
-              <span class="thumb-photo"><img src="menu-photos/ソース焼きそば.jpg" alt="" width="400" height="300" loading="lazy" decoding="async"></span>
+              <span class="thumb-photo">
+                <picture>
+                  <source type="image/webp" srcset="menu-photos/ソース焼きそば.webp">
+                  <img src="menu-photos/ソース焼きそば.jpg" alt="" width="400" height="300" loading="lazy" decoding="async">
+                </picture>
+              </span>
               <span class="thumb-label"><span>ソース焼きそば</span><small>¥850</small></span>
             </button>
           </li>
           <li>
             <button class="thumb" type="button" role="tab" aria-selected="false"
               data-img="menu-photos/旨辛ホルモン焼きそば.jpg"
+              data-img-webp="menu-photos/旨辛ホルモン焼きそば.webp"
               data-name="旨辛ホルモン焼きそば"
               data-desc="プリプリのホルモンとピリ辛味噌ダレが食欲をそそる、スタミナ満点の一皿。"
               data-price="¥1,100"
               data-badge=""
               data-badge-class="">
-              <span class="thumb-photo"><img src="menu-photos/旨辛ホルモン焼きそば.jpg" alt="" width="400" height="300" loading="lazy" decoding="async"></span>
+              <span class="thumb-photo">
+                <picture>
+                  <source type="image/webp" srcset="menu-photos/旨辛ホルモン焼きそば.webp">
+                  <img src="menu-photos/旨辛ホルモン焼きそば.jpg" alt="" width="400" height="300" loading="lazy" decoding="async">
+                </picture>
+              </span>
               <span class="thumb-label"><span>旨辛ホルモン焼きそば</span><small>¥1,100</small></span>
             </button>
           </li>
           <li>
             <button class="thumb" type="button" role="tab" aria-selected="false"
               data-img="menu-photos/名古屋風あんかけ焼きそば.jpg"
+              data-img-webp="menu-photos/名古屋風あんかけ焼きそば.webp"
               data-name="あんかけスパ風焼きそば"
               data-desc="名古屋名物あんかけスパと焼きそばの夢のコラボ。ピリ辛のとろみ餡が麺に絡む、ここだけのご当地メニュー。※ こちらは開発中メニューです。提供開始まで今しばらくお待ちください。"
               data-price="近日登場"
               data-badge="COMING SOON"
               data-badge-class="badge-soon">
               <span class="thumb-photo">
-                <img src="menu-photos/名古屋風あんかけ焼きそば.jpg" alt="" width="400" height="300" loading="lazy" decoding="async">
+                <picture>
+                  <source type="image/webp" srcset="menu-photos/名古屋風あんかけ焼きそば.webp">
+                  <img src="menu-photos/名古屋風あんかけ焼きそば.jpg" alt="" width="400" height="300" loading="lazy" decoding="async">
+                </picture>
                 <span class="thumb-badge badge-soon">COMING SOON</span>
               </span>
               <span class="thumb-label"><span>あんかけスパ風</span><small>近日</small></span>
@@ -516,25 +590,35 @@
           <li>
             <button class="thumb" type="button" role="tab" aria-selected="false"
               data-img="menu-photos/ソース焼きそば_目玉焼きトッピング_.jpg"
+              data-img-webp="menu-photos/ソース焼きそば_目玉焼きトッピング_.webp"
               data-name="ソース焼きそば(目玉焼きトッピング)"
               data-desc="ソース焼きそばに、とろ〜り半熟の目玉焼きをオン。黄身をくずして麺にからめて。"
               data-price="¥950"
               data-badge=""
               data-badge-class="">
-              <span class="thumb-photo"><img src="menu-photos/ソース焼きそば_目玉焼きトッピング_.jpg" alt="" width="400" height="300" loading="lazy" decoding="async"></span>
+              <span class="thumb-photo">
+                <picture>
+                  <source type="image/webp" srcset="menu-photos/ソース焼きそば_目玉焼きトッピング_.webp">
+                  <img src="menu-photos/ソース焼きそば_目玉焼きトッピング_.jpg" alt="" width="400" height="300" loading="lazy" decoding="async">
+                </picture>
+              </span>
               <span class="thumb-label"><span>目玉焼きトッピング</span><small>¥950</small></span>
             </button>
           </li>
           <li>
             <button class="thumb" type="button" role="tab" aria-selected="false"
               data-img="menu-photos/焼きそばパン_2個セット_.jpg"
+              data-img-webp="menu-photos/焼きそばパン_2個セット_.webp"
               data-name="焼きそばパン(2個セット)"
               data-desc="パン専用に厳選した麺を使用した、テイクアウト向けメニュー。おやつにも、手土産にも。"
               data-price="¥600"
               data-badge="テイクアウト専用"
               data-badge-class="badge-togo">
               <span class="thumb-photo">
-                <img src="menu-photos/焼きそばパン_2個セット_.jpg" alt="" width="400" height="300" loading="lazy" decoding="async">
+                <picture>
+                  <source type="image/webp" srcset="menu-photos/焼きそばパン_2個セット_.webp">
+                  <img src="menu-photos/焼きそばパン_2個セット_.jpg" alt="" width="400" height="300" loading="lazy" decoding="async">
+                </picture>
                 <span class="thumb-badge badge-togo">テイクアウト専用</span>
               </span>
               <span class="thumb-label"><span>焼きそばパン</span><small>¥600</small></span>
@@ -623,7 +707,7 @@
     <div class="container">
       <header class="section-head">
         <span class="section-kicker">ACCESS &amp; INFO</span>
-        <h2 class="section-title">店舗情報</h2>
+        <h2 class="section-title" id="access-heading">店舗情報</h2>
         <p class="section-lede">
           名古屋市営地下鉄桜通線「鶴里駅」から徒歩1分。<br>
           ふらっと立ち寄れる駅近立地です。
@@ -631,12 +715,13 @@
       </header>
 
       <div class="access-grid">
-        <div class="access-map">
+        <div class="access-map" role="region" aria-labelledby="access-heading">
           <iframe
             src="https://www.google.com/maps?q=35.105756,136.9443319&hl=ja&z=17&output=embed"
             width="100%" height="100%" style="border:0;"
             allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-            title="焼きそばスタンドらふ 地図"></iframe>
+            title="焼きそばスタンドらふ 店舗地図（鶴里駅徒歩1分）"
+            aria-label="焼きそばスタンドらふの店舗地図。鶴里駅から徒歩1分"></iframe>
           <div class="map-sticker" aria-hidden="true">
             <span class="map-sticker-top">ココ！</span>
             <span class="map-sticker-bottom">鶴里駅<br>徒歩1分</span>
@@ -848,6 +933,25 @@
           <span class="contact-value">info@rafu.rta.nagoya</span>
           <span class="contact-action">メールを送る →</span>
         </a>
+        <span class="contact-card contact-line contact-card-disabled" aria-disabled="true">
+          <span class="contact-label">LINE</span>
+          <span class="contact-value">公式アカウント</span>
+          <span class="contact-action">準備中</span>
+        </span>
+      </div>
+
+      <div class="review-links">
+        <p class="review-lede">口コミ・ご感想はこちらから</p>
+        <div class="review-grid">
+          <span class="review-card review-card-disabled" aria-disabled="true">
+            <span class="review-label">食べログ</span>
+            <span class="review-action">準備中</span>
+          </span>
+          <a class="review-card" href="https://www.google.com/maps/search/?api=1&query=%E7%84%BC%E3%81%8D%E3%81%9D%E3%81%B0%E3%82%B9%E3%82%BF%E3%83%B3%E3%83%89%E3%82%89%E3%81%B5" target="_blank" rel="noopener noreferrer">
+            <span class="review-label">Google Maps</span>
+            <span class="review-action">レビューを見る →</span>
+          </a>
+        </div>
       </div>
     </div>
   </section>

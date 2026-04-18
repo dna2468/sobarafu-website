@@ -1694,7 +1694,7 @@ ul { list-style: none; padding: 0; margin: 0; }
 }
 .contact-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 20px;
   position: relative;
 }
@@ -1733,9 +1733,76 @@ ul { list-style: none; padding: 0; margin: 0; }
 .contact-tel .contact-label { color: var(--c-orange); }
 .contact-mail { border-top-color: var(--c-cta); }
 .contact-mail .contact-label { color: var(--c-cta); }
+.contact-line { border-top-color: #06C755; }
+.contact-line .contact-label { color: #06C755; }
+.contact-card-disabled {
+  opacity: .55;
+  cursor: not-allowed;
+}
+.contact-card-disabled:hover { transform: none; }
+.contact-card-disabled .contact-action { color: var(--c-ink-soft); }
 
-@media (max-width: 900px) {
+.review-links {
+  margin-top: 56px;
+  text-align: center;
+}
+.review-lede {
+  font-family: var(--f-heading);
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--c-brown);
+  letter-spacing: .12em;
+  margin-bottom: 18px;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+}
+.review-lede::before,
+.review-lede::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 1px;
+  background: var(--c-line);
+}
+.review-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 240px));
+  gap: 16px;
+  justify-content: center;
+}
+.review-card {
+  background: #fff;
+  border: 1px solid var(--c-line);
+  border-radius: 999px;
+  padding: 14px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  font-family: var(--f-heading);
+  font-weight: 700;
+  font-size: 14px;
+  transition: transform .25s, box-shadow .25s;
+}
+.review-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-card); }
+.review-label { color: var(--c-brown); letter-spacing: .08em; }
+.review-action { color: var(--c-cta); font-size: 13px; }
+.review-card-disabled {
+  opacity: .55;
+  cursor: not-allowed;
+  background: transparent;
+}
+.review-card-disabled:hover { transform: none; box-shadow: none; }
+.review-card-disabled .review-action { color: var(--c-ink-soft); }
+
+@media (max-width: 1080px) {
+  .contact-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
   .contact-grid { grid-template-columns: 1fr; }
+  .review-grid { grid-template-columns: 1fr; }
 }
 
 /* =========================================================

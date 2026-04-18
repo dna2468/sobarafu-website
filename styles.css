@@ -536,18 +536,20 @@ ul { list-style: none; padding: 0; margin: 0; }
 .hero-catch {
   font-family: var(--f-heading);
   font-weight: 900;
-  font-size: clamp(22px, 3.2vw, 34px);
-  line-height: 1.55;
+  font-size: clamp(26px, 4vw, 42px);
+  line-height: 1.35;
   color: var(--c-brown);
   margin: 18px 0 18px;
   letter-spacing: -0.01em;
 }
 .hero-catch em {
   font-style: normal;
-  color: var(--c-red);
+  color: var(--c-brown);
   position: relative;
-  padding: 0 4px;
-  background: linear-gradient(transparent 62%, rgba(255, 184, 0, 0.55) 62%);
+  padding: 0 6px;
+  background: linear-gradient(transparent 62%, rgba(255, 184, 0, 0.6) 62%);
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
 }
 
 .hero-lede {

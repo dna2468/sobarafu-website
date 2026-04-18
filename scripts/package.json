@@ -1,0 +1,12 @@
+{
+  "name": "rafu-image-scripts",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "description": "Menu photo background replacement via Gemini 2.5 Flash Image",
+  "dependencies": {
+    "@google/genai": "^1.0.0",
+    "dotenv": "^16.4.0",
+    "sharp": "^0.33.0"
+  }
+}

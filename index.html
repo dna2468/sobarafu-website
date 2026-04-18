@@ -49,9 +49,11 @@
   "url": "https://sobarafu.rta.nagoya/",
   "telephone": "+81-52-746-6386",
   "email": "info@rafu.rta.nagoya",
-  "priceRange": "¥600-¥1,200",
+  "priceRange": "¥330-¥1,200",
   "servesCuisine": ["焼きそば", "日本料理"],
   "acceptsReservations": false,
+  "paymentAccepted": "Cash, Credit Card (Visa, Mastercard, JCB, American Express, Diners Club), Contactless Card, Transit IC (Suica, PASMO, manaca, ICOCA, Kitaca, toica, SUGOCA, nimoca, はやかけん), nanaco, WAON, PayPay, d払い, au PAY, 楽天ペイ, メルペイ, 銀行Pay, AEON Pay, Alipay+, WeChat Pay",
+  "currenciesAccepted": "JPY",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "中江1-6-15 パックス鶴里1階",
@@ -167,7 +169,7 @@
       "name": "支払い方法は？クレジットカードは使えますか？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "現金・各種クレジットカード・電子マネー・QRコード決済に対応予定です。対応ブランドの詳細は開店前に改めてご案内します。"
+        "text": "現金のほか、クレジットカード（VISA・Mastercard・JCB・American Express・Diners Club／タッチ決済対応）、電子マネー（交通系IC：Suica・PASMO・manaca・ICOCA・Kitaca・toica・SUGOCA・nimoca・はやかけん／nanaco・WAON／※PiTaPaは除く）、コード決済（PayPay・d払い・au PAY・楽天ペイ・メルペイ・銀行Pay・AEON Pay・Alipay+・WeChat Pay）に対応します。"
       }
     },
     {
@@ -752,7 +754,12 @@
             <div><dt>席数</dt><dd>カウンター 8席</dd></div>
             <div><dt>予約</dt><dd>不可（先着順）</dd></div>
             <div><dt>テイクアウト</dt><dd>一部メニュー対応可</dd></div>
-            <div><dt>支払い</dt><dd>現金／各種クレジットカード／電子マネー／QRコード決済</dd></div>
+            <div><dt>支払い</dt><dd>
+              現金／クレジットカード／電子マネー／コード決済
+              <small>クレジット: VISA・Mastercard・JCB・American Express・Diners Club（タッチ決済対応）<br>
+              電子マネー: 交通系IC（Suica・PASMO・manaca・ICOCA・Kitaca・toica・SUGOCA・nimoca・はやかけん／PiTaPa除く）・nanaco・WAON<br>
+              コード決済: PayPay・d払い・au PAY・楽天ペイ・メルペイ・銀行Pay・AEON Pay・Alipay+・WeChat Pay</small>
+            </dd></div>
             <div><dt>喫煙</dt><dd>全席禁煙</dd></div>
             <div><dt>駐車場</dt><dd>提携駐車場を調整中<br><small>（近隣コインパーキングをご利用ください）</small></dd></div>
           </dl>
@@ -852,11 +859,17 @@
             </summary>
             <div class="faq-a">
               <span class="faq-a-mark">A</span>
-              <p>
-                はい、各種ご利用いただけます。
-                <strong>現金／各種クレジットカード／電子マネー／QRコード決済</strong>に対応予定です。
-                ※ 対応ブランドの詳細は開店前に改めてご案内します。
-              </p>
+              <div class="faq-a-body">
+                <p>
+                  はい、各種ご利用いただけます。
+                  <strong>現金</strong>のほか、以下のキャッシュレス決済に対応します:
+                </p>
+                <ul class="faq-pay-list">
+                  <li><strong>クレジットカード</strong>：VISA／Mastercard／JCB／American Express／Diners Club（タッチ決済対応）</li>
+                  <li><strong>電子マネー</strong>：交通系IC（Suica・PASMO・manaca・ICOCA・Kitaca・toica・SUGOCA・nimoca・はやかけん ※PiTaPaは除く）／nanaco／WAON</li>
+                  <li><strong>コード決済</strong>：PayPay／d払い／au PAY／楽天ペイ／メルペイ／銀行Pay／AEON Pay／Alipay+／WeChat Pay</li>
+                </ul>
+              </div>
             </div>
           </details>
         </li>

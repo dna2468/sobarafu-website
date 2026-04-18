@@ -109,7 +109,7 @@ npx --yes http-server -p 3000 -c-1
 - **予約**: 不可（先着順）
 - **テイクアウト**: 一部メニュー対応可
 - **駐車場**: 現在、提携駐車場を調整中（近隣コインパーキング案内）
-- **支払い**: 現金・クレジットカード・電子マネー・QRコード決済
+- **支払い**: 現金／クレジットカード（VISA・Mastercard・JCB・AMEX・Diners／タッチ決済対応）／電子マネー（交通系IC ※PiTaPa除く・nanaco・WAON）／コード決済（PayPay・d払い・au PAY・楽天ペイ・メルペイ・銀行Pay・AEON Pay・Alipay+・WeChat Pay）
 - **Instagram**: @yakisoba.stand.rafu
 - **オープン**: 2026.5.7（木）
 

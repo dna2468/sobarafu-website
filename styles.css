@@ -1682,6 +1682,7 @@ ul { list-style: none; padding: 0; margin: 0; }
   align-items: flex-start;
   animation: faqFadeIn .35s ease;
 }
+.faq-a-body { flex: 1; min-width: 0; }
 .faq-a p {
   margin: 10px 0 0;
   line-height: 1.95;
@@ -1693,6 +1694,25 @@ ul { list-style: none; padding: 0; margin: 0; }
   font-weight: 900;
   background: linear-gradient(transparent 62%, rgba(255, 184, 0, .4) 62%);
   padding: 0 2px;
+}
+.faq-pay-list {
+  margin: 10px 0 0;
+  padding: 0;
+  list-style: none;
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--c-ink-soft);
+}
+.faq-pay-list li {
+  padding: 8px 0;
+  border-top: 1px dashed var(--c-line);
+}
+.faq-pay-list li:first-child { border-top: 0; padding-top: 4px; }
+.faq-pay-list strong {
+  display: inline-block;
+  color: var(--c-brown);
+  font-weight: 900;
+  margin-right: 4px;
 }
 @keyframes faqFadeIn {
   from { opacity: 0; transform: translateY(-6px); }

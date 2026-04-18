@@ -1523,10 +1523,41 @@ ul { list-style: none; padding: 0; margin: 0; }
   0%, 100% { transform: rotate(-10deg); }
   50% { transform: rotate(-4deg) scale(1.04); }
 }
+.map-open-link {
+  position: absolute;
+  left: 14px;
+  bottom: 14px;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 14px;
+  background: #fff;
+  color: var(--c-brown);
+  font-family: var(--f-heading);
+  font-weight: 700;
+  font-size: 13px;
+  text-decoration: none;
+  border-radius: 999px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, .2);
+  transition: transform .2s, box-shadow .2s;
+}
+.map-open-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, .28);
+}
+.map-open-link svg {
+  width: 16px;
+  height: 16px;
+  color: var(--c-red);
+  flex-shrink: 0;
+}
 @media (max-width: 720px) {
   .map-sticker { width: 94px; height: 94px; top: 10px; right: 10px; padding: 10px 8px; }
   .map-sticker-top { font-size: 13px; }
   .map-sticker-bottom { font-size: 10px; }
+  .map-open-link { font-size: 12px; padding: 8px 12px; left: 10px; bottom: 10px; }
+  .map-open-link svg { width: 14px; height: 14px; }
 }
 
 .access-info {

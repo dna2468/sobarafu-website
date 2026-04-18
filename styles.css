@@ -1191,9 +1191,9 @@ ul { list-style: none; padding: 0; margin: 0; }
   line-height: 1.4;
 }
 .feature-desc {
-  font-size: 14.5px;
+  font-size: 15.5px;
   line-height: 1.95;
-  color: var(--c-ink-soft);
+  color: var(--c-ink);
   margin: 0 0 22px;
 }
 .feature-price {
@@ -1387,9 +1387,9 @@ ul { list-style: none; padding: 0; margin: 0; }
 }
 .menu-note {
   text-align: center;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.9;
-  color: var(--c-ink-soft);
+  color: var(--c-ink);
   margin-top: 36px;
   padding: 18px 24px;
   background: rgba(255, 255, 255, 0.55);
@@ -1566,7 +1566,7 @@ ul { list-style: none; padding: 0; margin: 0; }
   line-height: 1.8;
   color: var(--c-ink);
 }
-.info-list dd small { color: var(--c-ink); opacity: .75; font-size: 13px; font-weight: 400; }
+.info-list dd small { color: var(--c-ink); opacity: .9; font-size: 14px; font-weight: 400; }
 
 @media (max-width: 900px) {
   .access-grid { grid-template-columns: 1fr; }
@@ -1687,11 +1687,15 @@ ul { list-style: none; padding: 0; margin: 0; }
   animation: faqFadeIn .35s ease;
 }
 .faq-a-body { flex: 1; min-width: 0; }
+.faq-a > p {
+  flex: 1;
+  min-width: 0;
+}
 .faq-a p {
   margin: 10px 0 0;
   line-height: 1.95;
-  font-size: 14.5px;
-  color: var(--c-ink-soft);
+  font-size: 16px;
+  color: var(--c-ink);
 }
 .faq-a p strong {
   color: var(--c-red);
@@ -1703,9 +1707,9 @@ ul { list-style: none; padding: 0; margin: 0; }
   margin: 10px 0 0;
   padding: 0;
   list-style: none;
-  font-size: 14px;
-  line-height: 1.7;
-  color: var(--c-ink-soft);
+  font-size: 15px;
+  line-height: 1.75;
+  color: var(--c-ink);
 }
 .faq-pay-list li {
   padding: 8px 0;
@@ -1727,7 +1731,7 @@ ul { list-style: none; padding: 0; margin: 0; }
   .faq-item summary { padding: 18px 20px; font-size: 15px; gap: 12px; }
   .faq-q-mark, .faq-a-mark { width: 36px; height: 36px; font-size: 17px; }
   .faq-a { padding: 0 20px 22px; gap: 12px; }
-  .faq-a p { font-size: 13.5px; line-height: 1.9; }
+  .faq-a p { font-size: 15px; line-height: 1.9; }
   .faq-toggle { width: 22px; height: 22px; }
 }
 
@@ -1939,10 +1943,6 @@ ul { list-style: none; padding: 0; margin: 0; }
 
 @media (max-width: 1080px) {
   .contact-grid { grid-template-columns: repeat(2, 1fr); }
-}
-@media (max-width: 720px) {
-  /* モバイルでリード文を左寄せ（2行以上になったときの可読性） */
-  .section-head .section-lede { text-align: left; }
 }
 @media (max-width: 560px) {
   .access-info { padding: 26px 18px; }

@@ -899,20 +899,23 @@ ul { list-style: none; padding: 0; margin: 0; }
 .concept-card {
   background: #fff;
   border-radius: var(--radius-l);
-  padding: 28px 24px 26px;
+  padding: 26px 24px 24px;
   position: relative;
+  overflow: hidden;
   box-shadow: var(--shadow-card);
   transition: transform .3s;
   border: 3px solid var(--c-ink);
 }
 .concept-card:hover { transform: translateY(-4px); }
+.concept-card > * { position: relative; z-index: 1; }
 .concept-num {
   position: absolute;
-  top: 12px; right: 16px;
+  top: 10px; right: 16px;
   font-family: var(--f-display);
-  font-size: 32px;
+  font-size: 30px;
   color: var(--c-butter);
   line-height: 1;
+  z-index: 1;
 }
 .concept-tag {
   display: inline-block;
@@ -940,26 +943,32 @@ ul { list-style: none; padding: 0; margin: 0; }
   padding: 0 2px;
 }
 .concept-icon {
-  width: 68px; height: 68px;
+  position: absolute;
+  bottom: -18px;
+  right: -18px;
+  width: 160px; height: 160px;
   background: var(--c-red);
   color: #fff;
   border-radius: 50%;
   display: grid; place-items: center;
-  margin-bottom: 16px;
-  box-shadow: 0 5px 0 var(--c-red-deep);
-  transition: transform .6s cubic-bezier(.34,1.56,.64,1);
+  margin-bottom: 0;
+  box-shadow: none;
+  opacity: .14;
+  z-index: 0;
+  transition: transform .6s cubic-bezier(.34,1.56,.64,1), opacity .4s;
+  pointer-events: none;
 }
-.concept-icon svg { width: 54%; height: 54%; display: block; }
-.concept-card:hover .concept-icon { transform: rotate(-8deg) scale(1.06); }
-.concept-card:nth-child(2) .concept-icon { background: var(--c-orange); color: var(--c-brown); box-shadow: 0 5px 0 #c48d00; }
-.concept-card:nth-child(3) .concept-icon { background: var(--c-cta); color: #fff; box-shadow: 0 5px 0 #c44a1b; }
+.concept-icon svg { width: 56%; height: 56%; display: block; }
+.concept-card:hover .concept-icon { transform: rotate(-8deg) scale(1.05); opacity: .2; }
+.concept-card:nth-child(2) .concept-icon { background: var(--c-orange); color: var(--c-brown); }
+.concept-card:nth-child(3) .concept-icon { background: var(--c-cta); color: #fff; }
 
 .concept-title {
   font-family: var(--f-heading);
   font-weight: 900;
-  font-size: 19px;
-  line-height: 1.4;
-  margin: 0 0 10px;
+  font-size: 23px;
+  line-height: 1.45;
+  margin: 0 0 14px;
   color: var(--c-brown);
 }
 .concept-title em {
@@ -968,10 +977,10 @@ ul { list-style: none; padding: 0; margin: 0; }
   background: linear-gradient(transparent 60%, rgba(255, 184, 0, .5) 60%);
 }
 .concept-body {
-  font-size: 13.5px;
-  line-height: 1.75;
+  font-size: 15px;
+  line-height: 1.9;
   margin: 0;
-  color: var(--c-ink-soft);
+  color: var(--c-ink);
 }
 
 @media (max-width: 900px) {

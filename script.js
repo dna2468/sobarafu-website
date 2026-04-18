@@ -114,13 +114,18 @@
     revealTargets.forEach((el) => el.classList.add('is-in'));
   }
 
-  /* ---------------- Hero entrance (fire once on load) ---------------- */
-  window.addEventListener('load', () => {
+  /* ---------------- Hero entrance (fire ASAP, don't wait for images) ---------------- */
+  const triggerHeroReveal = () => {
     heroRevealEls.forEach((el, i) => {
-      el.style.setProperty('--d', 120 + i * 110 + 'ms');
+      el.style.setProperty('--d', 40 + i * 90 + 'ms');
       requestAnimationFrame(() => el.classList.add('is-in'));
     });
-  });
+  };
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', triggerHeroReveal, { once: true });
+  } else {
+    triggerHeroReveal();
+  }
 
   /* ---------------- Scrollspy: aria-current on nav ---------------- */
   const navLinks = document.querySelectorAll('.site-nav a[href^="#"], .mobile-nav a[href^="#"]');

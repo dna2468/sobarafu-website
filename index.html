@@ -26,6 +26,10 @@
 <link rel="icon" type="image/png" href="logo-brand/ra-pattern.png">
 <link rel="apple-touch-icon" href="logo-brand/ra-pattern.png">
 
+<!-- Preload hero logos for faster first paint -->
+<link rel="preload" as="image" href="logo-brand/rafu-logo-rafu.svg" type="image/svg+xml" fetchpriority="high">
+<link rel="preload" as="image" href="logo-brand/rafu-logo-stand.svg" type="image/svg+xml">
+
 <title>焼きそばスタンド らふ｜名古屋・鶴里の焼きそば専門店</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -284,7 +288,7 @@
         </span>
 
         <h1 class="hero-title">
-          <img class="hero-title-sub" data-reveal-line src="logo-brand/rafu-logo-stand.svg" alt="焼きそばスタンド" decoding="async">
+          <img class="hero-title-sub" data-reveal-line src="logo-brand/rafu-logo-stand.svg" alt="焼きそばスタンド" decoding="async" fetchpriority="high">
           <img class="hero-title-main" data-reveal-pop src="logo-brand/rafu-logo-rafu.svg" alt="らふ" fetchpriority="high" decoding="async">
         </h1>
 

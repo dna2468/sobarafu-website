@@ -20,5 +20,6 @@ build/
 .env.local
 .env.*.local
 
-# Image backup from scripts/replace-bg.mjs (keep originals locally, not in git)
+# Image backups from scripts (keep originals locally, not in git)
 menu-photos-original/
+images-original/

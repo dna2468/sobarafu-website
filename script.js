@@ -11,7 +11,6 @@
   const floatDisc = document.querySelector('.float-disc');
   const backToTop = document.querySelector('.back-to-top');
   const parallaxEls = document.querySelectorAll('[data-parallax]');
-  const tiltEls = document.querySelectorAll('[data-tilt]');
   const magnetEls = document.querySelectorAll('[data-magnet]');
 
   /* ---------------- Scroll: header shadow, progress, float disc ---------------- */
@@ -153,33 +152,6 @@
       { rootMargin: '-40% 0px -50% 0px', threshold: [0, 0.1, 0.4] }
     );
     sections.forEach((s) => spyIO.observe(s));
-  }
-
-  /* ---------------- 3D tilt (mouse follow) ---------------- */
-  if (!prefersReducedMotion && window.matchMedia('(pointer: fine)').matches) {
-    tiltEls.forEach((el) => {
-      const max = 8;
-      let rafLocal = null;
-
-      const onMove = (e) => {
-        if (rafLocal) cancelAnimationFrame(rafLocal);
-        rafLocal = requestAnimationFrame(() => {
-          const r = el.getBoundingClientRect();
-          const px = (e.clientX - r.left) / r.width;
-          const py = (e.clientY - r.top) / r.height;
-          const rotY = (px - 0.5) * (max * 2);
-          const rotX = (0.5 - py) * (max * 2);
-          el.style.transform = `perspective(800px) rotateX(${rotX.toFixed(2)}deg) rotateY(${rotY.toFixed(2)}deg) translateY(-4px)`;
-        });
-      };
-      const onLeave = () => {
-        if (rafLocal) cancelAnimationFrame(rafLocal);
-        el.style.transform = '';
-      };
-
-      el.addEventListener('mousemove', onMove);
-      el.addEventListener('mouseleave', onLeave);
-    });
   }
 
   /* ---------------- Magnetic buttons ---------------- */

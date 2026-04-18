@@ -878,7 +878,7 @@ ul { list-style: none; padding: 0; margin: 0; }
    CONCEPT
    ========================================================= */
 .concept {
-  padding: 100px 0;
+  padding: 76px 0;
   background: var(--c-cream);
   position: relative;
 }
@@ -893,24 +893,24 @@ ul { list-style: none; padding: 0; margin: 0; }
 .concept-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
+  gap: 20px;
   position: relative;
 }
 .concept-card {
   background: #fff;
   border-radius: var(--radius-l);
-  padding: 40px 32px 36px;
+  padding: 28px 24px 26px;
   position: relative;
   box-shadow: var(--shadow-card);
   transition: transform .3s;
   border: 3px solid var(--c-ink);
 }
-.concept-card:hover { transform: translateY(-6px); }
+.concept-card:hover { transform: translateY(-4px); }
 .concept-num {
   position: absolute;
-  top: 16px; right: 20px;
+  top: 12px; right: 16px;
   font-family: var(--f-display);
-  font-size: 38px;
+  font-size: 32px;
   color: var(--c-butter);
   line-height: 1;
 }
@@ -920,11 +920,11 @@ ul { list-style: none; padding: 0; margin: 0; }
   color: var(--c-butter);
   font-family: var(--f-heading);
   font-weight: 700;
-  font-size: 14px;
-  padding: 8px 16px 9px;
+  font-size: 13px;
+  padding: 6px 14px 7px;
   border-radius: 999px;
   letter-spacing: .06em;
-  margin-bottom: 18px;
+  margin-bottom: 12px;
   transform: rotate(-2deg);
   box-shadow: 0 3px 0 rgba(0,0,0,.15);
 }
@@ -940,26 +940,26 @@ ul { list-style: none; padding: 0; margin: 0; }
   padding: 0 2px;
 }
 .concept-icon {
-  width: 84px; height: 84px;
+  width: 68px; height: 68px;
   background: var(--c-red);
   color: #fff;
   border-radius: 50%;
   display: grid; place-items: center;
-  margin-bottom: 24px;
-  box-shadow: 0 6px 0 var(--c-red-deep);
+  margin-bottom: 16px;
+  box-shadow: 0 5px 0 var(--c-red-deep);
   transition: transform .6s cubic-bezier(.34,1.56,.64,1);
 }
 .concept-icon svg { width: 54%; height: 54%; display: block; }
 .concept-card:hover .concept-icon { transform: rotate(-8deg) scale(1.06); }
-.concept-card:nth-child(2) .concept-icon { background: var(--c-orange); color: var(--c-brown); box-shadow: 0 6px 0 #c48d00; }
-.concept-card:nth-child(3) .concept-icon { background: var(--c-cta); color: #fff; box-shadow: 0 6px 0 #c44a1b; }
+.concept-card:nth-child(2) .concept-icon { background: var(--c-orange); color: var(--c-brown); box-shadow: 0 5px 0 #c48d00; }
+.concept-card:nth-child(3) .concept-icon { background: var(--c-cta); color: #fff; box-shadow: 0 5px 0 #c44a1b; }
 
 .concept-title {
   font-family: var(--f-heading);
   font-weight: 900;
-  font-size: 22px;
+  font-size: 19px;
   line-height: 1.4;
-  margin: 0 0 16px;
+  margin: 0 0 10px;
   color: var(--c-brown);
 }
 .concept-title em {
@@ -968,8 +968,8 @@ ul { list-style: none; padding: 0; margin: 0; }
   background: linear-gradient(transparent 60%, rgba(255, 184, 0, .5) 60%);
 }
 .concept-body {
-  font-size: 14.5px;
-  line-height: 1.9;
+  font-size: 13.5px;
+  line-height: 1.75;
   margin: 0;
   color: var(--c-ink-soft);
 }
@@ -1980,12 +1980,6 @@ ul { list-style: none; padding: 0; margin: 0; }
               transform .9s cubic-bezier(.34,1.56,.64,1);
 }
 .reveal-pop.is-in { opacity: 1; transform: none; }
-
-[data-tilt] {
-  transition: transform .35s cubic-bezier(.2,.8,.2,1), box-shadow .35s;
-  transform-style: preserve-3d;
-  will-change: transform;
-}
 
 /* =========================================================
    REDUCED MOTION

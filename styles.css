@@ -1814,67 +1814,123 @@ ul { list-style: none; padding: 0; margin: 0; }
 .contact-card-disabled .contact-action { color: var(--c-ink-soft); }
 
 .review-links {
-  margin-top: 56px;
+  margin-top: 64px;
+  padding: 40px 24px 36px;
+  background: linear-gradient(180deg, rgba(255, 184, 0, .08) 0%, rgba(255, 107, 53, .05) 100%);
+  border: 1px solid rgba(255, 184, 0, .28);
+  border-radius: var(--radius-l);
   text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.review-links::before {
+  content: "";
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 140px;
+  height: 80px;
+  background: radial-gradient(ellipse, rgba(255, 184, 0, .35) 0%, transparent 70%);
+  pointer-events: none;
+}
+.review-stars {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  font-size: 22px;
+  color: var(--c-orange);
+  margin-bottom: 12px;
+  letter-spacing: .1em;
+  text-shadow: 0 2px 6px rgba(255, 184, 0, .4);
+  position: relative;
+}
+.review-heading {
+  font-family: var(--f-display);
+  font-size: clamp(20px, 3.6vw, 26px);
+  color: #fff;
+  margin: 0 0 10px;
+  letter-spacing: .04em;
+  line-height: 1.4;
+  position: relative;
 }
 .review-lede {
-  font-family: var(--f-heading);
-  font-weight: 700;
-  font-size: 15px;
-  color: #fff;
-  letter-spacing: .12em;
-  margin-bottom: 18px;
+  font-family: var(--f-body);
+  font-size: 14px;
+  color: rgba(255, 255, 255, .85);
+  line-height: 1.7;
+  margin: 0 0 22px;
+  letter-spacing: .04em;
   position: relative;
+}
+.review-cta {
   display: inline-flex;
   align-items: center;
-  gap: 16px;
-}
-.review-lede::before,
-.review-lede::after {
-  content: "";
-  display: block;
-  width: 40px;
-  height: 1px;
-  background: rgba(255, 255, 255, .35);
-}
-.review-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 280px));
-  gap: 16px;
-  justify-content: center;
-}
-.review-card {
+  gap: 14px;
   background: #fff;
-  border: 1px solid var(--c-line);
+  color: var(--c-brown);
+  padding: 16px 26px 16px 22px;
   border-radius: 999px;
-  padding: 14px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
   font-family: var(--f-heading);
   font-weight: 700;
-  font-size: 14px;
-  transition: transform .25s, box-shadow .25s;
+  text-decoration: none;
+  box-shadow: 0 6px 20px rgba(255, 107, 53, .35), 0 2px 6px rgba(0, 0, 0, .2);
+  transition: transform .25s ease, box-shadow .25s ease;
+  position: relative;
 }
-.review-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-card); }
-.review-label { color: var(--c-brown); letter-spacing: .08em; white-space: nowrap; }
-.review-action { color: var(--c-cta); font-size: 13px; white-space: nowrap; }
-.review-card-disabled {
-  cursor: not-allowed;
-  background: rgba(255, 255, 255, .06);
-  border-color: rgba(255, 255, 255, .2);
+.review-cta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(255, 107, 53, .5), 0 4px 10px rgba(0, 0, 0, .25);
 }
-.review-card-disabled:hover { transform: none; box-shadow: none; }
-.review-card-disabled .review-label { color: rgba(255, 255, 255, .75); }
-.review-card-disabled .review-action { color: rgba(255, 255, 255, .5); }
+.review-cta-icon {
+  width: 26px;
+  height: 26px;
+  color: var(--c-red);
+  flex-shrink: 0;
+}
+.review-cta-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  text-align: left;
+}
+.review-cta-label {
+  font-size: 11px;
+  letter-spacing: .12em;
+  color: var(--c-ink-soft);
+  font-weight: 500;
+}
+.review-cta-main {
+  font-size: 17px;
+  letter-spacing: .06em;
+  color: var(--c-brown);
+}
+.review-cta-arrow {
+  font-family: var(--f-display);
+  font-size: 20px;
+  color: var(--c-cta);
+  transition: transform .25s ease;
+}
+.review-cta:hover .review-cta-arrow { transform: translateX(4px); }
+.review-sub {
+  margin: 18px 0 0;
+  font-family: var(--f-body);
+  font-size: 11px;
+  color: rgba(255, 255, 255, .55);
+  letter-spacing: .04em;
+  line-height: 1.6;
+  position: relative;
+}
 
 @media (max-width: 1080px) {
   .contact-grid { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 560px) {
   .contact-grid { grid-template-columns: 1fr; }
-  .review-grid { grid-template-columns: 1fr; }
+  .review-links { padding: 32px 18px 28px; }
+  .review-cta { padding: 14px 20px 14px 18px; gap: 10px; }
+  .review-cta-main { font-size: 15px; }
 }
 
 /* =========================================================

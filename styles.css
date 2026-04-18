@@ -88,8 +88,6 @@ body {
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
   cursor: auto;
-  word-break: keep-all;
-  overflow-wrap: break-word;
 }
 
 /* =========================================================
@@ -560,7 +558,7 @@ ul { list-style: none; padding: 0; margin: 0; }
   font-size: clamp(15px, 1.6vw, 18px);
   line-height: 2;
   margin: 0 0 32px;
-  color: var(--c-ink-soft);
+  color: var(--c-ink);
 }
 
 .hero-cta-row {
@@ -864,7 +862,7 @@ ul { list-style: none; padding: 0; margin: 0; }
   font-weight: 500;
   font-size: 15px;
   line-height: 2;
-  color: var(--c-ink-soft);
+  color: var(--c-ink);
   margin: 0;
 }
 .section-lede strong {
@@ -1211,7 +1209,7 @@ ul { list-style: none; padding: 0; margin: 0; }
 }
 .feature-price small {
   font-size: 13px;
-  color: var(--c-ink-soft);
+  color: var(--c-ink);
   font-family: var(--f-heading);
 }
 .spotlight-feature.is-soon .feature-price-main {
@@ -1380,9 +1378,9 @@ ul { list-style: none; padding: 0; margin: 0; }
   margin: 0 0 8px;
 }
 .menu-side-block p {
-  font-size: 13.5px;
+  font-size: 14.5px;
   line-height: 1.8;
-  color: var(--c-ink-soft);
+  color: var(--c-ink);
   margin: 0;
 }
 .menu-note {
@@ -1566,7 +1564,7 @@ ul { list-style: none; padding: 0; margin: 0; }
   line-height: 1.8;
   color: var(--c-ink);
 }
-.info-list dd small { color: var(--c-ink); opacity: .9; font-size: 14px; font-weight: 400; }
+.info-list dd small { color: var(--c-ink); font-size: 14px; font-weight: 400; }
 
 @media (max-width: 900px) {
   .access-grid { grid-template-columns: 1fr; }
@@ -1916,7 +1914,7 @@ ul { list-style: none; padding: 0; margin: 0; }
 .review-cta-label {
   font-size: 11px;
   letter-spacing: .12em;
-  color: var(--c-ink-soft);
+  color: var(--c-ink);
   font-weight: 500;
 }
 .review-cta-main {

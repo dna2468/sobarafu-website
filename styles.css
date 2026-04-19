@@ -794,7 +794,7 @@ ul { list-style: none; padding: 0; margin: 0; }
 @media (max-width: 960px) {
   .hero { padding: 48px 0 88px; }
   .hero-inner { grid-template-columns: 1fr; gap: 60px; }
-  .hero-visual { margin: 0 auto; max-width: 440px; }
+  .hero-visual { display: none; }
   .hero-title-sub {
     height: clamp(30px, 5.6vw, 44px);
   }
@@ -829,9 +829,6 @@ ul { list-style: none; padding: 0; margin: 0; }
     object-fit: cover;
     display: block;
   }
-}
-@media (max-width: 480px) {
-  .hero-photo-main { width: 86%; }
 }
 
 /* =========================================================

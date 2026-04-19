@@ -1074,10 +1074,10 @@ ul { list-style: none; padding: 0; margin: 0; }
 }
 .story-visual {
   position: relative;
-  aspect-ratio: 1 / 1;
   max-width: 520px;
   margin-left: auto;
   width: 100%;
+  min-height: 620px;
 }
 .story-photo {
   position: absolute;
@@ -1086,21 +1086,53 @@ ul { list-style: none; padding: 0; margin: 0; }
   box-shadow: var(--shadow-strong);
 }
 .story-photo img { width: 100%; height: 100%; object-fit: cover; }
-.story-photo-a {
-  top: 0; right: 0;
-  width: 68%;
-  aspect-ratio: 3 / 4;
-  transform: rotate(3deg);
+.story-reel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 72%;
+  transform: rotate(2deg);
   border: 6px solid #fff;
+  border-radius: var(--radius-l);
+  overflow: hidden;
+  box-shadow: var(--shadow-strong);
+  background: #fff;
   z-index: 1;
+  transition: transform .4s ease;
+}
+.story-reel:hover { transform: rotate(0) scale(1.02); }
+.story-reel .instagram-media {
+  min-width: 0 !important;
+  max-width: 100% !important;
+  width: 100% !important;
+  margin: 0 !important;
+  border-radius: 0 !important;
+  border: 0 !important;
+  box-shadow: none !important;
 }
 .story-photo-b {
   bottom: 0; left: 0;
-  width: 60%;
+  width: 48%;
   aspect-ratio: 4 / 3;
   transform: rotate(-5deg);
   border: 6px solid var(--c-orange);
   z-index: 2;
+}
+.story-ig-note {
+  font-family: var(--f-body);
+  font-size: 13px;
+  color: rgba(255, 248, 231, 0.7);
+  letter-spacing: .04em;
+  margin: -8px 0 0;
+}
+.story-ig-note a {
+  color: var(--c-orange);
+  font-weight: 700;
+  border-bottom: 1px dotted rgba(255, 184, 0, .5);
+}
+.story-ig-note a:hover {
+  color: #fff;
+  border-bottom-color: #fff;
 }
 .story-tag {
   position: absolute;
@@ -1122,7 +1154,9 @@ ul { list-style: none; padding: 0; margin: 0; }
 @media (max-width: 900px) {
   .story { padding: 80px 0; }
   .story-inner { grid-template-columns: 1fr; gap: 60px; }
-  .story-visual { margin: 0 auto; max-width: 400px; }
+  .story-visual { margin: 0 auto; max-width: 360px; min-height: 560px; }
+  .story-reel { width: 80%; }
+  .story-photo-b { width: 52%; }
 }
 
 /* =========================================================

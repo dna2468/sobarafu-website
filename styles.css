@@ -1577,7 +1577,7 @@ ul { list-style: none; padding: 0; margin: 0; }
   gap: 32px 28px;
   max-width: 980px;
   margin: 0 auto;
-  padding-top: 12px;
+  padding-top: 20px;
   align-items: start;
 }
 .ig-card {
@@ -1599,19 +1599,19 @@ ul { list-style: none; padding: 0; margin: 0; }
 
 .ig-card-badge {
   position: absolute;
-  top: -14px;
+  top: -20px;
   left: 50%;
   transform: translateX(-50%) rotate(-4deg);
-  padding: 6px 16px;
+  padding: 10px 24px;
   background: var(--c-orange);
   color: var(--c-brown);
   font-family: var(--f-heading);
   font-weight: 900;
-  font-size: 12px;
-  letter-spacing: .08em;
+  font-size: 16px;
+  letter-spacing: .1em;
   border-radius: 999px;
-  border: 2px dashed var(--c-brown);
-  box-shadow: 0 4px 0 #c48d00;
+  border: 2.5px dashed var(--c-brown);
+  box-shadow: 0 5px 0 #c48d00;
   white-space: nowrap;
   z-index: 4;
 }

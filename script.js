@@ -50,8 +50,7 @@
       parallaxEls.forEach((el) => {
         const speed = parseFloat(el.dataset.parallax) || 0;
         el.style.setProperty('--py', (y * speed).toFixed(2) + 'px');
-        const base = el.classList.contains('hero-photo-main') ? -3 : 4;
-        el.style.transform = `translateY(${(y * speed).toFixed(2)}px) rotate(${base}deg)`;
+        el.style.transform = `translateY(${(y * speed).toFixed(2)}px) rotate(-3deg)`;
       });
     }
   };
@@ -203,12 +202,10 @@
     /* Effect 1: Hero photos + bg text scrub */
     const heroSection = document.querySelector('.hero');
     const mainPhoto = document.querySelector('.hero-photo-main');
-    const subPhoto = document.querySelector('.hero-photo-sub');
     const heroBgText = document.querySelector('.hero-bg-text');
 
     if (heroSection && enableParallax()) {
-      gsap.set(mainPhoto, { rotate: -3, transformOrigin: '50% 50%' });
-      gsap.set(subPhoto, { rotate: 4, transformOrigin: '50% 50%' });
+      if (mainPhoto) gsap.set(mainPhoto, { rotate: -3, transformOrigin: '50% 50%' });
 
       const heroTL = gsap.timeline({
         scrollTrigger: {
@@ -220,7 +217,6 @@
       });
 
       if (mainPhoto) heroTL.to(mainPhoto, { y: -140, rotate: -9, scale: 0.92, ease: 'none' }, 0);
-      if (subPhoto)  heroTL.to(subPhoto,  { y:  110, rotate: 12, scale: 1.06, ease: 'none' }, 0);
       if (heroBgText) heroTL.to(heroBgText, { xPercent: -14, rotate: -8, ease: 'none' }, 0);
     }
 

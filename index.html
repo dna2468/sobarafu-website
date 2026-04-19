@@ -290,10 +290,14 @@
 
     <div class="hero-inner">
       <div class="hero-copy">
-        <span class="opening-badge">
-          <span class="opening-dot"></span>
-          2026.5.7 (木) OPEN
-        </span>
+        <div class="opening-countdown" role="status" aria-live="polite">
+          <span class="opening-dot" aria-hidden="true"></span>
+          <span class="opening-countdown-label">GRAND OPEN まで</span>
+          <span class="opening-countdown-main">
+            あと <strong class="opening-countdown-days" data-countdown-days>—</strong> <span class="opening-countdown-unit">日</span>
+          </span>
+          <span class="opening-countdown-date">2026.5.7 (木)</span>
+        </div>
 
         <h1 class="hero-title">
           <span class="hero-title-row">
@@ -321,6 +325,19 @@
           <a href="#menu" class="btn btn-primary" data-magnet><span>メニューを見る</span></a>
           <a href="#access" class="btn btn-ghost" data-magnet><span>アクセス・営業時間</span></a>
         </div>
+
+        <a class="hero-ig-follow" href="https://www.instagram.com/yakisoba.stand.rafu/" target="_blank" rel="noopener noreferrer">
+          <svg class="hero-ig-follow-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="18" height="18" rx="5"/>
+            <circle cx="12" cy="12" r="4"/>
+            <circle cx="17.5" cy="6.5" r=".6" fill="currentColor" stroke="none"/>
+          </svg>
+          <span class="hero-ig-follow-text">
+            <span class="hero-ig-follow-lead">開店までの様子を発信中</span>
+            <span class="hero-ig-follow-handle">@yakisoba.stand.rafu</span>
+          </span>
+          <span class="hero-ig-follow-cta">フォローする<span aria-hidden="true">→</span></span>
+        </a>
       </div>
 
       <div class="hero-visual">
@@ -594,18 +611,15 @@
               data-img="menu-photos/名古屋風あんかけ焼きそば.jpg"
               data-img-webp="menu-photos/名古屋風あんかけ焼きそば.webp"
               data-name="あんかけスパ風焼きそば"
-              data-desc="名古屋名物あんかけスパと焼きそばの夢のコラボ。ピリ辛のとろみ餡が麺に絡む、ここだけのご当地メニュー。※ こちらは開発中メニューです。提供開始まで今しばらくお待ちください。"
-              data-price="近日登場"
-              data-badge="COMING SOON"
-              data-badge-class="badge-soon">
+              data-desc="名古屋名物あんかけスパと焼きそばの夢のコラボ。ピリ辛のとろみ餡が麺に絡む、ここだけのご当地メニュー。"
+              data-price="¥1,100">
               <span class="thumb-photo">
                 <picture>
                   <source type="image/webp" srcset="menu-photos/名古屋風あんかけ焼きそば.webp">
                   <img src="menu-photos/名古屋風あんかけ焼きそば.jpg" alt="名古屋風あんかけ焼きそば" width="400" height="300" loading="lazy" decoding="async">
                 </picture>
-                <span class="thumb-badge badge-soon">COMING SOON</span>
               </span>
-              <span class="thumb-label"><span>あんかけスパ風</span><small>近日</small></span>
+              <span class="thumb-label"><span>あんかけスパ風</span><small>¥1,100</small></span>
             </button>
           </li>
           <li>

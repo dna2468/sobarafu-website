@@ -1080,6 +1080,8 @@ ul { list-style: none; padding: 0; margin: 0; }
 .concept-card:hover .concept-icon { transform: rotate(-8deg) scale(1.05); opacity: .2; }
 .concept-item:nth-child(2) .concept-icon { background: var(--c-orange); color: var(--c-brown); }
 .concept-item:nth-child(3) .concept-icon { background: var(--c-cta); color: #fff; }
+.concept-card a { color: inherit; text-decoration: underline; text-decoration-color: var(--c-orange); text-decoration-thickness: 2px; text-underline-offset: 3px; }
+.concept-card a:hover { color: var(--c-cta); text-decoration-color: var(--c-cta); }
 
 .concept-title {
   font-family: var(--f-heading);

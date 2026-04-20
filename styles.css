@@ -1993,17 +1993,17 @@ ul { list-style: none; padding: 0; margin: 0; }
 }
 .contact-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 16px;
   position: relative;
 }
 .contact-card {
   background: #fff;
   border-radius: var(--radius-l);
-  padding: 36px 28px;
+  padding: 28px 20px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
   transition: transform .25s;
   border-top: 6px solid var(--c-red);
 }
@@ -2017,9 +2017,10 @@ ul { list-style: none; padding: 0; margin: 0; }
 .contact-value {
   font-family: var(--f-heading);
   font-weight: 900;
-  font-size: 20px;
+  font-size: 17px;
   color: var(--c-brown);
-  word-break: break-all;
+  overflow-wrap: anywhere;
+  line-height: 1.35;
 }
 .contact-action {
   margin-top: auto;
@@ -2027,6 +2028,14 @@ ul { list-style: none; padding: 0; margin: 0; }
   font-weight: 700;
   font-size: 14px;
   color: var(--c-cta);
+}
+.contact-tiktok { border-top-color: #000; }
+.contact-tiktok .contact-label {
+  color: #000;
+  background: linear-gradient(90deg, #25F4EE 0%, #FE2C55 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .contact-tel { border-top-color: var(--c-orange); }
 .contact-tel .contact-label { color: var(--c-orange); }
@@ -2162,6 +2171,9 @@ ul { list-style: none; padding: 0; margin: 0; }
 }
 
 @media (max-width: 1080px) {
+  .contact-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 720px) {
   .contact-grid { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 560px) {

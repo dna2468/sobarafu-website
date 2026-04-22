@@ -97,12 +97,14 @@
         "name": "特製焼きそば",
         "hasMenuItem": [
           {"@type": "MenuItem", "name": "ソース焼きそば", "description": "もちもちの食感を最大限に引き出す、王道のソース焼きそば。", "offers": {"@type": "Offer", "price": "850", "priceCurrency": "JPY"}},
+          {"@type": "MenuItem", "name": "塩焼きそば", "description": "塩ベースのあっさりシンプルな焼きそば。茹で麺の食感と素材の旨味をストレートに。", "offers": {"@type": "Offer", "price": "850", "priceCurrency": "JPY"}},
           {"@type": "MenuItem", "name": "すじコン焼きそば", "description": "甘辛く煮込んだ牛すじとこんにゃくの旨味が麺に絡む、当店自慢の一品。", "offers": {"@type": "Offer", "price": "1200", "priceCurrency": "JPY"}},
           {"@type": "MenuItem", "name": "旨辛ホルモン焼きそば", "description": "プリプリのホルモンとピリ辛味噌ダレが食欲をそそる一皿。", "offers": {"@type": "Offer", "price": "1100", "priceCurrency": "JPY"}},
           {"@type": "MenuItem", "name": "あんかけスパ風焼きそば", "description": "名古屋名物あんかけスパと焼きそばの夢のコラボ。", "offers": {"@type": "Offer", "price": "1100", "priceCurrency": "JPY"}},
           {"@type": "MenuItem", "name": "ソース焼きそば 目玉焼きトッピング", "offers": {"@type": "Offer", "price": "950", "priceCurrency": "JPY"}},
           {"@type": "MenuItem", "name": "焼きそばパン（2個セット）", "description": "焼きそばパン用に厳選した麺と、名古屋の老舗ベーカリー「永楽堂」のふわふわ食パンを使用。テイクアウト専用メニュー。", "offers": {"@type": "Offer", "price": "580", "priceCurrency": "JPY"}},
-          {"@type": "MenuItem", "name": "焼きそばパン（単品）", "description": "焼きそばパン用に厳選した麺と、名古屋の老舗ベーカリー「永楽堂」のふわふわ食パンを使用。テイクアウト専用メニュー。", "offers": {"@type": "Offer", "price": "330", "priceCurrency": "JPY"}}
+          {"@type": "MenuItem", "name": "焼きそばパン（単品）", "description": "焼きそばパン用に厳選した麺と、名古屋の老舗ベーカリー「永楽堂」のふわふわ食パンを使用。テイクアウト専用メニュー。", "offers": {"@type": "Offer", "price": "330", "priceCurrency": "JPY"}},
+          {"@type": "MenuItem", "name": "お昼のセット", "description": "焼きそばに、ごはん・お味噌汁がついたお昼限定セット（追加料金）。", "offers": {"@type": "Offer", "price": "200", "priceCurrency": "JPY"}}
         ]
       },
       {
@@ -600,6 +602,24 @@
           </li>
           <li>
             <button class="thumb" type="button" role="tab" aria-selected="false"
+              data-img="menu-photos/塩焼きそば.jpg"
+              data-img-webp="menu-photos/塩焼きそば.webp"
+              data-name="塩焼きそば"
+              data-desc="塩ベースのあっさりシンプルな焼きそば。もちもちの茹で麺の食感と、素材の旨味をストレートに味わえる一皿。"
+              data-price="¥850"
+              data-badge=""
+              data-badge-class="">
+              <span class="thumb-photo">
+                <picture>
+                  <source type="image/webp" srcset="menu-photos/塩焼きそば.webp">
+                  <img src="menu-photos/塩焼きそば.jpg" alt="塩焼きそば" width="400" height="300" loading="lazy" decoding="async">
+                </picture>
+              </span>
+              <span class="thumb-label"><span>塩焼きそば</span><small>¥850</small></span>
+            </button>
+          </li>
+          <li>
+            <button class="thumb" type="button" role="tab" aria-selected="false"
               data-img="menu-photos/旨辛ホルモン焼きそば.jpg"
               data-img-webp="menu-photos/旨辛ホルモン焼きそば.webp"
               data-name="旨辛ホルモン焼きそば"
@@ -667,6 +687,25 @@
                 <span class="thumb-badge badge-togo">テイクアウト専用</span>
               </span>
               <span class="thumb-label"><span>焼きそばパン</span><small>¥580</small></span>
+            </button>
+          </li>
+          <li>
+            <button class="thumb" type="button" role="tab" aria-selected="false"
+              data-img="menu-photos/お昼のセット.jpg"
+              data-img-webp="menu-photos/お昼のセット.webp"
+              data-name="お昼のセット"
+              data-desc="焼きそばに、ごはん・お味噌汁がついたお昼限定のセット。追加料金でワンランク満足度アップ。"
+              data-price="+¥200"
+              data-badge="ランチ限定"
+              data-badge-class="badge-lunch">
+              <span class="thumb-photo">
+                <picture>
+                  <source type="image/webp" srcset="menu-photos/お昼のセット.webp">
+                  <img src="menu-photos/お昼のセット.jpg" alt="お昼のセット（焼きそば＋ごはん＋お味噌汁）" width="400" height="300" loading="lazy" decoding="async">
+                </picture>
+                <span class="thumb-badge badge-lunch">ランチ限定</span>
+              </span>
+              <span class="thumb-label"><span>お昼のセット</span><small>+¥200</small></span>
             </button>
           </li>
         </ul>

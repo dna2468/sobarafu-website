@@ -1465,6 +1465,7 @@ ul { list-style: none; padding: 0; margin: 0; }
 .badge-hot { background: var(--c-red); }
 .badge-local { background: var(--c-orange); color: var(--c-brown); }
 .badge-togo { background: var(--c-navy); color: var(--c-butter); }
+.badge-lunch { background: var(--c-cta); color: #fff; }
 .badge-soon {
   background: var(--c-brown);
   color: var(--c-butter);

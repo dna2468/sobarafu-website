@@ -100,11 +100,10 @@
           {"@type": "MenuItem", "name": "塩焼きそば", "description": "塩ベースのあっさりシンプルな焼きそば。茹で麺の食感と素材の旨味をストレートに。", "offers": {"@type": "Offer", "price": "850", "priceCurrency": "JPY"}},
           {"@type": "MenuItem", "name": "すじコン焼きそば", "description": "甘辛く煮込んだ牛すじとこんにゃくの旨味が麺に絡む、当店自慢の一品。", "offers": {"@type": "Offer", "price": "1200", "priceCurrency": "JPY"}},
           {"@type": "MenuItem", "name": "旨辛ホルモン焼きそば", "description": "プリプリのホルモンとピリ辛味噌ダレが食欲をそそる一皿。", "offers": {"@type": "Offer", "price": "1100", "priceCurrency": "JPY"}},
-          {"@type": "MenuItem", "name": "あんかけスパ風焼きそば", "description": "名古屋名物あんかけスパと焼きそばの夢のコラボ。", "offers": {"@type": "Offer", "price": "1100", "priceCurrency": "JPY"}},
           {"@type": "MenuItem", "name": "ソース焼きそば 目玉焼きトッピング", "offers": {"@type": "Offer", "price": "950", "priceCurrency": "JPY"}},
           {"@type": "MenuItem", "name": "焼きそばパン（2個セット）", "description": "焼きそばパン用に厳選した麺と、名古屋の老舗ベーカリー「永楽堂」のふわふわ食パンを使用。テイクアウト専用メニュー。", "offers": {"@type": "Offer", "price": "580", "priceCurrency": "JPY"}},
           {"@type": "MenuItem", "name": "焼きそばパン（単品）", "description": "焼きそばパン用に厳選した麺と、名古屋の老舗ベーカリー「永楽堂」のふわふわ食パンを使用。テイクアウト専用メニュー。", "offers": {"@type": "Offer", "price": "330", "priceCurrency": "JPY"}},
-          {"@type": "MenuItem", "name": "お昼のセット", "description": "焼きそばに、ごはん・お味噌汁がついたお昼限定セット（追加料金）。", "offers": {"@type": "Offer", "price": "200", "priceCurrency": "JPY"}}
+          {"@type": "MenuItem", "name": "お昼のセット", "description": "ごはんに小鉢がついたお昼限定セット（追加料金）。", "offers": {"@type": "Offer", "price": "200", "priceCurrency": "JPY"}}
         ]
       },
       {
@@ -550,21 +549,39 @@
         <article class="spotlight-feature" aria-live="polite">
           <div class="spotlight-photo">
             <picture class="feature-picture">
-              <source class="feature-source" type="image/webp" srcset="menu-photos/すじこん焼きそば.webp">
-              <img class="feature-img" src="menu-photos/すじこん焼きそば.jpg" alt="すじコン焼きそば" width="800" height="602" loading="lazy" decoding="async">
+              <source class="feature-source" type="image/webp" srcset="menu-photos/ソース焼きそば.webp">
+              <img class="feature-img" src="menu-photos/ソース焼きそば.jpg" alt="ソース焼きそば" width="800" height="602" loading="lazy" decoding="async">
             </picture>
-            <span class="menu-badge feature-badge badge-hot">人気No.1</span>
+            <span class="menu-badge feature-badge"></span>
           </div>
           <div class="spotlight-body">
-            <h3 class="feature-name">すじコン焼きそば</h3>
-            <p class="feature-desc">甘辛く煮込んだ牛すじとこんにゃくの旨味が、もちもちの茹で麺にしっかり絡む、当店自慢の一品。ビールとの相性も抜群です。</p>
-            <p class="feature-price"><span class="feature-price-main">¥1,200</span><small>（税込）</small></p>
+            <h3 class="feature-name">ソース焼きそば</h3>
+            <p class="feature-desc">こだわりの茹で麺の食感を最大限に引き出す、王道のソース焼きそば。当店の原点の一皿。</p>
+            <p class="feature-price"><span class="feature-price-main">¥850</span><small>（税込）</small></p>
           </div>
         </article>
 
         <ul class="spotlight-thumbs" role="tablist" aria-label="メニュー一覧">
           <li>
             <button class="thumb is-active" type="button" role="tab" aria-selected="true"
+              data-img="menu-photos/ソース焼きそば.jpg"
+              data-img-webp="menu-photos/ソース焼きそば.webp"
+              data-name="ソース焼きそば"
+              data-desc="こだわりの茹で麺の食感を最大限に引き出す、王道のソース焼きそば。当店の原点の一皿。"
+              data-price="¥850"
+              data-badge=""
+              data-badge-class="">
+              <span class="thumb-photo">
+                <picture>
+                  <source type="image/webp" srcset="menu-photos/ソース焼きそば.webp">
+                  <img src="menu-photos/ソース焼きそば.jpg" alt="ソース焼きそば" width="400" height="300" loading="lazy" decoding="async">
+                </picture>
+              </span>
+              <span class="thumb-label"><span>ソース焼きそば</span><small>¥850</small></span>
+            </button>
+          </li>
+          <li>
+            <button class="thumb" type="button" role="tab" aria-selected="false"
               data-img="menu-photos/すじこん焼きそば.jpg"
               data-img-webp="menu-photos/すじこん焼きそば.webp"
               data-name="すじコン焼きそば"
@@ -580,24 +597,6 @@
                 <span class="thumb-badge badge-hot">人気No.1</span>
               </span>
               <span class="thumb-label"><span>すじコン焼きそば</span><small>¥1,200</small></span>
-            </button>
-          </li>
-          <li>
-            <button class="thumb" type="button" role="tab" aria-selected="false"
-              data-img="menu-photos/ソース焼きそば.jpg"
-              data-img-webp="menu-photos/ソース焼きそば.webp"
-              data-name="ソース焼きそば"
-              data-desc="こだわりの茹で麺の食感を最大限に引き出す、王道のソース焼きそば。当店の原点の一皿。"
-              data-price="¥850"
-              data-badge=""
-              data-badge-class="">
-              <span class="thumb-photo">
-                <picture>
-                  <source type="image/webp" srcset="menu-photos/ソース焼きそば.webp">
-                  <img src="menu-photos/ソース焼きそば.jpg" alt="ソース焼きそば" width="400" height="300" loading="lazy" decoding="async">
-                </picture>
-              </span>
-              <span class="thumb-label"><span>ソース焼きそば</span><small>¥850</small></span>
             </button>
           </li>
           <li>
@@ -634,22 +633,6 @@
                 </picture>
               </span>
               <span class="thumb-label"><span>旨辛ホルモン焼きそば</span><small>¥1,100</small></span>
-            </button>
-          </li>
-          <li>
-            <button class="thumb" type="button" role="tab" aria-selected="false"
-              data-img="menu-photos/名古屋風あんかけ焼きそば.jpg"
-              data-img-webp="menu-photos/名古屋風あんかけ焼きそば.webp"
-              data-name="あんかけスパ風焼きそば"
-              data-desc="名古屋名物あんかけスパと焼きそばの夢のコラボ。ピリ辛のとろみ餡が麺に絡む、ここだけのご当地メニュー。"
-              data-price="¥1,100">
-              <span class="thumb-photo">
-                <picture>
-                  <source type="image/webp" srcset="menu-photos/名古屋風あんかけ焼きそば.webp">
-                  <img src="menu-photos/名古屋風あんかけ焼きそば.jpg" alt="名古屋風あんかけ焼きそば" width="400" height="300" loading="lazy" decoding="async">
-                </picture>
-              </span>
-              <span class="thumb-label"><span>あんかけスパ風</span><small>¥1,100</small></span>
             </button>
           </li>
           <li>
@@ -694,14 +677,14 @@
               data-img="menu-photos/お昼のセット.jpg"
               data-img-webp="menu-photos/お昼のセット.webp"
               data-name="お昼のセット"
-              data-desc="焼きそばに、ごはん・お味噌汁がついたお昼限定のセット。追加料金でワンランク満足度アップ。"
+              data-desc="ごはんに小鉢がついたお昼限定のセット。追加料金でワンランク満足度アップ。"
               data-price="+¥200"
               data-badge="ランチ限定"
               data-badge-class="badge-lunch">
               <span class="thumb-photo">
                 <picture>
                   <source type="image/webp" srcset="menu-photos/お昼のセット.webp">
-                  <img src="menu-photos/お昼のセット.jpg" alt="お昼のセット（焼きそば＋ごはん＋お味噌汁）" width="400" height="300" loading="lazy" decoding="async">
+                  <img src="menu-photos/お昼のセット.jpg" alt="お昼のセット（ごはん＋小鉢）" width="400" height="300" loading="lazy" decoding="async">
                 </picture>
                 <span class="thumb-badge badge-lunch">ランチ限定</span>
               </span>

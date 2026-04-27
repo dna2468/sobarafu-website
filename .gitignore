@@ -23,3 +23,9 @@ build/
 # Image backups from scripts (keep originals locally, not in git)
 menu-photos-original/
 images-original/
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+!.env.example

@@ -49,7 +49,7 @@
   "url": "https://sobarafu.rta.nagoya/",
   "telephone": "+81-52-746-6386",
   "email": "info@rafu.rta.nagoya",
-  "priceRange": "¥330-¥1,200",
+  "priceRange": "¥100-¥1,300",
   "servesCuisine": ["焼きそば", "日本料理", "Yakisoba", "Japanese", "Noodles"],
   "acceptsReservations": false,
   "paymentAccepted": "Cash, Credit Card (Visa, Mastercard, JCB, American Express, Diners Club), Contactless Card, Transit IC (Suica, PASMO, manaca, ICOCA, Kitaca, toica, SUGOCA, nimoca, はやかけん; PiTaPa not accepted), nanaco, WAON, PayPay, d払い, au PAY, 楽天ペイ, メルペイ, 銀行Pay, AEON Pay, Alipay+, WeChat Pay",
@@ -94,35 +94,59 @@
     "hasMenuSection": [
       {
         "@type": "MenuSection",
-        "name": "特製焼きそば",
+        "name": "焼きそば",
         "hasMenuItem": [
-          {"@type": "MenuItem", "name": "ソース焼きそば", "description": "もちもちの食感を最大限に引き出す、王道のソース焼きそば。", "offers": {"@type": "Offer", "price": "850", "priceCurrency": "JPY"}},
+          {"@type": "MenuItem", "name": "ソース焼きそば", "description": "こだわりの茹で麺の食感を最大限に引き出す、王道のソース焼きそば。", "offers": {"@type": "Offer", "price": "850", "priceCurrency": "JPY"}},
           {"@type": "MenuItem", "name": "塩焼きそば", "description": "塩ベースのあっさりシンプルな焼きそば。茹で麺の食感と素材の旨味をストレートに。", "offers": {"@type": "Offer", "price": "850", "priceCurrency": "JPY"}},
-          {"@type": "MenuItem", "name": "すじコン焼きそば", "description": "甘辛く煮込んだ牛すじとこんにゃくの旨味が麺に絡む、当店自慢の一品。", "offers": {"@type": "Offer", "price": "1200", "priceCurrency": "JPY"}},
-          {"@type": "MenuItem", "name": "旨辛ホルモン焼きそば", "description": "プリプリのホルモンとピリ辛味噌ダレが食欲をそそる一皿。", "offers": {"@type": "Offer", "price": "1100", "priceCurrency": "JPY"}},
-          {"@type": "MenuItem", "name": "ソース焼きそば 目玉焼きトッピング", "offers": {"@type": "Offer", "price": "950", "priceCurrency": "JPY"}},
-          {"@type": "MenuItem", "name": "焼きそばパン（2個セット）", "description": "焼きそばパン用に厳選した麺と、名古屋の老舗ベーカリー「永楽堂」のふわふわ食パンを使用。テイクアウト専用メニュー。", "offers": {"@type": "Offer", "price": "580", "priceCurrency": "JPY"}},
-          {"@type": "MenuItem", "name": "焼きそばパン（単品）", "description": "焼きそばパン用に厳選した麺と、名古屋の老舗ベーカリー「永楽堂」のふわふわ食パンを使用。テイクアウト専用メニュー。", "offers": {"@type": "Offer", "price": "330", "priceCurrency": "JPY"}},
-          {"@type": "MenuItem", "name": "お昼のセット", "description": "ごはんに小鉢がついたお昼限定セット（追加料金）。", "offers": {"@type": "Offer", "price": "200", "priceCurrency": "JPY"}}
+          {"@type": "MenuItem", "name": "激辛ホルモン焼きそば", "description": "プリプリのホルモンと激辛味噌ダレが食欲をそそる、スタミナ満点の一皿。", "offers": {"@type": "Offer", "price": "1100", "priceCurrency": "JPY"}}
+        ]
+      },
+      {
+        "@type": "MenuSection",
+        "name": "定食",
+        "description": "焼きそば＋ライス＋小鉢のセット",
+        "hasMenuItem": [
+          {"@type": "MenuItem", "name": "ソース焼きそば定食", "offers": {"@type": "Offer", "price": "1050", "priceCurrency": "JPY"}},
+          {"@type": "MenuItem", "name": "塩焼きそば定食", "offers": {"@type": "Offer", "price": "1050", "priceCurrency": "JPY"}},
+          {"@type": "MenuItem", "name": "激辛ホルモン焼きそば定食", "offers": {"@type": "Offer", "price": "1300", "priceCurrency": "JPY"}}
+        ]
+      },
+      {
+        "@type": "MenuSection",
+        "name": "テイクアウト",
+        "hasMenuItem": [
+          {"@type": "MenuItem", "name": "焼きそばパン", "description": "焼きそばパン用に厳選した麺と、名古屋の老舗ベーカリー「永楽堂」のふわふわ食パンを使用。", "offers": {"@type": "Offer", "price": "300", "priceCurrency": "JPY"}},
+          {"@type": "MenuItem", "name": "持ち帰りソース焼きそば", "offers": {"@type": "Offer", "price": "850", "priceCurrency": "JPY"}},
+          {"@type": "MenuItem", "name": "持ち帰り塩焼きそば", "offers": {"@type": "Offer", "price": "850", "priceCurrency": "JPY"}}
         ]
       },
       {
         "@type": "MenuSection",
         "name": "トッピング",
         "hasMenuItem": [
-          {"@type": "MenuItem", "name": "目玉焼き"},
-          {"@type": "MenuItem", "name": "温泉卵"},
-          {"@type": "MenuItem", "name": "チーズ"},
-          {"@type": "MenuItem", "name": "すじコン"}
+          {"@type": "MenuItem", "name": "目玉焼き", "offers": {"@type": "Offer", "price": "100", "priceCurrency": "JPY"}},
+          {"@type": "MenuItem", "name": "温泉卵", "offers": {"@type": "Offer", "price": "150", "priceCurrency": "JPY"}},
+          {"@type": "MenuItem", "name": "あぶりチーズ", "offers": {"@type": "Offer", "price": "100", "priceCurrency": "JPY"}},
+          {"@type": "MenuItem", "name": "ウインナー2本", "offers": {"@type": "Offer", "price": "100", "priceCurrency": "JPY"}},
+          {"@type": "MenuItem", "name": "すじコン（トッピング）", "offers": {"@type": "Offer", "price": "350", "priceCurrency": "JPY"}}
+        ]
+      },
+      {
+        "@type": "MenuSection",
+        "name": "一品料理",
+        "hasMenuItem": [
+          {"@type": "MenuItem", "name": "ライス", "offers": {"@type": "Offer", "price": "200", "priceCurrency": "JPY"}},
+          {"@type": "MenuItem", "name": "すじコン（一品料理）", "offers": {"@type": "Offer", "price": "400", "priceCurrency": "JPY"}}
         ]
       },
       {
         "@type": "MenuSection",
         "name": "ドリンク",
         "hasMenuItem": [
-          {"@type": "MenuItem", "name": "ビール"},
-          {"@type": "MenuItem", "name": "オレンジジュース"},
-          {"@type": "MenuItem", "name": "カルピス"}
+          {"@type": "MenuItem", "name": "瓶ビール", "offers": {"@type": "Offer", "price": "650", "priceCurrency": "JPY"}},
+          {"@type": "MenuItem", "name": "黒ウーロン茶", "offers": {"@type": "Offer", "price": "300", "priceCurrency": "JPY"}},
+          {"@type": "MenuItem", "name": "オレンジジュース", "offers": {"@type": "Offer", "price": "300", "priceCurrency": "JPY"}},
+          {"@type": "MenuItem", "name": "カルピス", "offers": {"@type": "Offer", "price": "300", "priceCurrency": "JPY"}}
         ]
       }
     ]
@@ -347,9 +371,9 @@
         <div class="hero-photo hero-photo-main" data-parallax="0.14">
           <picture>
             <source type="image/webp" srcset="menu-photos/すじこん焼きそば.webp">
-            <img src="menu-photos/すじこん焼きそば.jpg" alt="すじコン焼きそば（人気No.1）" width="800" height="602" fetchpriority="high" decoding="async">
+            <img src="menu-photos/すじこん焼きそば.jpg" alt="すじコン焼きそば（トッピング例）" width="800" height="602" fetchpriority="high" decoding="async">
           </picture>
-          <span class="menu-badge badge-hot hero-photo-badge">人気No.1</span>
+          <span class="menu-badge badge-hot hero-photo-badge">トッピング例</span>
         </div>
       </div>
     </div>
@@ -582,25 +606,6 @@
           </li>
           <li>
             <button class="thumb" type="button" role="tab" aria-selected="false"
-              data-img="menu-photos/すじこん焼きそば.jpg"
-              data-img-webp="menu-photos/すじこん焼きそば.webp"
-              data-name="すじコン焼きそば"
-              data-desc="甘辛く煮込んだ牛すじとこんにゃくの旨味が、もちもちの茹で麺にしっかり絡む、当店自慢の一品。ビールとの相性も抜群です。"
-              data-price="¥1,200"
-              data-badge="人気No.1"
-              data-badge-class="badge-hot">
-              <span class="thumb-photo">
-                <picture>
-                  <source type="image/webp" srcset="menu-photos/すじこん焼きそば.webp">
-                  <img src="menu-photos/すじこん焼きそば.jpg" alt="すじコン焼きそば" width="400" height="300" loading="lazy" decoding="async">
-                </picture>
-                <span class="thumb-badge badge-hot">人気No.1</span>
-              </span>
-              <span class="thumb-label"><span>すじコン焼きそば</span><small>¥1,200</small></span>
-            </button>
-          </li>
-          <li>
-            <button class="thumb" type="button" role="tab" aria-selected="false"
               data-img="menu-photos/塩焼きそば.jpg"
               data-img-webp="menu-photos/塩焼きそば.webp"
               data-name="塩焼きそば"
@@ -621,74 +626,76 @@
             <button class="thumb" type="button" role="tab" aria-selected="false"
               data-img="menu-photos/旨辛ホルモン焼きそば.jpg"
               data-img-webp="menu-photos/旨辛ホルモン焼きそば.webp"
-              data-name="旨辛ホルモン焼きそば"
-              data-desc="プリプリのホルモンとピリ辛味噌ダレが食欲をそそる、スタミナ満点の一皿。"
+              data-name="激辛ホルモン焼きそば"
+              data-desc="プリプリのホルモンと激辛味噌ダレが食欲をそそる、スタミナ満点の一皿。汗をかきながら、どうぞ。"
               data-price="¥1,100"
               data-badge=""
               data-badge-class="">
               <span class="thumb-photo">
                 <picture>
                   <source type="image/webp" srcset="menu-photos/旨辛ホルモン焼きそば.webp">
-                  <img src="menu-photos/旨辛ホルモン焼きそば.jpg" alt="旨辛ホルモン焼きそば" width="400" height="300" loading="lazy" decoding="async">
+                  <img src="menu-photos/旨辛ホルモン焼きそば.jpg" alt="激辛ホルモン焼きそば" width="400" height="300" loading="lazy" decoding="async">
                 </picture>
               </span>
-              <span class="thumb-label"><span>旨辛ホルモン焼きそば</span><small>¥1,100</small></span>
+              <span class="thumb-label"><span>激辛ホルモン焼きそば</span><small>¥1,100</small></span>
+            </button>
+          </li>
+          <li>
+            <button class="thumb" type="button" role="tab" aria-selected="false"
+              data-img="menu-photos/すじこん焼きそば.jpg"
+              data-img-webp="menu-photos/すじこん焼きそば.webp"
+              data-name="ソース焼きそば＋すじコン"
+              data-desc="ソース焼きそば（¥850）に「すじコン」トッピング（+¥350）を加えた一例。甘辛く煮込んだ牛すじとこんにゃくの旨味が、もちもちの茹で麺にしっかり絡みます。"
+              data-price="+¥350"
+              data-badge="トッピング例"
+              data-badge-class="badge-hot">
+              <span class="thumb-photo">
+                <picture>
+                  <source type="image/webp" srcset="menu-photos/すじこん焼きそば.webp">
+                  <img src="menu-photos/すじこん焼きそば.jpg" alt="ソース焼きそば＋すじコン（トッピング例）" width="400" height="300" loading="lazy" decoding="async">
+                </picture>
+                <span class="thumb-badge badge-hot">トッピング例</span>
+              </span>
+              <span class="thumb-label"><span>ソース＋すじコン</span><small>+¥350</small></span>
             </button>
           </li>
           <li>
             <button class="thumb" type="button" role="tab" aria-selected="false"
               data-img="menu-photos/ソース焼きそば_目玉焼きトッピング_.jpg"
               data-img-webp="menu-photos/ソース焼きそば_目玉焼きトッピング_.webp"
-              data-name="ソース焼きそば(目玉焼きトッピング)"
-              data-desc="ソース焼きそばに、とろ〜り半熟の目玉焼きをオン。黄身をくずして麺にからめて。"
-              data-price="¥950"
-              data-badge=""
-              data-badge-class="">
+              data-name="ソース焼きそば＋目玉焼き"
+              data-desc="ソース焼きそば（¥850）に「目玉焼き」トッピング（+¥100）を加えた一例。とろ〜り半熟の黄身をくずして麺にからめて。"
+              data-price="+¥100"
+              data-badge="トッピング例"
+              data-badge-class="badge-hot">
               <span class="thumb-photo">
                 <picture>
                   <source type="image/webp" srcset="menu-photos/ソース焼きそば_目玉焼きトッピング_.webp">
-                  <img src="menu-photos/ソース焼きそば_目玉焼きトッピング_.jpg" alt="ソース焼きそば 目玉焼きトッピング" width="400" height="300" loading="lazy" decoding="async">
+                  <img src="menu-photos/ソース焼きそば_目玉焼きトッピング_.jpg" alt="ソース焼きそば＋目玉焼き（トッピング例）" width="400" height="300" loading="lazy" decoding="async">
                 </picture>
+                <span class="thumb-badge badge-hot">トッピング例</span>
               </span>
-              <span class="thumb-label"><span>目玉焼きトッピング</span><small>¥950</small></span>
+              <span class="thumb-label"><span>ソース＋目玉焼き</span><small>+¥100</small></span>
             </button>
           </li>
           <li>
             <button class="thumb" type="button" role="tab" aria-selected="false"
               data-img="menu-photos/焼きそばパン_2個セット_.jpg"
               data-img-webp="menu-photos/焼きそばパン_2個セット_.webp"
-              data-name="焼きそばパン(2個セット)"
-              data-desc="焼きそばパン用に厳選した麺と、名古屋の老舗ベーカリー「永楽堂」のふわふわ食パン。テイクアウト向けメニュー。おやつにも、手土産にも。単品 ¥330。"
-              data-price="¥580"
+              data-name="焼きそばパン"
+              data-desc="焼きそばパン用に厳選した麺と、名古屋の老舗ベーカリー「永楽堂」のふわふわ食パン。おやつにも、手土産にも。※写真は2個。"
+              data-price="¥300"
               data-badge="テイクアウト専用"
               data-badge-class="badge-togo">
               <span class="thumb-photo">
                 <picture>
                   <source type="image/webp" srcset="menu-photos/焼きそばパン_2個セット_.webp">
-                  <img src="menu-photos/焼きそばパン_2個セット_.jpg" alt="焼きそばパン（2個セット）" width="400" height="300" loading="lazy" decoding="async">
+                  <img src="menu-photos/焼きそばパン_2個セット_.jpg" alt="焼きそばパン（※写真は2個）" width="400" height="300" loading="lazy" decoding="async">
                 </picture>
                 <span class="thumb-badge badge-togo">テイクアウト専用</span>
+                <span class="thumb-photo-note">※写真は2個</span>
               </span>
-              <span class="thumb-label"><span>焼きそばパン</span><small>¥580</small></span>
-            </button>
-          </li>
-          <li>
-            <button class="thumb" type="button" role="tab" aria-selected="false"
-              data-img="menu-photos/お昼のセット.jpg"
-              data-img-webp="menu-photos/お昼のセット.webp"
-              data-name="お昼のセット"
-              data-desc="ごはんに小鉢がついたお昼限定のセット。追加料金でワンランク満足度アップ。"
-              data-price="+¥200"
-              data-badge="ランチ限定"
-              data-badge-class="badge-lunch">
-              <span class="thumb-photo">
-                <picture>
-                  <source type="image/webp" srcset="menu-photos/お昼のセット.webp">
-                  <img src="menu-photos/お昼のセット.jpg" alt="お昼のセット（ごはん＋小鉢）" width="400" height="300" loading="lazy" decoding="async">
-                </picture>
-                <span class="thumb-badge badge-lunch">ランチ限定</span>
-              </span>
-              <span class="thumb-label"><span>お昼のセット</span><small>+¥200</small></span>
+              <span class="thumb-label"><span>焼きそばパン</span><small>¥300</small></span>
             </button>
           </li>
         </ul>
@@ -696,21 +703,45 @@
 
       <div class="menu-side">
         <div class="menu-side-block">
-          <h4>トッピング</h4>
-          <p>目玉焼き／温泉卵／チーズ／すじコン　ほか</p>
+          <h4>定食</h4>
+          <p class="menu-side-sub">焼きそば＋ライス＋小鉢</p>
+          <ul class="menu-side-list">
+            <li><span>ソース焼きそば定食</span><small>¥1,050</small></li>
+            <li><span>塩焼きそば定食</span><small>¥1,050</small></li>
+            <li><span>激辛ホルモン焼きそば定食</span><small>¥1,300</small></li>
+          </ul>
         </div>
         <div class="menu-side-block">
-          <h4>セットメニュー・単品</h4>
-          <p>ごはん（単品）／お昼のセット（焼きそば＋ごはん等）</p>
+          <h4>トッピング</h4>
+          <ul class="menu-side-list">
+            <li><span>目玉焼き</span><small>¥100</small></li>
+            <li><span>温泉卵</span><small>¥150</small></li>
+            <li><span>あぶりチーズ</span><small>¥100</small></li>
+            <li><span>ウインナー2本</span><small>¥100</small></li>
+            <li><span>すじコン</span><small>¥350</small></li>
+          </ul>
+        </div>
+        <div class="menu-side-block">
+          <h4>一品料理</h4>
+          <ul class="menu-side-list">
+            <li><span>ライス</span><small>¥200</small></li>
+            <li><span>すじコン</span><small>¥400</small></li>
+          </ul>
         </div>
         <div class="menu-side-block">
           <h4>ドリンク</h4>
-          <p>ビール／オレンジジュース／カルピス　ほか</p>
+          <ul class="menu-side-list">
+            <li><span>瓶ビール</span><small>¥650</small></li>
+            <li><span>黒ウーロン茶</span><small>¥300</small></li>
+            <li><span>オレンジジュース</span><small>¥300</small></li>
+            <li><span>カルピス</span><small>¥300</small></li>
+          </ul>
         </div>
       </div>
 
       <p class="menu-note">
-        ※ 掲載メニュー・価格は開発中のものです。<strong>オープン（2026年5月7日）までに一部変更となる場合があります。</strong><br>
+        ※ テイクアウトは <strong>焼きそばパン ¥300</strong>／<strong>持ち帰りソース焼きそば ¥850</strong>／<strong>持ち帰り塩焼きそば ¥850</strong> をご用意しています。<br>
+        ※ 表示価格はすべて税込です。掲載メニュー・価格は<strong>オープン（2026年5月7日）までに一部変更となる場合があります</strong>。<br>
         最新情報は<a href="https://www.instagram.com/yakisoba.stand.rafu/" target="_blank" rel="noopener noreferrer">公式Instagram</a>にて随時お知らせします。
       </p>
     </div>

@@ -248,7 +248,7 @@
       featureName.textContent = d.name;
       featureDesc.textContent = d.desc;
       featurePriceMain.textContent = d.price;
-      const isPriced = /^¥/.test(d.price || '');
+      const isPriced = /[¥￥]/.test(d.price || '');
       spotlight.classList.toggle('is-soon', !isPriced);
       if (priceTax) priceTax.style.display = isPriced ? '' : 'none';
       if (d.badge) {

@@ -2002,6 +2002,39 @@ ul { list-style: none; padding: 0; margin: 0; }
   font-weight: 900;
   margin-right: 4px;
 }
+.faq-park-list {
+  margin: 10px 0 0;
+  padding: 0;
+  list-style: none;
+  font-size: 15px;
+  line-height: 1.75;
+  color: var(--c-ink);
+}
+.faq-park-list li {
+  padding: 8px 0;
+  border-top: 1px dashed var(--c-line);
+}
+.faq-park-list li:first-child { border-top: 0; padding-top: 4px; }
+.faq-park-list strong {
+  display: inline-block;
+  color: var(--c-brown);
+  font-weight: 900;
+  margin-right: 4px;
+}
+.faq-park-warn {
+  margin-top: 14px !important;
+  padding: 12px 14px;
+  background: rgba(193, 39, 45, 0.06);
+  border-left: 4px solid var(--c-red);
+  border-radius: 6px;
+  font-size: 14.5px !important;
+  line-height: 1.85 !important;
+  color: var(--c-ink);
+}
+.faq-park-warn strong {
+  color: var(--c-red);
+  font-weight: 900;
+}
 @keyframes faqFadeIn {
   from { opacity: 0; transform: translateY(-6px); }
   to { opacity: 1; transform: translateY(0); }

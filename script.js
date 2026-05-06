@@ -4,37 +4,15 @@
   const enableParallax = () => !prefersReducedMotion && isDesktop();
   const useGSAP = !!(window.gsap && window.ScrollTrigger) && !prefersReducedMotion;
 
-  /* ---------------- Countdown to grand opening (2026-05-07 JST) ---------------- */
-  (function initCountdown() {
-    const targets = document.querySelectorAll('[data-countdown-days]');
-    if (!targets.length) return;
-    const OPEN_AT = new Date('2026-05-07T00:00:00+09:00').getTime();
-    const update = () => {
-      const now = Date.now();
-      const diffMs = OPEN_AT - now;
-      if (diffMs <= 0) {
-        targets.forEach((el) => { el.textContent = '0'; });
-        const cd = document.querySelector('.opening-countdown');
-        if (cd) cd.classList.add('is-open');
-        return false;
-      }
-      const days = Math.ceil(diffMs / 86400000);
-      targets.forEach((el) => { el.textContent = days; });
-      return true;
-    };
-    if (update()) setInterval(update, 60 * 60 * 1000); /* hourly refresh */
-  })();
-
   const header = document.getElementById('siteHeader');
   const navToggle = document.getElementById('navToggle');
   const mobileNav = document.getElementById('mobileNav');
   const progressBar = document.getElementById('scrollProgress');
-  const floatDisc = document.querySelector('.float-disc');
   const backToTop = document.querySelector('.back-to-top');
   const parallaxEls = document.querySelectorAll('[data-parallax]');
   const magnetEls = document.querySelectorAll('[data-magnet]');
 
-  /* ---------------- Scroll: header shadow, progress, float disc ---------------- */
+  /* ---------------- Scroll: header shadow, progress, back-to-top ---------------- */
   const onScroll = () => {
     const y = window.scrollY;
     const max = document.documentElement.scrollHeight - window.innerHeight;
@@ -42,7 +20,6 @@
 
     header.classList.toggle('is-scrolled', y > 8);
     if (progressBar) progressBar.style.width = pct + '%';
-    if (floatDisc) floatDisc.classList.toggle('is-visible', y > 400);
     if (backToTop) backToTop.classList.toggle('is-visible', y > 600);
 
     /* parallax hero photos (fallback when GSAP is absent) — desktop only */

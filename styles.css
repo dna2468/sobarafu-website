@@ -2149,15 +2149,6 @@ ul { list-style: none; padding: 0; margin: 0; }
 .contact-tel .contact-label { color: var(--c-orange); }
 .contact-mail { border-top-color: var(--c-cta); }
 .contact-mail .contact-label { color: var(--c-cta); }
-.contact-line { border-top-color: #06C755; }
-.contact-line .contact-label { color: #06C755; }
-.contact-card-disabled {
-  opacity: .55;
-  cursor: not-allowed;
-}
-.contact-card-disabled:hover { transform: none; }
-.contact-card-disabled .contact-action { color: var(--c-ink-soft); }
-
 .review-links {
   margin-top: 64px;
   padding: 40px 24px 36px;
